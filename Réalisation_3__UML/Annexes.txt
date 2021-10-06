@@ -1,0 +1,6 @@
+Abréviations
+
+BDD Base de données
+SI Système d'information
+MAJ Mise à jour
+msg message
