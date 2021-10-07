@@ -1,6 +1,13 @@
 Abréviations
 
-BDD Base de données
-SI Système d'information
-MAJ Mise à jour
-msg message
+appli		=> Application
+SI		=> Système d'information
+BDD		=> Base de données
+mdp		=> Mot de passe
+MAJ		=> Mise à jour
+msg		=> Message
+param.		=> Paramètre
+info		=> Information
+HS		=> Hors service
+CGU		=> Conditions générales d'utilisation
+CGV		=> Conditions générales de vente
