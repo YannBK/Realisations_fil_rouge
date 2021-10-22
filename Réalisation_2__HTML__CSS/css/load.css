@@ -1,0 +1,43 @@
+
+.saves {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    margin: 10px;
+    border: solid 1px black;
+    background-color: #777777;
+}
+.saves div img {
+    max-height: 30px;
+    min-height: 30px;
+    margin-right: 5px;
+}
+.saves button {
+    margin-right: 5px;
+    width: 80px;
+    height: 100%;
+}
+.saves button:last-child {
+    margin: 0;
+}
+h4 {
+    display: block;
+    min-width: 100px;
+}
+@media screen and (max-width:700px){
+    #appareil {
+        justify-content: flex-start;
+    }
+    .saves button {
+        width: 60px;
+    }
+    .saves div img {
+        width: 50%;
+        min-width: 100px;
+    }
+    .apercus {
+        display: flex;
+        justify-content: center;
+    }
+}

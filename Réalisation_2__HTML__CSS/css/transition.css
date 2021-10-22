@@ -1,0 +1,30 @@
+
+
+#trans_tableau {
+    border: solid 1px red;
+    padding: 5px;
+}
+
+input[type*="number"] {
+    width: 70px;
+}
+
+.trans-lignes {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+#trans_total {
+    text-align: center;
+    margin: 5px;
+}
+
+.btns {
+    padding: 5px;
+}
+
+.btntrans {
+    width: 30px;
+    height: 30px;
+}

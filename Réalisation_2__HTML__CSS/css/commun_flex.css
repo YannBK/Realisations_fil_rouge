@@ -1,0 +1,520 @@
+/*------------------------------------------------------------------------------*/
+/*-------------------------------------------GENERAL----------------------------*/
+/*------------------------------------------------------------------------------*/
+body {
+    background-color: rgb(46, 46, 46);
+    background: url(/Réalisation_2__HTML__CSS/images/music-2.jpg) center;
+    background-attachment: fixed;
+}
+/*TODO il y a un vide sous l'appareil sur certains écrans*/
+#appareil {
+    margin: 15vh auto auto auto;
+    background-color: rgba(53, 53, 53, 0.9);
+    border-radius: 10px;
+    width: 60vw;
+    height: auto; 
+    min-height: 60vh;
+    color: rgb(236, 235, 235);
+    /* overflow: scroll;  */
+    /*TODO on ne peut pas avoir le scroll apparent QUE lorsqu'il y en a besoin ?*/
+}
+.btns {
+    background-color: #575757;
+    border-radius: 10px;
+}
+.btns:hover {
+    background-color: #424242;
+    color: rgb(236, 235, 235);
+    cursor: pointer;
+}
+.btns:active {
+    border-color: azure;
+}
+select {
+    background-color: #575757;
+    border-radius: 10px;
+}
+select:hover {
+    color: rgb(236, 235, 235);
+}
+h1 {
+    color: #000;
+    font-size: 2rem;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h2 {
+    font-size: 1.3rem;
+    padding-top: 15px;
+    padding-left: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+h3, h4 {
+    text-align: center;
+    margin: 20px auto;
+}
+h3 {
+    font-size: 1.2rem;
+}
+h4 {
+    font-size: 1rem;
+}
+h2 a {
+    text-decoration: none;
+    color: rgb(236, 235, 235);
+    font-size: 1.3rem;
+}
+/*------------------------------------------------------------------------------*/
+/*-------------------------------------------BURGER----------------------------*/
+/*------------------------------------------------------------------------------*/
+
+#hamnav { /*menu nav hamburger*/ /*TODO besoin de mettre un genre de overflow:scroll pour les mobiles en format paysage ?*/
+    width: 100%;
+    height: 50px;
+    background: #000;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+}
+#hamitems { /*div de liens*/
+    /* display: flex;  */
+    display: none; 
+    background: #000;
+    position: sticky; /*comme d'hab pb si la page scroll*//* il faudrait pouvoir l'accrocher à un point, un élément...*/
+    /*TODO position:sticky ?*/
+    width: 60vw;
+    border-radius: 10px;
+    z-index: 100;
+}
+#hamitems a { /*liens*/
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 13px;
+    box-sizing: border-box;
+    color: rgb(236, 235, 235);
+    text-decoration: none;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+#hamitems a:hover { 
+    background: #401408; 
+}
+#hamburger { /*checkbox*/
+    display: none; 
+}
+#hamitems a:first-of-type {
+    border-top: none;
+}
+#hamnav label { 
+    display: inline-block; 
+    background: #000;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;    
+}
+#hamnav input:checked ~ #hamitems { 
+    display: block; 
+}
+/*------------------------------------------------------------------------------*/
+/*---------------------------------SIGNATURE RYTHMIQUE -------------------------*/
+/*------------------------------------------------------------------------------*/
+#A0_signature {
+    display: flex;
+    justify-content: space-evenly;
+    margin:10px auto;
+}
+#A0_signature label{
+    padding-right: 10px;
+    text-align: right;
+}
+/*------------------------------------------------------------------------------*/
+/*-------------------------------------AFFICHAGE DEROULANT ---------------------*/
+/*------------------------------------------------------------------------------*/
+#A0_affichage{
+    display: flex;
+    justify-content: space-evenly;
+    margin:20px;
+}
+#A0_affichage_defilement-simple{
+    height: 100px;
+    background-color: rgba(71, 252, 197, 0.3);
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+/*------------------------------------------------------------------------------*/
+/*--------------------------------------CHOIX TEMPO ----------------------------*/
+/*------------------------------------------------------------------------------*/
+#A0_range {
+    display: flex;
+    justify-content: space-evenly;
+}
+#A0_tempo_barre-tactile{
+    height: 5px;
+    margin:30px;
+    width: 100%;
+/*TODO changer la couleur du range*/
+}
+/* input[type='range'] {
+    -webkit-appearance: none !important;
+    background:rgb(236, 235, 235);
+    height:7px;
+    border-radius: 10px;
+}
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background:blue;
+    height:10px;
+    width:10px;
+} */
+/*TODO ^^ c'est bien, mais il faudrait pouvoir différencier l'avant et après curseur*/
+#A0_gestion_bpm {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
+#A0_bpm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    background-color: rgba(0, 245, 172, 0.3);
+}
+.btn15 {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+#A0_btn_drt {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30vw;
+}
+#A0_btn_gch {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30vw;
+}
+#A0_btn_bas {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px auto 20px auto;
+}
+.btn-pp {
+    width: 60px;
+    height: 40px;
+}
+#A0_btn-play:hover {
+    background-color: rgb(2, 129, 19);
+}
+#A0_btn-pause:hover {
+    background-color: rgb(151, 1, 1);
+}
+#A0-speed-light {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px auto 20px auto;
+}
+.btn-vl {
+    width: 60px;
+    height: 40px;
+}
+#A0_btn-speed {
+    padding: 0;
+}
+#A0_btn-speed a { /*TODO pas se faire chier avec les liens DANS les boutons, plutôt faire un lien qui RESSEMBLE à un bouton*/
+    padding: 13px 10px 12px 12px;
+    text-decoration: none;
+    color: black;
+    }
+#A0_btn-speed a:hover {
+    color: rgb(236, 235, 235);
+}
+/*------------------------------------------------------------------------------*/
+/*-----------------------------------EDITEUR RYTHME ----------------------------*/
+/*------------------------------------------------------------------------------*/
+#A0_rythme {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 20px;
+}
+#A0_btn_rythme_avance {
+    height: 100%;
+    padding: 0;
+}
+#A0_btn_rythme_avance a {
+padding: 30px 10px;
+text-decoration: none;
+color: black;
+}
+#A0_btn_rythme_avance a:hover {
+    color: rgb(236, 235, 235);
+}
+.btn-sl a {
+padding: 10px 25%;
+text-decoration: none;
+color: black;
+}
+.btn-sl a:hover {
+    color: rgb(236, 235, 235);
+}
+.btn-sl {
+    height:50%;
+    width: 60px;
+    padding: 0;
+}
+#A0_rythme_diode{
+    display:flex;
+    flex-direction: row;
+    height: 80px;
+}
+#A0_rythme_diode-affichage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgba(71, 252, 197, 0.3);
+}
+.diode {
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 5px;
+}
+.diode:hover {
+    background-color: green;
+}
+/*------------------------------------------------------------------------------*/
+/*--------------------------------------PUBS -----------------------------------*/
+/*------------------------------------------------------------------------------*/
+#ads {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #000;
+    color: darkgoldenrod;
+    height: 50px;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+}
+/*------------------------------------------------------------------------------*/
+/*--------------------------------------POPUP-SONS -----------------------------*/
+/*------------------------------------------------------------------------------*/
+#A0_liste-sons {
+    position: relative;
+    text-align: center; /*TODO les centrer mais alignés sur la droite, en gros les btn radio en ligne verticale... ou alors cacher les btn, mais alors il me faut le chgmt de couleur de la radio activée*/
+    left: 0;
+}
+/* Masquez la forme Popup */
+#A0_liste-sons-popup {
+    display: none;
+    position: fixed;/*sticky ? */
+    top:20vh;
+    left: 20vw;
+    z-index: 9;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    width: 60vw;
+}
+/* Styles pour le conteneur du form */
+#A0_liste-sons_form {
+    display: flex;
+    flex-direction: column;
+    max-width: 60vw;
+    margin: 0;
+    background-color: rgba(53, 53, 53, 1);
+    border-radius: 10px;
+}
+
+#A0_liste-sons_form label{
+    border-top: 1px solid #000;
+    font-size: 1.2em;
+    padding: 10px;
+}
+#A0_liste-sons_form label:hover {
+    background-color: #401408;
+}
+#A0_liste-sons_form input:checked{
+    /* background-color: rgb(197, 13, 13); */
+    /*TODO ^^ via CSS, sinon via JS => quand input:radio checked, son label change de bckgrd*/
+}
+#checksons-label {
+    background-color: #575757;
+    border-radius: 100%;
+    padding: 8px;
+    color: #000;
+    border: solid 2px;
+    border-top-color: #868686;/*trouver les bonnes couleurs de boutons*/
+    border-left-color: #868686;
+    border-bottom-color: #707070;
+    border-right-color: #707070;
+    border-style: outset;
+    position: relative;
+    top: 15px;
+}
+#checksons-label:hover {
+    background-color: #424242;
+    color: rgb(236, 235, 235);
+    cursor: pointer;
+}
+#checksons-label:active {
+    border-color: azure;
+}
+#checksons {
+    display: none;
+}
+#A0_liste-sons #checksons:checked ~ #A0_liste-sons-popup {
+    display: block;
+}
+#A0_sons-play {
+    background-color: #000;
+    border-radius: 10px;
+    border: none;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    color: rgb(236, 235, 235);
+}
+#A0_sons-play:hover {
+    background: #401408; 
+}
+/*------------------------------------------------------------------------------*/
+/*------------------------ECRAN MENTIONS LEGALES  -----------------------*/
+/*------------------------------------------------------------------------------*/
+#mentions {
+    text-align: center;
+}
+#mentions p {
+    text-align: justify;
+    padding: 10px;
+}
+
+/*------------------------------------------------------------------------------*/
+/*----------------------------------------MEDIA  1000 -------------------------------*/
+/*------------------------------------------------------------------------------*/
+@media screen and (max-width:1000px){
+    #appareil {
+        width: 80vw;
+    }
+    #hamitems {
+        width: 80vw;
+    }
+    #A0_liste-sons-popup {
+        left: 10vw;
+        width: 80vw;
+    }
+    #A0_liste-sons_form {
+        max-width: 80vw;
+    }
+    header {
+        display: none;
+    }
+}
+/*------------------------------------------------------------------------------*/
+/*----------------------------------------MEDIA  700 -------------------------------*/
+/*------------------------------------------------------------------------------*/
+@media screen and (max-width:700px){
+    #appareil {
+        width: 100vw;
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 0;
+    }
+    #hamitems {
+        width: 100vw;
+    }
+    #A0_liste-sons-popup {
+        left: 0;
+        top: 50px;
+        width: 100vw;
+    }
+    #A0_liste-sons_form {
+        max-width: 100vw;
+    }
+    #A0_rythme {
+        margin: 0 5px;
+    }
+    #A0_btn_bas {
+        width: 100%;
+        margin: 20px auto 0 auto;
+    }
+    #A0-speed-light {
+        width: 100%;
+        margin: 20px auto 10px auto;
+    }
+}
+
+/*TODO @media format paysage */
+/*TODO IPad Pro et NestHub*/
+/*TODO Galaxy Fold*/
+#construction {
+    text-align: center;
+}
+.construction {
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+    margin-top: 10vh;
+    background-color: transparent;
+    color: #fff;
+    font-weight: bold;
+    animation: btn4 5s infinite linear;
+    animation-timing-function: cubic-bezier(.58,.23,.52,.81);
+    border: solid 5px;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    cursor: pointer;
+}
+.construction:active{
+    animation: none;
+    transform: scale(2);
+    color: red;
+    border-right-color: red;
+    border-left-color: red;
+}
+.petit{
+    margin-top: 0;
+    margin-left: 20px;
+    height: 30px;
+    width: 30px;
+    font-size: 0.2rem;
+}
+.petit:active{
+    animation: none;
+    transform: scale(3);
+    color: red;
+    border-right-color: red;
+    border-left-color: red;
+}
+    @keyframes btn4 {
+        0% {
+            transform: rotate(0deg) scale(1.3);
+            color: red;
+            border-right-color: rgb(0, 0, 0);
+            border-left-color: rgb(0, 0, 0);
+        }
+        50% {
+            transform: rotate(180deg) scale(1);
+            color: #fff;
+            border-right-color: red;
+            border-left-color: red;
+        }
+        100% {
+            transform: rotate(360deg) scale(1.3);
+            color: red;
+            border-right-color: rgb(0, 0, 0);
+            border-left-color: rgb(0, 0, 0);
+        }
+    }

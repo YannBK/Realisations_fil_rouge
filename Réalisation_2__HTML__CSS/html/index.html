@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--titre-->
+    <title>Métronome</title>
+    <!--meta données-->
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Language" CONTENT="fr" />
+    <!--CSS-->
+    <link rel="stylesheet" href="/Réalisation_2__HTML__CSS/css/stylesreset.css">
+    <link rel="stylesheet" href="/Réalisation_2__HTML__CSS/css/commun_flex.css">
+</head>
+
+<body>
+    <header>
+        <h1>ZE METRONOME</h1>
+    </header>
+    <!--TODO faire une nav "normale", en plus du hamburger, pour PC ?-->
+    <main>
+        <div id="appareil">
+
+                <nav id="hamnav">
+                    <label for="hamburger">&#9776;</label>
+                    <input type="checkbox" id="hamburger" />
+                    <h2>
+                        METRONOME
+                    </h2>
+                    <div id="hamitems">
+                        <a href="index.html">Métronome</a>
+                        <a href="transitions.html">Rythme avancé<button class="construction petit">Waiting for work</button></a>
+                        <a href="speed.html">Speed training</a>
+                        <a href="harmo.html">Grille harmonique<button class="construction petit">Waiting for work</button></a>
+                        <a href="accordeur.html">Accordeur<button class="construction petit">Waiting for work</button></a>
+                        <a href="preferences.html">Préférences</a>
+                        <a href="creation-connexion.html">Connexion / Création<button class="construction petit">Waiting for work</button></a><!--ne s'affiche que si non-connecté-->
+                        <a href="compte.html">Compte utilisateur<button class="construction petit">Waiting for work</button></a><!--ne s'affiche que si connecté-->
+                        <a href="evaluation.html">&#201;valuez-moi!</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
+                    </div>
+                </nav>
+
+            <div id="A0_signature">
+                <label for="nb-bips">Nombre de temps :</label>
+                <div id="A0_signature_nb-bips">
+                    <select name="nb-bips" id="nb-bips">
+                        <!--TODO reliés à la gestion du rythme et du nombre de diodes-->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                    </select>
+                </div>
+                <label for="nb-tps">Unité de temps :</label>
+                <div id="A0_signature_nb-tps">
+                    <select name="nb-tps" id="nb-tps">
+                        <!--TODO Est-ce bien utile au final, le nb de bips fait le job peut importe que tu compte en noire, en croche ou autre...Peut peut-être permettre des préréglages de la gestion du rythme sur tous les temps...mouaif...et une symétrie visuelle;)-->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="4" selected>4</option>
+                        <option value="8">8</option>
+                        <option value="16">16</option>
+                        <option value="32">32</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="A0_affichage">
+                <!--à l'intérieur affichage via code en dur, pour harmo, flash, défilement rythme?-->
+                <div id="A0_affichage_defilement-simple">
+                    <p>affichage déroulant, dynamique et tout ce que tu veux, et plus encore mon grand !sfsfsfsfsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfghghghghghghghghghghghghghghghghghghghghghghghghghghghghghghgh</p>
+                </div>
+            </div>
+
+            <div id="A0_range">
+                <input type="range" name="barre-tactile" id="A0_tempo_barre-tactile" min="0" max="300" value="150">
+            </div>
+
+            <div id="A0_gestion_bpm">
+                <div id="A0_btn_gch" class="btn_gch">
+                    <button id="A0_btn-gch2" class="btn15 btns">
+                        +1
+                    </button>
+                    <button id="A0_btn-gch5" class="btn15 btns">
+                        +5
+                    </button>
+                </div>
+                <div id="A0_bpm" class="">
+                    <div id="A0_bpm_chiffres">
+                        120
+                    </div>
+                    <!--TODO à rendre dynamique avec JS-->
+                    <div id="A0_bpm_note">
+                        n
+                    </div>
+                    <!--?idem que pour nb-tps, bien utile, vraiment?-->
+                </div>
+                <div id="A0_btn_drt" class="btn_drt">
+                    <button id="A0_btn-drt1" class="btn15 btns">
+                        +1
+                    </button>
+                    <button id="A0_btn-drt5" class="btn15 btns">
+                        +5
+                    </button>
+                </div>
+            </div>
+
+            <div id="A0_btn_bas" class="btn_bas">
+
+                <div id="A0_liste-sons"><!--<form> ?-->
+                    <label for="checksons" id="checksons-label" class="btns btn15">                
+                    Bip
+                </label>
+                    <input type="checkbox" name="checksons" id="checksons">
+                    <!--!pb si checked d'une radio de la liste -> c'est réinitialisé à l'affichage suivant...-->
+                    <div id="A0_liste-sons-popup">
+                    <form action="" id="A0_liste-sons_form">
+                        <label>
+                            <input type="radio" name="son" id="" class="" value="clave1">Clave 1
+                        </label>
+                        <label>
+                            <input type="radio" name="son" id="" class="" value="clave2">Clave 2
+                        </label>
+                        <label>
+                            <input type="radio" name="son" id="" class="" value="electro1">Electro 1
+                        </label>
+                        <label>
+                            <input type="radio" name="son" id="" class="" value="electro2">Electro 2
+                        </label>
+                        <label>
+                            <input type="radio" name="son" id="" class="" value="electro3">Electro 3
+                        </label>
+                        <label>
+                            <input type="radio" name="son" id="" class="" value="hihat">Hi-hat
+                        </label>
+                        <label>
+                            <input type="radio" name="son" id="" class="" value="gc">Grosse caisse
+                        </label>
+                        <label>
+                            <input type="radio" name="son" id="" class="" value="beep">et bien d'autres à venir
+                        </label>
+
+                        <button id="A0_sons-play" class="btn_sons-ps">Fermer</button>
+                    </form>
+                    </div>
+                </div>
+                <button id="A0_btn-pause" class="btns btn-pp">
+                    Stop
+                </button>
+                <button id="A0_btn-play" class="btns btn-pp">
+                    Play
+                </button>
+                <button id="A0_btn-tap" class="btns btn15">
+                    Tap
+                </button>
+            </div>
+
+            <div id="A0-speed-light">
+                <button id="A0_btn-speed" class="btns btn-vl">
+                    <a href="speed.html">
+                        Speed
+                    </a>
+                </button>
+                <button id="A0_btn-light" class="btns btn-vl">
+                    Flash
+                </button>
+
+            </div>
+
+            <div id="A0_rythme">
+                <div id="A0_rythme_diode">
+                    <button id="A0_btn_rythme_avance" class="btns">
+                        <a href="transitions.html">
+                            Avancé
+                        </a>
+                    </button>
+                    <div id="A0_rythme_diode-affichage" class="affiche-rythme">
+                        <!--les diodes seront affichées/supprimées dynamiquement.-->
+                        <div id="A0_diode-2" class="diode"></div>
+                        <!--les diodes, simples div cliquables, ou autant de boutons?-->
+                        <div id="A0_diode-3" class="diode"></div>
+                        <div id="A0_diode-4" class="diode"></div>/
+                        <div id="A0_diode-5" class="diode"></div>
+                        <div id="A0_diode-6" class="diode"></div>
+                        <div id="A0_diode-7" class="diode"></div>
+                        <div id="A0_diode-8" class="diode"></div>/
+                        <div id="A0_diode-9" class="diode"></div>
+                        <div id="A0_diode-10" class="diode"></div>
+                        <div id="A0_diode-11" class="diode"></div>
+                        <div id="A0_diode-12" class="diode"></div>/
+                        <div id="A0_diode-13" class="diode"></div>
+                        <div id="A0_diode-14" class="diode"></div>
+                        <div id="A0_diode-15" class="diode"></div>
+                        <div id="A0_diode-16" class="diode"></div>/
+                        <div id="A0_diode-17" class="diode"></div>
+                        <div id="A0_diode-18" class="diode"></div>
+                        <div id="A0_diode-19" class="diode"></div>
+                        <div id="A0_diode-20" class="diode"></div>/
+                        <div id="A0_diode-21" class="diode"></div>
+                        <div id="A0_diode-22" class="diode"></div>
+                        <div id="A0_diode-23" class="diode"></div>
+                        <div id="A0_diode-24" class="diode"></div>/
+                    </div>
+                    <div id="A0_btn_save-load">
+                        <button id="A0_btn-save" class="btn-sl btns">
+                            <a href="save.html">
+                                Save
+                            </a>
+                        </button>
+                        <button id="A0_btn-load" class="btn-sl btns">
+                            <a href="load.html">
+                                Load
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ads">
+                PUB PUB PUB PUB PUB PUB PUB
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src=""></script>
+</body>
+</html>

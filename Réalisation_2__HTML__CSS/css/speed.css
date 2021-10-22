@@ -1,0 +1,65 @@
+
+/*!pour la div Mesures silencieuses, lui donner border radius en bas*/
+form {
+    margin-right: 5px;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align:center;
+    margin: auto;
+    align-items: center;
+}
+button[type*="submit"] {
+    width: 60px;
+    margin: 5px;
+    padding: 5px;
+}
+#speed_count #count:checked ~ #decompte {
+    display: flex;
+    justify-content: space-between;
+}
+#increase #acc:checked ~ #acceleration {
+    display: flex;
+    justify-content: space-between;
+}
+#decrease #dec:checked ~ #deceleration {
+    display: flex;
+    justify-content: space-between;
+}
+#mute #mut:checked ~ #silence {
+    display: flex;
+    justify-content: space-between;
+}
+.speed-div {
+    border-bottom: solid 1px #000;
+}
+input[type*="number"] {
+    width: 50px;
+    height: 20px;
+}
+input[name*="speed"]{
+    display: none;
+}
+.speed-div:hover {
+    background-color: #333; 
+}
+h4{
+    margin: 0 auto;
+}
+.label-choix {
+    display: flex;
+    line-height: 4rem;
+}
+form input,
+form label {
+    margin: 5px;
+}
+#mute {
+    border-radius: 0 0 10px 10px;
+}
+
+@media screen and (max-width:700px){
+    #appareil {
+        justify-content: flex-start;
+    }
+}

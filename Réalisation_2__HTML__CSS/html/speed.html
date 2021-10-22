@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--titre page-->
+    <title>ZE METRONOME</title>
+    <!--meta données-->
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Language" CONTENT="fr" />
+    <!--CSS-->
+    <link rel="stylesheet" href="/Réalisation_2__HTML__CSS/css/stylesreset.css">
+    <link rel="stylesheet" href="/Réalisation_2__HTML__CSS/css/commun_flex.css">
+    <link rel="stylesheet" href="/Réalisation_2__HTML__CSS/css/speed.css">
+</head>
+
+<body>
+    <header>
+        <h1>ZE METRONOME</h1>
+    </header>
+        <main>
+            <div id="appareil">
+                <nav id="hamnav" class="row stopboot">
+                    <label for="hamburger">&#9776;</label>
+                    <input type="checkbox" id="hamburger" />
+                    <h2>
+                        <a href="index.html">&larr; </a>
+                        SPEED TRAINING
+                    </h2>
+                    <div id="hamitems">
+                        <a href="index.html">Métronome</a>
+                        <a href="transitions.html">Rythme avancé<button class="construction petit">Waiting for work</button></a>
+                        <a href="speed.html">Speed training</a>
+                        <a href="harmo.html">Grille harmonique<button class="construction petit">Waiting for work</button></a>
+                        <a href="accordeur.html">Accordeur<button class="construction petit">Waiting for work</button></a>
+                        <a href="preferences.html">Préférences</a>
+                        <a href="creation-connexion.html">Connexion / Création<button class="construction petit">Waiting for work</button></a><!--ne s'affiche que si non-connecté-->
+                        <a href="compte.html">Compte utilisateur<button class="construction petit">Waiting for work</button></a><!--ne s'affiche que si connecté-->
+                        <a href="evaluation.html">&#201;valuez-moi!</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
+                    </div>
+                </nav>
+
+                <div id="speed_count" class="speed-div">
+                    <label for="count" class="label-choix">
+                        <h4>
+                            Décompte
+                        </h4>
+                    </label>
+                        <input type="radio" name="speed" id="count">
+                    <!--! UTILISER LES SECTION !!!! -->
+                    <form id="decompte">
+                        <label for="nb-count">
+                            Nombre de mesures de lancement :
+                        </label>
+                            <input type="number" name="nb-count" id="nb-count" min="0" placeholder="nb de mesures">
+                        <button type="submit" class="btns">
+                                Go
+                        </button>
+                    </form>
+                </div>
+
+
+                <div id="increase" class="speed-div">
+                    <label for="acc" class="label-choix">
+                        <h4>
+                            Accélération
+                        </h4>
+                    </label>
+                        <input type="radio" name="speed" id="acc">
+                    <form id="acceleration">
+                            <label for="inc-depart">
+                                Tempo de départ
+                            </label>
+                                <input type="number" name="inc-depart" id="inc-depart" min="0" placeholder="120">
+
+                            <label for="inc-step">
+                                Incrémentation de
+                            </label>
+                                <input type="number" name="inc-step" id="inc-step" min="0" placeholder="5">
+                            Bpm par
+                            <fieldset>
+                                <label for="inc">
+                                </label>
+                                    <input type="radio" name="inc" id="inc-mesure" value="inc-mesure">
+                                    nb de mesure
+                                        <label for="choix-mesure"></label>
+                                            <input type="number" name="choix-mesure" id="choix-mesure" min="0" placeholder="4"> <br>
+                                    <input type="radio" name="inc" id="inc-sec" value="inc-sec">
+                                    nb de secondes
+                                        <label for="choix-sec"></label>
+                                        <input type="number" name="choix-sec" id="choix-sec" min="0" placeholder="30">
+                            </fieldset>
+                            <label for="inc-max">
+                                Tempo d'arrivée
+                            </label>
+                            <input type="number" name="inc-max" id="inc-max" min="0" placeholder="300">
+                        <button type="submit" class="btns">
+                            Go
+                        </button>
+                    </form>
+                </div>
+
+
+                <div id="decrease" class="speed-div">
+                    <label for="dec" class="label-choix">
+                        <h4>
+                            Décélération
+                        </h4>
+                    </label>
+                        <input type="radio" name="speed" id="dec">
+                    <form id="deceleration">
+                            <label for="dec-depart">
+                            Tempo de départ
+                            </label>
+                                <input type="number" name="dec-depart" id="dec-depart" min="0" placeholder="300">
+                            <label for="dec-step">
+                                Décrémentation de
+                            </label>
+                                <input type="number" name="dec-step" id="dec-step" min="0" placeholder="5">
+                            Bpm par
+                            <fieldset>
+                                <label for="dec">  
+                                    <input type="radio" name="dec" id="dec-mesure" value="dec-mesure">
+                                    nb de mesure
+                                </label>
+                                        <label for="choix-mesure">
+                                            <input type="number" name="choix-mesure" id="choix-mesure" min="0" placeholder="4">
+                                        </label> <br>
+                                    <input type="radio" name="dec" id="dec-sec" value="dec-sec">
+                                        <label for="choix-sec">
+                                            nb de secondes
+                                            <input type="number" name="choix-sec" id="choix-sec" min="0" placeholder="30">
+                                        </label>
+                            </fieldset>
+                            <label for="dec-max">
+                                Tempo d'arrivée
+                            </label>
+                                <input type="number" name="dec-max" id="dec-max" min="0" placeholder="100">
+                        <button type="submit" class="btns">
+                            Go
+                        </button>
+                    </form>
+                </div>
+
+
+                <div id="mute" class="speed-div">
+                    <label for="mut" class="label-choix">
+                        <h4>
+                            Mesures silencieuses
+                        </h4>
+                    </label>
+                        <input type="radio" name="speed" id="mut">
+                    <form id="silence">
+                            <label for="choix-mute"></label>
+                                <input type="radio" name="choix-mute" id="mute-reg" value="mute-reg">Régulier
+                                    <label for="mes-jouees">Nb de mesures jouées</label>
+                                        <input type="number" name="mes-jouees" id="mes-jouees" min="0" placeholder="3">
+                                    <label for="mes-mute">Nb de mesures mute</label>
+                                        <input type="number" name="mes-mute" id="mes-mute" min="0" placeholder="1">
+                            <input type="radio" name="choix-mute" id="mute-random" value="mute-random">Random
+                                <label for="freq-mute">Fréquence de mute</label>
+                                    <input type="number" name="freq-mute" id="freq-mute" min="0" max="100" placeholder="15%">
+                        <button type="submit" class="btns">
+                            Go
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    <footer>
+
+    </footer>
+<!--Javascript-->
+    <script src=""></script>
+</body>
+
+</html>

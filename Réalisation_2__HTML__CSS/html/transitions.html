@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--titre-->
+    <title>Métronome</title>
+    <!--meta données-->
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Language" CONTENT="fr" />
+    <!--CSS-->
+    <link rel="stylesheet" href="/Réalisation_2__HTML__CSS/css/stylesreset.css">
+    <link rel="stylesheet" href="/Réalisation_2__HTML__CSS/css/commun_flex.css">
+    <link rel="stylesheet" href="/Réalisation_2__HTML__CSS/css/transition.css">
+    </head>
+
+<body>
+    <header>
+        <h1>ZE METRONOME</h1>
+    </header>
+    <main>
+        <div id="appareil">
+                <nav id="hamnav">
+                    <label for="hamburger">&#9776;</label>
+                    <input type="checkbox" id="hamburger" />
+                    <h2>
+                        <a href="index.html">&larr; </a>
+                        TRANSITIONS
+                    </h2>
+                    <div id="hamitems">
+                        <a href="index.html">Métronome</a>
+                        <a href="transitions.html">Rythme avancé<button class="construction petit">Waiting for work</button></a>
+                        <a href="speed.html">Speed training</a>
+                        <a href="harmo.html">Grille harmonique<button class="construction petit">Waiting for work</button></a>
+                        <a href="accordeur.html">Accordeur<button class="construction petit">Waiting for work</button></a>
+                        <a href="preferences.html">Préférences</a>
+                        <a href="creation-connexion.html">Connexion / Création<button class="construction petit">Waiting for work</button></a><!--ne s'affiche que si non-connecté-->
+                        <a href="compte.html">Compte utilisateur<button class="construction petit">Waiting for work</button></a><!--ne s'affiche que si connecté-->
+                        <a href="evaluation.html">&#201;valuez-moi!</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
+                    </div>
+                </nav>
+            
+<!--TODO à générer, et possibilité de changer l'ordre (par drag&drop ou par btn haut/bas à rajouter)-->
+          <div id="trans_tableau">    
+            <div id="trans_ligne-1" class="trans-lignes">
+                <button id="trans_schema-1" >schéma rythmique</button>
+                <button id="trans_btn-save" class="btn-sl btns" >save</button>
+                <button id="trans_btn-load" class="btn-sl btns" >load</button>
+                <input type="number"  placeholder="répétitions">
+                <input type="number" placeholder="120">
+                <button id="trans_btn-suppr" class="btns btntrans">-</button>
+                <button id="trans_btn-add" class="btns btntrans">+</button>
+                <button id="move-top" class="btns btntrans">&#8593;</button>
+                <button id="move-bottom" class="btns btntrans">&#8595;</button>
+            </div>
+
+            <div id="trans_ligne-2" class="trans-lignes">
+                <button id="trans_schema-2" >schéma rythmique</button>
+                <button id="trans_btn-save" class="btn-sl btns" >save</button>
+                <button id="trans_btn-load" class="btn-sl btns" >load</button>
+                <input type="number"  placeholder="répétitions">
+                <input type="number" placeholder="120">
+                <button id="trans_btn-suppr" class="btns btntrans">-</button>
+                <button id="trans_btn-add" class="btns btntrans">+</button>
+                <button id="move-top" class="btns btntrans">&#8593;</button>
+                <button id="move-bottom" class="btns btntrans">&#8595;</button>
+            </div>
+        </div>  
+        
+        <div id="trans_total">
+            <button id="trans_total-save" class="btn-sl btns">save</button>
+            <button type="submit" id="trans_total-ok" class="btns">OK</button>
+        </div>
+
+
+
+
+
+        <H3>PAGE A LIER AU BTN schéma rythmique , en style popup? RYTHME
+        </H3>
+        <p>ou alors mettre la partie paramêtrage du schéma en bas, fixé, et les transitions en haut...mmm</p>
+        <div id="A2_inputs">
+            nb de temps : <input type="number" name="A2_inputs_nbBips" id="A2_inputs_nb-bips">
+            unité de temps : <input type="number" name="A2_inputs_tps-mesure" id="A2_inputs_tps-mesure">
+        </div>
+            <button type="submit" id="B1b_btn-ok" class="btn-ok">OK</button>
+
+        <div id="A0_rythme">
+            <div id="A0_rythme_diode">
+                <button id="A0_btn_rythme_avance" class="btns">
+                        Play / Stop
+                </button>
+                <!--TODO ouverture page -->
+                <div id="A0_rythme_diode-affichage" class="affiche-rythme">
+                    <div id="A0_diode-1" class="diode"></div>
+                    <div id="A0_diode-2" class="diode"></div>
+                    <div id="A0_diode-3" class="diode"></div>
+                    <div id="A0_diode-4" class="diode"></div>/
+                    <div id="A0_diode-5" class="diode"></div>
+                    <div id="A0_diode-6" class="diode"></div>
+                    <div id="A0_diode-7" class="diode"></div>
+                    <div id="A0_diode-8" class="diode"></div>/
+                    <div id="A0_diode-9" class="diode"></div>
+                    <div id="A0_diode-10" class="diode"></div>
+                    <div id="A0_diode-11" class="diode"></div>
+                    <div id="A0_diode-12" class="diode"></div>/
+                    <div id="A0_diode-13" class="diode"></div>
+                    <div id="A0_diode-14" class="diode"></div>
+                    <div id="A0_diode-15" class="diode"></div>
+                    <div id="A0_diode-16" class="diode"></div>/
+                    <div id="A0_diode-17" class="diode"></div>
+                    <div id="A0_diode-18" class="diode"></div>
+                    <div id="A0_diode-19" class="diode"></div>
+                    <div id="A0_diode-20" class="diode"></div>/
+                    <div id="A0_diode-21" class="diode"></div>
+                    <div id="A0_diode-22" class="diode"></div>
+                    <div id="A0_diode-23" class="diode"></div>
+                    <div id="A0_diode-24" class="diode"></div>/
+                </div>
+                <div id="A0_btn_save-load">
+                    <button id="A0_btn-save" class="btn-sl btns">
+                        <a href="save.html">
+                            Save
+                        </a>
+                    </button>
+                    <button id="A0_btn-load" class="btn-sl btns">
+                        <a href="load.html">
+                            Load
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button class="construction">Waiting for work</button>
+    </div>
+    </main>
+    <footer>
+        
+    </footer>
+    
+    <script src=""></script>
+</body>
+
+</html>

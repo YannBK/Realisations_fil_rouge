@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--titre-->
+    <title>Métronome</title>
+    <!--meta données-->
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Language" CONTENT="fr" />
+    <!--CSS-->
+    <link rel="stylesheet" href="/Réalisation_2__HTML__CSS/css/stylesreset.css">
+    <link rel="stylesheet" href="/Réalisation_2__HTML__CSS/css/commun_flex.css">
+    <link rel="stylesheet" href="/Réalisation_2__HTML__CSS/css/contact.css">
+</head>
+
+<body>
+    <header>
+        <h1>ZE METRONOME</h1>
+    </header>
+    <main>
+        <div id="appareil">
+            <nav id="hamnav">
+                <label for="hamburger">&#9776;</label>
+                <input type="checkbox" id="hamburger" />
+                <h2>
+                    <a href="index.html">&larr; </a>
+                    CONTACT
+                </h2>
+                <div id="hamitems">
+                    <a href="index.html">Métronome</a>
+                    <a href="transitions.html">Rythme avancé<button class="construction petit">Waiting for work</button></a>
+                    <a href="speed.html">Speed training</a>
+                    <a href="harmo.html">Grille harmonique<button class="construction petit">Waiting for work</button></a>
+                    <a href="accordeur.html">Accordeur<button class="construction petit">Waiting for work</button></a>
+                    <a href="preferences.html">Préférences</a>
+                    <a href="creation-connexion.html">Connexion / Création<button class="construction petit">Waiting for work</button></a><!--ne s'affiche que si non-connecté-->
+                    <a href="compte.html">Compte utilisateur<button class="construction petit">Waiting for work</button></a><!--ne s'affiche que si connecté-->
+                    <a href="evaluation.html">&#201;valuez-moi!</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </div>
+            </nav>
+                <h3>Contactez le développeur</h3>
+                <form method="POST" action="">
+                    <label for="nom">
+                        Nom : <span>*</span>
+                    </label>
+                        <input type="text" name="nom" id="nom" minlength="2" maxlength="50" placeholder="Votre nom"
+                        required>
+                    <label for="prenom">
+                        Prénom: 
+                    </label>
+                        <input type="text" name="prenom" id="prenom" minlength="2" maxlength="50" placeholder="Votre prénom">
+                    <label for="email">
+                        E-mail: <span>*</span>
+                    </label>
+                        <input type="email" name="email" id="email" minlength="2" maxlength="50" placeholder="Votre e-mail"
+                        required>
+                    <label for="sujet">
+                        Sujet: <span>*</span>
+                    </label>
+                        <input type="text" name="sujet" id="sujet" minlength="2" maxlength="50"
+                        placeholder="Objet de votre prise de contact" required>
+                    <label for="textarea">
+                        Exprimez-vous: 
+                    </label>
+                        <textarea name="textarea" id="textarea" cols="70" rows="10"
+                        placeholder="N'hésitez pas à être honnête, dans un sens comme dans l'autre"></textarea>
+                    <button type="submit" value="Envoyer" class="btns">
+                        Envoyer
+                    </button>
+                </form>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src=""></script>
+</body>
+
+
+</html>

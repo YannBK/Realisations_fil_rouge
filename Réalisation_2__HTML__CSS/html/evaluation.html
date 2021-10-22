@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--titre-->
+    <title>Métronome</title>
+    <!--meta données-->
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Language" CONTENT="fr" />
+    <!--CSS-->
+    <link rel="stylesheet" href="/Réalisation_2__HTML__CSS/css/stylesreset.css">
+    <link rel="stylesheet" href="/Réalisation_2__HTML__CSS/css/commun_flex.css">
+    <link rel="stylesheet" href="/Réalisation_2__HTML__CSS/css/eval.css">
+</head>
+
+<body>
+    <header>
+        <h1>ZE METRONOME</h1>
+    </header>
+    <main>
+        <div id="appareil">
+            <nav id="hamnav">
+                <label for="hamburger">&#9776;</label>
+                <input type="checkbox" id="hamburger" />
+                <h2>
+                    <a href="index.html">&larr; </a>
+                    &#201;VALUATION
+                </h2>
+                <div id="hamitems">
+                    <a href="index.html">Métronome</a>
+                    <a href="transitions.html">Rythme avancé<button class="construction petit">Waiting for work</button></a>
+                    <a href="speed.html">Speed training</a>
+                    <a href="harmo.html">Grille harmonique<button class="construction petit">Waiting for work</button></a>
+                    <a href="accordeur.html">Accordeur<button class="construction petit">Waiting for work</button></a>
+                    <a href="preferences.html">Préférences</a>
+                    <a href="creation-connexion.html">Connexion / Création<button class="construction petit">Waiting for work</button></a><!--ne s'affiche que si non-connecté-->
+                    <a href="compte.html">Compte utilisateur<button class="construction petit">Waiting for work</button></a><!--ne s'affiche que si connecté-->
+                    <a href="evaluation.html">&#201;valuez-moi!</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </div>
+            </nav>
+            <div id="eval">
+                <h3>&#201;valuez-moi</h3>
+                <p>En prenant le temps de noter cette petite application, vous lui permettez de s'améliorer! <br>Merci à
+                    vous.</p>
+                <form action="note.php" method="post">
+                    <label for="note">
+                        Votre note sur 5 :
+                    </label>
+                        <input type="number" name="note" id="note" min="0" max="5" placeholder="5">
+                </form>
+                <p>Si vous voulez contribuer plus profondément à l'amélioration du métronome, et détailler vos louanges,
+                    critiques, et pistes de développement, n'hésitez pas à me contacter via le menu "Contact"</p>
+                <p>Merci encore de votre retour.</p>
+                <p>Musicalement votre</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src=""></script>
+</body>
+
+</html>
