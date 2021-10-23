@@ -8,11 +8,13 @@
     border: solid 1px black;
     background-color: #777777;
 }
+
 .saves div img {
     max-height: 30px;
     min-height: 30px;
     margin-right: 5px;
 }
+
 .saves button {
     margin-right: 5px;
     width: 80px;
@@ -40,4 +42,6 @@ h4 {
         display: flex;
         justify-content: center;
     }
+
+
 }

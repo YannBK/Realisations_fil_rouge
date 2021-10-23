@@ -3,7 +3,7 @@
 /*------------------------------------------------------------------------------*/
 body {
     background-color: rgb(46, 46, 46);
-    background: url(/Réalisation_2__HTML__CSS/images/music-2.jpg) center;
+    background: url(/images/music-2.jpg) center;
     background-attachment: fixed;
 }
 /*TODO il y a un vide sous l'appareil sur certains écrans*/
@@ -83,7 +83,7 @@ h2 a {
     display: none; 
     background: #000;
     position: sticky; /*comme d'hab pb si la page scroll*//* il faudrait pouvoir l'accrocher à un point, un élément...*/
-    /*TODO position:sticky ?*/
+    /*TODO position:sticky ? => pas sûr du tout, ici ça marche mais c'est peut-être un hasard*/
     width: 60vw;
     border-radius: 10px;
     z-index: 100;
@@ -484,6 +484,9 @@ color: black;
     border-right-color: red;
     border-left-color: red;
 }
+.construction span {
+    animation: clique 0.5s infinite alternate;
+}
 .petit{
     margin-top: 0;
     margin-left: 20px;
@@ -518,3 +521,11 @@ color: black;
             border-left-color: rgb(0, 0, 0);
         }
     }
+@keyframes clique {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -11,13 +11,18 @@ button[type*="submit"] {
     margin: 5px;
     padding: 5px;
 }
-#stats #stat:checked ~ #form-stat,
-#mode #mod:checked ~ #form-mode,
-#flashy #flash:checked ~ #form-flash,
+#stats #stat:checked ~ #form-stat {
+    display: block;
+}
+#mode #mod:checked ~ #form-mode {
+    display: block;
+}
+#flashy #flash:checked ~ #form-flash {
+    display: block;
+}
 #maxy #max:checked ~ #form-max {
     display: block;
 }
-
 .pref-div {
     border-bottom: solid 1px #000;
 }

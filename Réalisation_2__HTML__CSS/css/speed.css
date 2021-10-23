@@ -1,5 +1,5 @@
 
-/*!pour la div Mesures silencieuses, lui donner border radius en bas*/
+
 form {
     margin-right: 5px;
     width: 100%;
@@ -62,4 +62,5 @@ form label {
     #appareil {
         justify-content: flex-start;
     }
+
 }
