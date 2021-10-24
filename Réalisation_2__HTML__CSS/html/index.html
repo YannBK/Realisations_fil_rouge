@@ -137,39 +137,34 @@
                     <input type="checkbox" name="checksons" id="checksons">
                     <!--!pb si checked d'une radio de la liste -> c'est réinitialisé à l'affichage suivant...-->
                     <div id="A0_liste-sons-popup">
-                        <!--!-------------------------------------------------------------------------------------->
-                        <!--!-------------------------------------------------------------------------------------->
-                        <!--!------donner id à chaque, puis label for="l'id", et pkoi pas mettre la dénomination lue par l'utilisateur dans le label...merde c'est déjà le cas...et les radio sont dans les labels pour permettre le clique sur le label...tout va bien donc, excepté lier les labels à leur radio respective (=>id ;))----->
-                        <!--!-------------------------------------------------------------------------------------->
-                        <!--!-------------------------------------------------------------------------------------->
-                    <form action="" id="A0_liste-sons_form">
-                        <label>
-                            <input type="radio" name="son" id="" class="" value="clave1">Clave 1
-                        </label>
-                        <label>
-                            <input type="radio" name="son" id="" class="" value="clave2">Clave 2
-                        </label>
-                        <label>
-                            <input type="radio" name="son" id="" class="" value="electro1">Electro 1
-                        </label>
-                        <label>
-                            <input type="radio" name="son" id="" class="" value="electro2">Electro 2
-                        </label>
-                        <label>
-                            <input type="radio" name="son" id="" class="" value="electro3">Electro 3
-                        </label>
-                        <label>
-                            <input type="radio" name="son" id="" class="" value="hihat">Hi-hat
-                        </label>
-                        <label>
-                            <input type="radio" name="son" id="" class="" value="gc">Grosse caisse
-                        </label>
-                        <label>
-                            <input type="radio" name="son" id="" class="" value="beep">et bien d'autres à venir
-                        </label>
+                        <form action="" id="A0_liste-sons_form">
+                            <label for="son_1">
+                                <input type="radio" name="son" id="son_1" class="" value="clave1">Clave 1
+                            </label>
+                            <label for="son_2">
+                                <input type="radio" name="son" id="son_2" class="" value="clave2">Clave 2
+                            </label>
+                            <label for="son_3">
+                                <input type="radio" name="son" id="son_3" class="" value="electro1">Electro 1
+                            </label>
+                            <label for="son_4">
+                                <input type="radio" name="son" id="son_4" class="" value="electro2">Electro 2
+                            </label>
+                            <label for="son_5">
+                                <input type="radio" name="son" id="son_5" class="" value="electro3">Electro 3
+                            </label>
+                            <label for="son_6">
+                                <input type="radio" name="son" id="son_6" class="" value="hihat">Hi-hat
+                            </label>
+                            <label for="son_7">
+                                <input type="radio" name="son" id="son_7" class="" value="gc">Grosse caisse
+                            </label>
+                            <label for="son_8">
+                                <input type="radio" name="son" id="son_8" class="" value="beep">et bien d'autres à venir
+                            </label>
 
-                        <button type="submit" id="A0_sons-play" class="btn_sons-ps">Fermer</button>
-                    </form>
+                            <button type="submit" id="A0_sons-play" class="btn_sons-ps">Fermer</button>
+                        </form>
                     </div>
                 </div>
                 <button id="A0_btn-pause" class="btns btn-pp">
