@@ -1,18 +1,7 @@
 
-#eval {
-    text-align: center;
-}
-p {
-    text-align: justify;
-    padding: 10px;
-}
+
 button[type*="submit"] {
     padding: 5px;
     margin-left: 10px;
 }
 
-@media screen and (max-width:700px){
-    #appareil {
-        justify-content: flex-start;
-    }
-}

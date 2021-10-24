@@ -7,7 +7,8 @@ body {
     background-attachment: fixed;
 }
 /*TODO il y a un vide sous l'appareil sur certains écrans*/
-#appareil {
+.appareil_1,
+.appareil_2 {
     margin: 15vh auto auto auto;
     background-color: rgba(53, 53, 53, 0.9);
     border-radius: 10px;
@@ -106,15 +107,94 @@ h2 a {
     color: rgb(236, 235, 235);
     font-size: 1.3rem;
 }
-h3, h4 {
+h3 {
     text-align: center;
+    font-size: 1.2rem;
     margin: 20px auto;
 }
-h3 {
-    font-size: 1.2rem;
-}
 h4 {
+    text-align: center;
+    margin: 20px auto;
     font-size: 1rem;
+    display: block;
+    min-width: 100px;
+}
+h5 {
+    margin: 0 auto;
+    display: block;
+    min-width: 100px;
+}
+/*_________________ Divers ______________*/
+p {
+    text-align: justify;
+    padding: 10px;
+}
+.ecran-texte {
+    text-align: center;
+}
+.star {
+    color: red;
+}
+/*-------------------------------------------------*/
+/* ------------------ bouton switch ----------------*/
+/*-------------------------------------------------*/
+
+/* Label contenant le slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+/* Le slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(189, 189, 189);
+    -webkit-transition: .4s;
+    transition: .2s;
+}
+/* Création et positionnement du curseur*/
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(12, 141, 102, 0.5);
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+input:checked + .slider {
+    background-color: rgba(71, 252, 197, 0.5);
+}
+input:checked + .slider::before {
+    background-color: #fff;
+}
+/* translation curseur */
+input:checked + .slider::before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+/* Slider arrondi */
+.slider.round {
+    border-radius: 34px;
+}
+/* Curseur arrondi */
+.slider.round:before {
+    border-radius: 50%;
 }
 /*------------------------------------------------------------------------------*/
 /*-------------------------------------------BURGER----------------------------*/
@@ -174,7 +254,7 @@ h4 {
 /*------------------------------------------------------------------------------*/
 /*---------------------------------SIGNATURE RYTHMIQUE -------------------------*/
 /*------------------------------------------------------------------------------*/
-#A0_signature {
+#A0_signature form{
     display: flex;
     justify-content: space-evenly;
     margin:10px auto;
@@ -394,22 +474,54 @@ color: black;
 #A0_sons-play:hover {
     background: #401408; 
 }
+
 /*------------------------------------------------------------------------------*/
-/*------------------------ECRAN MENTIONS LEGALES  -----------------------*/
+/*------------------------ECRAN LOAD  -----------------------*/
 /*------------------------------------------------------------------------------*/
-#mentions {
-    text-align: center;
-}
-#mentions p {
-    text-align: justify;
-    padding: 10px;
+
+.saves {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    margin: 10px;
+    border: solid 1px black;
+    background-color: #777777;
 }
 
+.saves div img {
+    max-height: 30px;
+    min-height: 30px;
+    margin-right: 5px;
+}
+
+.saves button {
+    margin-right: 5px;
+    width: 80px;
+    height: 100%;
+}
+.saves button:last-child {
+    margin: 0;
+}
+@media screen and (max-width:700px){
+    .saves button {
+        width: 60px;
+    }
+    .saves div img {
+        width: 50%;
+        min-width: 100px;
+    }
+    .apercus {
+        display: flex;
+        justify-content: center;
+    }
+}
 /*------------------------------------------------------------------------------*/
 /*----------------------------------------MEDIA  1000 -------------------------------*/
 /*------------------------------------------------------------------------------*/
 @media screen and (max-width:1000px){
-    #appareil {
+    .appareil_1, 
+    .appareil_2 {
         width: 80vw;
     }
     #hamitems {
@@ -430,7 +542,8 @@ color: black;
 /*----------------------------------------MEDIA  700 -------------------------------*/
 /*------------------------------------------------------------------------------*/
 @media screen and (max-width:700px){
-    #appareil {
+    .appareil_1, 
+    .appareil_2 {
         width: 100vw;
         min-height: 100vh;
         margin: 0;
@@ -438,6 +551,9 @@ color: black;
         flex-direction: column;
         justify-content: space-between;
         border-radius: 0;
+    }
+    .appareil_2 {
+        justify-content: flex-start;
     }
     #hamitems {
         width: 100vw;

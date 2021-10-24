@@ -22,7 +22,7 @@
     </header>
     <!--TODO faire une nav "normale", en plus du hamburger, pour PC ?-->
     <main>
-        <div id="appareil">
+        <div id="appareil" class="appareil_1">
 
                 <nav id="hamnav">
                     <label for="hamburger">&#9776;</label>
@@ -46,48 +46,50 @@
                 </nav>
 
             <div id="A0_signature">
-                <label for="nb-bips">Nombre de temps :</label>
-                <div id="A0_signature_nb-bips">
-                    <select name="nb-bips" id="nb-bips">
-                        <!--TODO reliés à la gestion du rythme et du nombre de diodes-->
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4" selected>4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                    </select>
-                </div>
-                <label for="nb-tps">Unité de temps :</label>
-                <div id="A0_signature_nb-tps">
-                    <select name="nb-tps" id="nb-tps">
-                        <!--TODO Est-ce bien utile au final, le nb de bips fait le job peut importe que tu compte en noire, en croche ou autre...Peut peut-être permettre des préréglages de la gestion du rythme sur tous les temps...mouaif...et une symétrie visuelle;)-->
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="4" selected>4</option>
-                        <option value="8">8</option>
-                        <option value="16">16</option>
-                        <option value="32">32</option>
-                    </select>
-                </div>
+                <form action="" method="POST">
+                    <label for="nb-bips">Nombre de temps :</label>
+                    <div id="A0_signature_nb-bips">
+                        <select name="nb-bips" id="nb-bips">
+                            <!--TODO reliés à la gestion du rythme et du nombre de diodes-->
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4" selected>4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                        </select>
+                    </div>
+                    <label for="nb-tps">Unité de temps :</label>
+                    <div id="A0_signature_nb-tps">
+                        <select name="nb-tps" id="nb-tps">
+                            <!--TODO Est-ce bien utile au final, le nb de bips fait le job peut importe que tu compte en noire, en croche ou autre...Peut peut-être permettre des préréglages de la gestion du rythme sur tous les temps...mouaif...et une symétrie visuelle;)-->
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="4" selected>4</option>
+                            <option value="8">8</option>
+                            <option value="16">16</option>
+                            <option value="32">32</option>
+                        </select>
+                    </div>
+                </form>
             </div>
 
             <div id="A0_affichage">
@@ -97,9 +99,9 @@
                 </div>
             </div>
 
-            <div id="A0_range">
+            <form id="A0_range">
                 <input type="range" name="barre-tactile" id="A0_tempo_barre-tactile" min="1" max="400" value="120">
-            </div>
+            </form>
 <!--!la value sera dynamique-->
             <div id="A0_gestion_bpm">
                 <div id="A0_btn_gch" class="btn_gch">
@@ -139,7 +141,7 @@
                     <input type="checkbox" name="checksons" id="checksons">
                     <!--!pb si checked d'une radio de la liste -> c'est réinitialisé à l'affichage suivant...-->
                     <div id="A0_liste-sons-popup">
-                        <form action="" id="A0_liste-sons_form">
+                        <form action="" method="POST" id="A0_liste-sons_form">
                             <label for="son_1">
                                 <input type="radio" name="son" id="son_1" class="" value="clave1">Clave 1
                             </label>

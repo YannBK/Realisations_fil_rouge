@@ -1,10 +1,5 @@
-h3 {
-    text-align: center;
-    margin: 20px auto;
-}
-h3:nth-child(1){
-    margin: 10px auto 20px auto;
-}
+
+
 form {
     display: flex;
     flex-direction: column;
@@ -26,9 +21,6 @@ form button {
     margin: 5px;
     padding: 10px 15px;
 }
-span {
-    color: red;
-}
 button[type*="submit"] {
     padding: 5px;
     margin: 10px auto;
@@ -38,8 +30,3 @@ div + div {
     margin-top: 20px;
 }
 
-@media screen and (max-width:700px){
-    #appareil {
-        justify-content: flex-start;
-    }
-}
