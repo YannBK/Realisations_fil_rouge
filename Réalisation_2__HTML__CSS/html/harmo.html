@@ -40,15 +40,72 @@
                     </div>
                 </nav>
 
+
+
+<!--! écran principal : B_1b , avec génération aléatoire de grille et un accord par mesure (sauf si connecté=> affiche la dernière grille utilisée) avec un random sur chaque mesure, user clique configure la mesure, rythme harmo, tout comme il peut laisser en random-->
+<!--je sais pourquoi j'ai tant tardé à m'y mettre, alors que c'est ma 2ème maquette : la maquette est en paysage, je ne voyais pas comment le faire en portrait... j'avais juste oublié que les boutons ne prennent pas autant de place!! :) ...et il y a plusieurs popups/écrans-->
+<!--TODO divers.js -->
+
+                
+
+
+                <!--?la grille-->
+                <div id="container-grille"><!--générée via du JS-->
                 <div id="construction">
                     <h3>page en construction</h3>
                     <button class="construction">Waiting for work</button>
                 </div>
+                </div>
+                <!--?la grille-->
+
+                <div id="param-grille">
+                    <form action="" method="post">
+                        <div>
+                            <label for="grille-mes">
+                                Nombre de mesure : 
+                                <input type="number" name="grille-mes" id="grille-mes" min="0" max="32" placeholder="12">
+                            </label>
+                        <!--le max est à régler selon ce que ça rend à l'écran-->
+                        </div>
+                        <div>
+                            <label for="grille-beats">
+                                Nombre de beats par mesure : 
+                                <input type="number" name="grille-beats" id="grille-beats" min="1" max="24" placeholder="8">
+                            </label>
+                        </div>
+                        <div>
+                            <label for="grille-repets">
+                                Répéter la mesure : 
+                                <input type="number" name="grille-repet" id="grille-repeat" min="1" max="500">
+                                 x
+                            </label>
+                        </div>
+                        <div>
+                            <label for="grille-bpm">
+                                Bpm : 
+                                <input type="number" name="grille-bpm" id="grille-bpm" min="1" max="400" placeholder="120">
+                            </label>
+                            
+                        </div>
+                    </form>
+                    <div id="grille_sl">
+                        <button id="grille-save" class="btn-sl btns">
+                            <a href="save.html">
+                                Save
+                            </a>
+                        </button>
+                        <button id="grille-load" class="btn-sl btns">
+                            <a href="load.html">
+                                Load
+                            </a>
+                        </button>
+                    </div>
+                    <button type="submit" class="btns">
+                        Ok
+                    </button>
+                </div>
 
 
-
-
-                
         </div>
     </main>
     <footer>

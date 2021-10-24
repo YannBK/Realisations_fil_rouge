@@ -18,6 +18,7 @@ body {
     /* overflow: scroll;  */
     /*TODO on ne peut pas avoir le scroll apparent QUE lorsqu'il y en a besoin ?*/
 }
+/* _____________________ Boutons ____________________*/
 .btns {
     background-color: #575757;
     border-radius: 10px;
@@ -30,6 +31,42 @@ body {
 .btns:active {
     border-color: azure;
 }
+.btn15 {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+/*_________ Speed / Flash _______________*/
+.btn-sf {
+    width: 60px;
+    height: 40px;
+}
+/*_________ Save / Load _______________*/
+.btn-sl {
+    height:50%;
+    width: 60px;
+    padding: 0;
+}
+.btn-sl a {
+    padding: 10px 25%;
+    text-decoration: none;
+    color: black;
+}
+.btn-sl a:hover {
+    color: rgb(236, 235, 235);
+}
+/*______________ Play / Pause _____________*/
+.btn-pp {
+    width: 60px;
+    height: 40px;
+}
+.btn-play:hover {
+    background-color: rgb(2, 129, 19);
+}
+.btn-pause:hover {
+    background-color: rgb(151, 1, 1);
+}
+/* __________________________ Inputs __________________________*/
 select {
     background-color: #575757;
     border-radius: 10px;
@@ -37,6 +74,18 @@ select {
 select:hover {
     color: rgb(236, 235, 235);
 }
+/* ___________________________ Diodes _________________________*/
+.diode {
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 5px;
+}
+.diode:hover {
+    background-color: green;
+}
+/* ___________________________ Titres __________________________*/
 h1 {
     color: #000;
     font-size: 2rem;
@@ -52,6 +101,11 @@ h2 {
     display: inline-block;
     font-weight: bold;
 }
+h2 a {
+    text-decoration: none;
+    color: rgb(236, 235, 235);
+    font-size: 1.3rem;
+}
 h3, h4 {
     text-align: center;
     margin: 20px auto;
@@ -61,11 +115,6 @@ h3 {
 }
 h4 {
     font-size: 1rem;
-}
-h2 a {
-    text-decoration: none;
-    color: rgb(236, 235, 235);
-    font-size: 1.3rem;
 }
 /*------------------------------------------------------------------------------*/
 /*-------------------------------------------BURGER----------------------------*/
@@ -187,11 +236,6 @@ input[type='range']::-webkit-slider-thumb {
     width: 30vw;
     background-color: rgba(0, 245, 172, 0.3);
 }
-.btn15 {
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-}
 #A0_btn_drt {
     display: flex;
     justify-content: space-evenly;
@@ -207,24 +251,10 @@ input[type='range']::-webkit-slider-thumb {
     justify-content: space-evenly;
     margin: 40px auto 20px auto;
 }
-.btn-pp {
-    width: 60px;
-    height: 40px;
-}
-#A0_btn-play:hover {
-    background-color: rgb(2, 129, 19);
-}
-#A0_btn-pause:hover {
-    background-color: rgb(151, 1, 1);
-}
 #A0-speed-light {
     display: flex;
     justify-content: space-evenly;
     margin: 40px auto 20px auto;
-}
-.btn-vl {
-    width: 60px;
-    height: 40px;
 }
 #A0_btn-speed {
     padding: 0;
@@ -258,19 +288,6 @@ color: black;
 #A0_btn_rythme_avance a:hover {
     color: rgb(236, 235, 235);
 }
-.btn-sl a {
-padding: 10px 25%;
-text-decoration: none;
-color: black;
-}
-.btn-sl a:hover {
-    color: rgb(236, 235, 235);
-}
-.btn-sl {
-    height:50%;
-    width: 60px;
-    padding: 0;
-}
 #A0_rythme_diode{
     display:flex;
     flex-direction: row;
@@ -282,16 +299,6 @@ color: black;
     flex-wrap: wrap;
     width: 100%;
     background-color: rgba(71, 252, 197, 0.3);
-}
-.diode {
-    height: 15px;
-    width: 15px;
-    background-color: red;
-    border-radius: 50%;
-    margin: 5px;
-}
-.diode:hover {
-    background-color: green;
 }
 /*------------------------------------------------------------------------------*/
 /*--------------------------------------PUBS -----------------------------------*/
@@ -459,6 +466,10 @@ color: black;
 /*TODO @media format paysage */
 /*TODO IPad Pro et NestHub*/
 /*TODO Galaxy Fold*/
+
+/*------------------------------------------------------------------------------*/
+/*------------------------------------- CONSTRUCTION -------------------------------*/
+/*------------------------------------------------------------------------------*/
 #construction {
     text-align: center;
 }

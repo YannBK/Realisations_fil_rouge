@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../css/stylesreset.css">
     <link rel="stylesheet" href="../css/commun_flex.css">
     <!--!rassembler les petits css, ne pas les multiplier, on dirait des puces ça n'arrête pas-->
+    <!--!factoriser les class, en créer, notamment pour les styles des boutons, un peu de réutilisable que diable-->
+    <!--TODO TODO.js-->
 </head>
 
 <body>
@@ -96,9 +98,9 @@
             </div>
 
             <div id="A0_range">
-                <input type="range" name="barre-tactile" id="A0_tempo_barre-tactile" min="0" max="300" value="150">
+                <input type="range" name="barre-tactile" id="A0_tempo_barre-tactile" min="1" max="400" value="120">
             </div>
-
+<!--!la value sera dynamique-->
             <div id="A0_gestion_bpm">
                 <div id="A0_btn_gch" class="btn_gch">
                     <button id="A0_btn-gch2" class="btn15 btns">
@@ -167,10 +169,10 @@
                         </form>
                     </div>
                 </div>
-                <button id="A0_btn-pause" class="btns btn-pp">
+                <button id="" class="btns btn-pp btn-pause">
                     Stop
                 </button>
-                <button id="A0_btn-play" class="btns btn-pp">
+                <button id="" class="btns btn-pp btn-play">
                     Play
                 </button>
                 <button id="A0_btn-tap" class="btns btn15">
@@ -179,12 +181,12 @@
             </div>
 
             <div id="A0-speed-light">
-                <button id="A0_btn-speed" class="btns btn-vl">
+                <button id="A0_btn-speed" class="btns btn-sf">
                     <a href="speed.html">
                         Speed
                     </a>
                 </button>
-                <button id="A0_btn-light" class="btns btn-vl">
+                <button id="A0_btn-light" class="btns btn-sf">
                     Flash
                 </button>
 
