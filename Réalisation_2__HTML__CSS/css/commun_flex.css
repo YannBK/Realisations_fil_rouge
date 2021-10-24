@@ -3,7 +3,7 @@
 /*------------------------------------------------------------------------------*/
 body {
     background-color: rgb(46, 46, 46);
-    background: url(/images/music-2.jpg) center;
+    background: url(../images/music-2.jpg) center;
     background-attachment: fixed;
 }
 /*TODO il y a un vide sous l'appareil sur certains écrans*/
