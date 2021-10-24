@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Language" CONTENT="fr" />
     <!--CSS-->
-    <link rel="stylesheet" href="../css/stylesreset.css">
-    <link rel="stylesheet" href="../css/commun_flex.css">
-    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="/css/stylesreset.css">
+    <link rel="stylesheet" href="/css/commun_flex.css">
+    <link rel="stylesheet" href="/css/contact-connexion.css">
 </head>
 
 <body>
@@ -25,49 +25,56 @@
                 <input type="checkbox" id="hamburger" />
                 <h2>
                     <a href="index.html">&larr; </a>
-                    CONTACT
+                    CONNEXION
                 </h2>
                 <div id="hamitems">
                     <a href="index.html">Métronome</a>
-                    <a href="transitions.html">Rythme avancé<button class="construction petit">Waiting for work</button></a>
+                    <a href="transitions.html">Rythme avancé<button class="construction petit"><span>Waiting</span> for
+                            work</button></a>
                     <a href="speed.html">Speed training</a>
-                    <a href="harmo.html">Grille harmonique<button class="construction petit">Waiting for work</button></a>
-                    <a href="accordeur.html">Accordeur<button class="construction petit">Waiting for work</button></a>
+                    <a href="harmo.html">Grille harmonique<button class="construction petit"><span>Waiting</span> for
+                            work</button></a>
+                    <a href="accordeur.html">Accordeur<button class="construction petit"><span>Waiting</span> for
+                            work</button></a>
                     <a href="preferences.html">Préférences</a>
-                    <a href="creation-connexion.html">Connexion / Création<button class="construction petit">Waiting for work</button></a><!--ne s'affiche que si non-connecté-->
-                    <a href="compte.html">Compte utilisateur<button class="construction petit">Waiting for work</button></a><!--ne s'affiche que si connecté-->
+                    <a href="creation-connexion.html">Connexion / Création</a>
+                    <a href="compte.html">Compte utilisateur<button class="construction petit"><span>Waiting</span> for
+                            work</button></a>
+                    <!--ne s'affiche que si connecté-->
                     <a href="evaluation.html">&#201;valuez-moi!</a>
                     <a href="contact.html">Contact</a>
                     <a href="mentions-legales.html">Mentions légales</a>
             </nav>
 
-            <div id="construction">
-                <h3>page en construction</h3>
-                <button class="construction">Waiting for work</button>
-            </div>
-
-                <!-- <h3>Contactez le développeur</h3>
+            <div>
+                <h3>Connexion</h3>
                 <form method="POST" action="">
-                    <label for="nom">Nom: </label>
-                    <input type="text" name="nom" id="nom" minlength="2" maxlength="50" placeholder="Votre nom"
+                    <label for="nom">Login : <span>*</span></label>
+                    <input type="text" name="login" id="login" minlength="2" maxlength="50" placeholder="Login"
                         required>
-                    <label for="prenom">Prénom: </label>
-                    <input type="text" name="prenom" id="prenom" minlength="2" maxlength="50" placeholder="Votre prénom"
-                        required>
-                    <label for="email">E-mail: </label>
-                    <input type="email" name="email" id="email" minlength="2" maxlength="50" placeholder="Votre e-mail"
-                        required>
-                    <label for="sujet">Sujet: </label>
-                    <input type="text" name="sujet" id="sujet" minlength="2" maxlength="50"
-                        placeholder="Objet de votre prise de contact" required>
-                    <label for="textarea">Exprimez-vous: </label>
-                    <textarea name="textarea" id="textarea" cols="70" rows="10"
-                        placeholder="N'hésitez pas à être honnête, dans un sens comme dans l'autre"></textarea>
-                    <button type="submit" value="Envoyer" class="btns">Envoyer</button>
-                </form> -->
+                    <label for="password">Mot de passe : <span>*</span></label>
+                    <input type="password" name="password" id="password" minlength="2" maxlength="50"
+                        placeholder="ex : eG*8FDg$75" required>
 
+                    <button type="submit" value="Envoyer" class="btns">Se connecter</button>
+                </form>
+            </div>
+            <!--! faire un popup de confirmation et re-bienvenue-->
+            <div>
+                <h3>Création de compte</h3>
+                <form method="POST" action="">
+                    <label for="nom">Login : <span>*</span></label>
+                    <input type="text" name="login" id="login" minlength="2" maxlength="50" placeholder="Login"
+                        required>
+                    <label for="password">Mot de passe : <span>*</span></label>
+                    <input type="password" name="password" id="password" minlength="2" maxlength="50"
+                        placeholder="ex : eG*8FDg$75" required>
 
-                
+                    <button type="submit" value="Envoyer" class="btns">Créer</button>
+                </form>
+            </div>
+            <!--! faire un popup de confirmation et bienvenue-->
+
         </div>
     </main>
     <footer>

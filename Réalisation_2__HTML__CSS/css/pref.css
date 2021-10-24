@@ -11,16 +11,11 @@ button[type*="submit"] {
     margin: 5px;
     padding: 5px;
 }
-#stats #stat:checked ~ #form-stat {
-    display: block;
-}
-#mode #mod:checked ~ #form-mode {
-    display: block;
-}
-#flashy #flash:checked ~ #form-flash {
-    display: block;
-}
-#maxy #max:checked ~ #form-max {
+#stats #stat:checked ~ form,
+#mode #mod:checked ~ form,
+#flashy #flash:checked ~ form,
+#maxy #max:checked ~ form,
+#notation #nota:checked ~ form {
     display: block;
 }
 .pref-div {

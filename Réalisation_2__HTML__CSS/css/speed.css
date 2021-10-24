@@ -14,10 +14,10 @@ button[type*="submit"] {
     margin: 5px;
     padding: 5px;
 }
-#speed_count #count:checked ~ #decompte,
-#increase #acc:checked ~ #acceleration,
-#decrease #dec:checked ~ #deceleration,
-#mute #mut:checked ~ #silence {
+#speed_count #count:checked ~ form,
+#increase #acc:checked ~ form,
+#decrease #dec:checked ~ form,
+#mute #mut:checked ~ form {
     display: flex;
     justify-content: space-between;
 }
