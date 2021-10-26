@@ -1,6 +1,6 @@
-/*------------------------------------------------------------------------------*/
-/*-------------------------------------------GENERAL----------------------------*/
-/*------------------------------------------------------------------------------*/
+
+
+/*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ GENERAL _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 body {
     background-color: rgb(46, 46, 46);
     background: url(../images/music-2.jpg) center;
@@ -9,72 +9,121 @@ body {
 /*TODO il y a un vide sous l'appareil sur certains écrans*/
 .appareil_1,
 .appareil_2 {
+    position: relative;
     margin: 15vh auto auto auto;
     background-color: rgba(53, 53, 53, 0.9);
     border-radius: 10px;
     width: 60vw;
     height: auto; 
-    min-height: 60vh;
+    min-height: 600px;
     color: rgb(236, 235, 235);
     /* overflow: scroll;  */
     /*TODO on ne peut pas avoir le scroll apparent QUE lorsqu'il y en a besoin ?*/
 }
+
 /* _____________________ Boutons ____________________*/
+/*TODO harmoniser tous ces boutons au maximum ! c'i le boldel ! */
 .btns {
     background-color: #575757;
     border-radius: 10px;
+    padding: 5px;
 }
+
 .btns:hover {
     background-color: #424242;
     color: rgb(236, 235, 235);
     cursor: pointer;
 }
+
 .btns:active {
     border-color: azure;
 }
+
 .btn15 {
     width: 40px;
     height: 40px;
     border-radius: 100%;
 }
-/*_________ Speed / Flash _______________*/
+
+/*_________ Btn Speed / Flash _______________*/
 .btn-sf {
     width: 60px;
     height: 40px;
 }
-/*_________ Save / Load _______________*/
+
+/*_________ Btn Save / Load _______________*/
 .btn-sl {
     height:50%;
     width: 60px;
     padding: 0;
 }
+
 .btn-sl a {
     padding: 10px 25%;
     text-decoration: none;
     color: black;
 }
+
 .btn-sl a:hover {
     color: rgb(236, 235, 235);
 }
-/*______________ Play / Pause _____________*/
+
+/*______________ Btn Play / Pause _____________*/
 .btn-pp {
     width: 60px;
     height: 40px;
 }
+
 .btn-play:hover {
     background-color: rgb(2, 129, 19);
 }
+
 .btn-pause:hover {
     background-color: rgb(151, 1, 1);
 }
+
+/*______________ Btn Transition _____________*/
+.btntrans {
+    width: 30px;
+    height: 30px;
+}
+
+/*______________ Btn Submit _____________*/
+.btn-submit {
+    width: max-content;
+    min-width: 60px;
+    margin: 5px;
+    padding: 5px;
+}
+
+button[type*="submit"] {
+    width: max-content;
+    min-width: 60px;
+    margin: 5px;
+    padding: 5px;
+}
+
 /* __________________________ Inputs __________________________*/
 select {
     background-color: #575757;
     border-radius: 10px;
 }
+
 select:hover {
     color: rgb(236, 235, 235);
 }
+
+input[type*="number"] {
+    width: 50px;
+    height: 20px;
+}
+
+textarea {
+    width: 70%;
+    height: 8rem;
+    border-radius: 5px;
+}
+
 /* ___________________________ Diodes _________________________*/
 .diode {
     height: 15px;
@@ -83,9 +132,11 @@ select:hover {
     border-radius: 50%;
     margin: 5px;
 }
+
 .diode:hover {
     background-color: green;
 }
+
 /* ___________________________ Titres __________________________*/
 h1 {
     color: #000;
@@ -95,6 +146,7 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
 }
+
 h2 {
     font-size: 1.3rem;
     padding-top: 15px;
@@ -102,16 +154,19 @@ h2 {
     display: inline-block;
     font-weight: bold;
 }
+
 h2 a {
     text-decoration: none;
     color: rgb(236, 235, 235);
     font-size: 1.3rem;
 }
+
 h3 {
     text-align: center;
     font-size: 1.2rem;
     margin: 20px auto;
 }
+
 h4 {
     text-align: center;
     margin: 20px auto;
@@ -119,26 +174,30 @@ h4 {
     display: block;
     min-width: 100px;
 }
+
 h5 {
     margin: 0 auto;
     display: block;
     min-width: 100px;
 }
+
 /*_________________ Divers ______________*/
 p {
     text-align: justify;
     padding: 10px;
 }
+
 .ecran-texte {
     text-align: center;
 }
+
 .star {
     color: red;
 }
+
 /*-------------------------------------------------*/
 /* ------------------ bouton switch ----------------*/
 /*-------------------------------------------------*/
-
 /* Label contenant le slider */
 .switch {
     position: relative;
@@ -176,9 +235,11 @@ p {
     -webkit-transition: .2s;
     transition: .2s;
 }
+
 input:checked + .slider {
     background-color: rgba(71, 252, 197, 0.5);
 }
+
 input:checked + .slider::before {
     background-color: #fff;
 }
@@ -196,6 +257,7 @@ input:checked + .slider::before {
 .slider.round:before {
     border-radius: 50%;
 }
+
 /*------------------------------------------------------------------------------*/
 /*-------------------------------------------BURGER----------------------------*/
 /*------------------------------------------------------------------------------*/
@@ -207,6 +269,7 @@ input:checked + .slider::before {
     margin: 0;
     border-radius: 10px 10px 0 0;
 }
+
 #hamitems { /*div de liens*/
     /* display: flex;  */
     display: none; 
@@ -217,6 +280,7 @@ input:checked + .slider::before {
     border-radius: 10px;
     z-index: 100;
 }
+
 #hamitems a { /*liens*/
     display: block;
     width: 100%;
@@ -228,15 +292,19 @@ input:checked + .slider::before {
     text-align: center;
     border-top: 1px solid #333;
 }
+
 #hamitems a:hover { 
     background: #401408; 
 }
+
 #hamburger { /*checkbox*/
     display: none; 
 }
+
 #hamitems a:first-of-type {
     border-top: none;
 }
+
 #hamnav label { 
     display: inline-block; 
     background: #000;
@@ -248,21 +316,28 @@ input:checked + .slider::before {
     justify-content: center;
     border-radius: 10px 10px 0 0;    
 }
+
 #hamnav input:checked ~ #hamitems { 
     display: block; 
 }
+
+
+/*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ METRONOME _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 /*------------------------------------------------------------------------------*/
 /*---------------------------------SIGNATURE RYTHMIQUE -------------------------*/
 /*------------------------------------------------------------------------------*/
 #A0_signature form{
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     margin:10px auto;
 }
+
 #A0_signature label{
     padding-right: 10px;
     text-align: right;
 }
+
 /*------------------------------------------------------------------------------*/
 /*-------------------------------------AFFICHAGE DEROULANT ---------------------*/
 /*------------------------------------------------------------------------------*/
@@ -271,6 +346,7 @@ input:checked + .slider::before {
     justify-content: space-evenly;
     margin:20px;
 }
+
 #A0_affichage_defilement-simple{
     height: 100px;
     background-color: rgba(71, 252, 197, 0.3);
@@ -278,6 +354,7 @@ input:checked + .slider::before {
     word-wrap: break-word;
     overflow: hidden;
 }
+
 /*------------------------------------------------------------------------------*/
 /*--------------------------------------CHOIX TEMPO ----------------------------*/
 /*------------------------------------------------------------------------------*/
@@ -285,6 +362,7 @@ input:checked + .slider::before {
     display: flex;
     justify-content: space-evenly;
 }
+
 #A0_tempo_barre-tactile{
     height: 5px;
     margin:30px;
@@ -309,6 +387,7 @@ input[type='range']::-webkit-slider-thumb {
     justify-content: space-evenly;
     margin: 20px auto;
 }
+
 #A0_bpm{
     display: flex;
     justify-content: center;
@@ -316,26 +395,21 @@ input[type='range']::-webkit-slider-thumb {
     width: 30vw;
     background-color: rgba(0, 245, 172, 0.3);
 }
-#A0_btn_drt {
-    display: flex;
-    justify-content: space-evenly;
-    width: 30vw;
-}
+
+#A0_btn_drt,
 #A0_btn_gch {
     display: flex;
     justify-content: space-evenly;
     width: 30vw;
 }
-#A0_btn_bas {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 40px auto 20px auto;
-}
+
+#A0_btn_bas,
 #A0-speed-light {
     display: flex;
     justify-content: space-evenly;
     margin: 40px auto 20px auto;
 }
+
 #A0_btn-speed {
     padding: 0;
 }
@@ -343,43 +417,52 @@ input[type='range']::-webkit-slider-thumb {
     padding: 13px 10px 12px 12px;
     text-decoration: none;
     color: black;
-    }
+}
+
 #A0_btn-speed a:hover {
     color: rgb(236, 235, 235);
 }
+
 /*------------------------------------------------------------------------------*/
 /*-----------------------------------EDITEUR RYTHME ----------------------------*/
 /*------------------------------------------------------------------------------*/
-#A0_rythme {
+.A0_rythme {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin: 0 20px;
 }
-#A0_btn_rythme_avance {
+
+.A0_btn_rythme_avance {
     height: 100%;
     padding: 0;
 }
-#A0_btn_rythme_avance a {
+
+.A0_btn_rythme_avance a {
 padding: 30px 10px;
 text-decoration: none;
 color: black;
 }
-#A0_btn_rythme_avance a:hover {
+
+.A0_btn_rythme_avance a:hover {
     color: rgb(236, 235, 235);
 }
-#A0_rythme_diode{
+
+.A0_rythme_diode{
     display:flex;
     flex-direction: row;
     height: 80px;
+    width: 100%;
 }
-#A0_rythme_diode-affichage {
+
+.A0_rythme_diode-affichage {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     background-color: rgba(71, 252, 197, 0.3);
 }
+
 /*------------------------------------------------------------------------------*/
 /*--------------------------------------PUBS -----------------------------------*/
 /*------------------------------------------------------------------------------*/
@@ -393,6 +476,7 @@ color: black;
     width: 100%;
     border-radius: 0 0 10px 10px;
 }
+
 /*------------------------------------------------------------------------------*/
 /*--------------------------------------POPUP-SONS -----------------------------*/
 /*------------------------------------------------------------------------------*/
@@ -427,14 +511,18 @@ color: black;
     border-top: 1px solid #000;
     font-size: 1.2em;
     padding: 10px;
+    width: 100%;
 }
+
 #A0_liste-sons_form label:hover {
     background-color: #401408;
 }
+
 #A0_liste-sons_form input:checked{
     /* background-color: rgb(197, 13, 13); */
     /*TODO ^^ via CSS, sinon via JS => quand input:radio checked, son label change de bckgrd*/
 }
+
 #checksons-label {
     background-color: #575757;
     border-radius: 100%;
@@ -449,21 +537,28 @@ color: black;
     position: relative;
     top: 15px;
 }
+
 #checksons-label:hover {
     background-color: #424242;
     color: rgb(236, 235, 235);
     cursor: pointer;
 }
+
 #checksons-label:active {
     border-color: azure;
 }
+
 #checksons {
     display: none;
 }
+
 #A0_liste-sons #checksons:checked ~ #A0_liste-sons-popup {
     display: block;
 }
+
 #A0_sons-play {
+    width: 100%;
+    margin: 0;
     background-color: #000;
     border-radius: 10px;
     border: none;
@@ -471,14 +566,211 @@ color: black;
     padding-top: 12px;
     color: rgb(236, 235, 235);
 }
+
 #A0_sons-play:hover {
     background: #401408; 
 }
 
-/*------------------------------------------------------------------------------*/
-/*------------------------ECRAN LOAD  -----------------------*/
-/*------------------------------------------------------------------------------*/
 
+/*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ ECRANS _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
+/*------------------------------------------------------------------------------*/
+/*------------------------Ecran TRANSITION  -----------------------*/
+/*------------------------------------------------------------------------------*/
+#trans_tableau {
+    border: solid 1px red;
+    padding: 5px;
+}
+
+.trans-lignes {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+#trans_total {
+    text-align: center;
+    margin: 5px;
+}
+
+#trans-rythme {
+    position: absolute;
+    bottom: 20px;
+    width: 95%;
+}
+
+#A2_inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-left: 20px;
+}
+
+#A2_inputs input {
+    margin: 5px;
+}
+
+.A2_btn_save-load {
+    max-width: min-content;
+}
+
+.trans-sl a {
+    text-decoration: none;
+    color: black;
+}
+
+.trans-sl a:hover {
+    color: rgb(236, 235, 235);
+}
+
+.A0_rythme_diode button[type*="submit"] {
+    margin: 0;
+    padding: 0;
+    width: 60px;
+}
+
+#trans-conteneur-1 {
+    border-bottom: solid 1px black;
+}
+
+/*------------------------------------------------------------------------------*/
+/*------------------------Ecran HARMONIE  -----------------------*/
+/*------------------------------------------------------------------------------*/
+#container-grille {
+    background-color: rgba(0, 245, 172, 0.3);
+    height: 300px;
+    max-width: 100%;
+    margin:20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 20px;
+}
+#param-grille form div {
+    display: flex;
+    align-items: baseline;
+    margin: 5px auto;
+}
+#grille_sl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#grille_sl button {
+    margin: 10px;
+    width: 60px;
+    height: 30px;
+}
+#param-grille form div input {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/*------------------------------------------------------------------------------*/
+/*------------------------Ecran BOX-TIROIR (speed, préf)  -----------------------*/
+/*------------------------------------------------------------------------------*/
+.box-div {
+    border-bottom: solid 1px #000;
+}
+
+.box-div:hover {
+    background-color: #333; 
+}
+
+.box-div form input,
+.box-div form label {
+    margin: 5px;
+}
+
+.box-choix {
+    display: flex;
+}
+
+.box-none {
+    display: none;
+}
+
+/*______________________ Ecran SPEED _______________________*/
+#speed_count #count:checked ~ form,
+#increase #acc:checked ~ form,
+#decrease #dec:checked ~ form,
+#mute #mut:checked ~ form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.speed-form {
+    margin-right: 5px;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align:center;
+    margin: auto;
+    align-items: center;
+}
+
+.speed-form div {
+    display: flex;
+    align-items: baseline;
+}
+
+#nb-count {
+    width: 80px;
+}
+
+#mute {
+    border-radius: 0 0 10px 10px;
+}
+
+/*______________________ Ecran PREF _______________________*/
+#mode #mod:checked ~ form,
+#flashy #flash:checked ~ form,
+#notation #nota:checked ~ form,
+#maxy #max:checked ~ form,
+#stats #stat:checked ~ form {
+    display: block;
+}
+
+.pref-form {
+    margin-right: 5px;
+    width: 60%;
+    display: none;
+    text-align:center;
+    margin: auto;
+}
+
+/*------------------------------------------------------------------------------*/
+/*----------------------------Ecran CONTACT / CONNEXION  -----------------------*/
+/*------------------------------------------------------------------------------*/
+.cc-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cc-form label {
+    margin: 10px auto;
+}
+
+.cc-form input {
+    width: 50%;
+    border-radius: 5px;
+}
+
+#connexion-container div:last-child {
+    border-top: solid 1px black;
+    margin-top: 20px;
+}
+
+/*------------------------------------------------------------------------------*/
+/*-------------------------------------------Ecran LOAD  -----------------------*/
+/*------------------------------------------------------------------------------*/
 .saves {
     display: flex;
     align-items: center;
@@ -500,22 +792,12 @@ color: black;
     width: 80px;
     height: 100%;
 }
+
 .saves button:last-child {
     margin: 0;
 }
-@media screen and (max-width:700px){
-    .saves button {
-        width: 60px;
-    }
-    .saves div img {
-        width: 50%;
-        min-width: 100px;
-    }
-    .apercus {
-        display: flex;
-        justify-content: center;
-    }
-}
+
+/*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ MEDIA _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 /*------------------------------------------------------------------------------*/
 /*----------------------------------------MEDIA  1000 -------------------------------*/
 /*------------------------------------------------------------------------------*/
@@ -576,6 +858,20 @@ color: black;
     #A0-speed-light {
         width: 100%;
         margin: 20px auto 10px auto;
+    }
+    .trans-lignes input{
+        width: 20px;
+    }
+    .saves button {
+        width: 60px;
+    }
+    .saves div img {
+        width: 50%;
+        min-width: 100px;
+    }
+    .apercus {
+        display: flex;
+        justify-content: center;
     }
 }
 

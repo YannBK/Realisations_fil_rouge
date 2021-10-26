@@ -11,7 +11,6 @@
     <!--CSS-->
     <link rel="stylesheet" href="../css/stylesreset.css">
     <link rel="stylesheet" href="../css/commun_flex.css">
-    <link rel="stylesheet" href="../css/speed.css">
 </head>
 
 <body>
@@ -29,9 +28,9 @@
                     </h2>
                     <div id="hamitems">
                         <a href="index.html">Métronome</a>
-                        <a href="transitions.html">Rythme avancé<button class="construction petit"><span>Waiting</span> for work</button></a>
+                        <a href="transitions.html">Rythme avancé</a>
                         <a href="speed.html">Speed training</a>
-                        <a href="harmo.html">Grille harmonique<button class="construction petit"><span>Waiting</span> for work</button></a>
+                        <a href="harmo.html">Grille harmonique</a>
                         <a href="accordeur.html">Accordeur<button class="construction petit"><span>Waiting</span> for work</button></a>
                         <a href="preferences.html">Préférences</a>
                         <a href="creation-connexion.html">Connexion / Création</a>
@@ -42,15 +41,15 @@
                     </div>
                 </nav>
 
-                <div id="speed_count" class="speed-div">
-                    <label for="count" class="label-choix">
+                <div id="speed_count" class="box-div">
+                    <label for="count" class="box-choix">
                         <h4>
                             Décompte
                         </h4>
                     </label>
-                        <input type="radio" name="speed" id="count">
+                        <input type="radio" name="speed" class="box-none" id="count">
                     <!--! UTILISER LES SECTION !!!! -->
-                    <form  action="" method="POST" id="decompte">
+                    <form  action="" method="POST" id="decompte" class="speed-form">
                         <div>
                             <label for="nb-count">
                                 Nombre de mesures de lancement :
@@ -64,14 +63,14 @@
                 </div>
 
 
-                <div id="increase" class="speed-div">
-                    <label for="acc" class="label-choix">
+                <div id="increase" class="box-div">
+                    <label for="acc" class="box-choix">
                         <h4>
                             Accélération
                         </h4>
                     </label>
-                        <input type="radio" name="speed" id="acc">
-                    <form action="" method="POST" id="acceleration">
+                        <input type="radio" name="speed" class="box-none" id="acc">
+                    <form action="" method="POST" id="acceleration" class="speed-form">
                         <div>
                             <label for="inc-depart">
                                 Tempo de départ :
@@ -122,14 +121,14 @@
                 </div>
 
 
-                <div id="decrease" class="speed-div">
-                    <label for="dec" class="label-choix">
+                <div id="decrease" class="box-div">
+                    <label for="dec" class="box-choix">
                         <h4>
                             Décélération
                         </h4>
                     </label>
-                        <input type="radio" name="speed" id="dec">
-                    <form action="" method="POST" id="deceleration">
+                        <input type="radio" name="speed" class="box-none" id="dec">
+                    <form action="" method="POST" id="deceleration" class="speed-form">
                         <div>
                             <label for="dec-depart">
                                 Tempo de départ
@@ -179,14 +178,14 @@
                 </div>
 
 
-                <div id="mute" class="speed-div">
-                    <label for="mut" class="label-choix">
+                <div id="mute" class="box-div">
+                    <label for="mut" class="box-choix">
                         <h4>
                             Mesures silencieuses
                         </h4>
                     </label>
-                        <input type="radio" name="speed" id="mut">
-                    <form action="" method="POST" id="silence">
+                        <input type="radio" name="speed" class="box-none" id="mut">
+                    <form action="" method="POST" id="silence" class="speed-form">
                         <div>
                             <label for="choix-mute">
                                 Régulier

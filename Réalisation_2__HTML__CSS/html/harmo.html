@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-    <head>
+
+<head>
     <!--titre-->
     <title>Métronome</title>
     <!--meta données-->
@@ -10,7 +11,7 @@
     <!--CSS-->
     <link rel="stylesheet" href="../css/stylesreset.css">
     <link rel="stylesheet" href="../css/commun_flex.css">
-    </head>
+</head>
 
 <body>
     <header>
@@ -18,100 +19,102 @@
     </header>
     <main>
         <div id="appareil" class="appareil_2">
-                <nav id="hamnav">
-                    <label for="hamburger">&#9776;</label>
-                    <input type="checkbox" id="hamburger" />
-                    <h2>
-                        <a href="index.html">&larr; </a>
-                        HARMONIE
-                    </h2>
-                    <div id="hamitems">
-                        <a href="index.html">Métronome</a>
-                        <a href="transitions.html">Rythme avancé<button class="construction petit">Waiting for work</button></a>
-                        <a href="speed.html">Speed training</a>
-                        <a href="harmo.html">Grille harmonique<button class="construction petit">Waiting for work</button></a>
-                        <a href="accordeur.html">Accordeur<button class="construction petit">Waiting for work</button></a>
-                        <a href="preferences.html">Préférences</a>
-                        <a href="creation-connexion.html">Connexion / Création</a>
-                        <a href="compte.html">Compte utilisateur<button class="construction petit">Waiting for work</button></a><!--ne s'affiche que si connecté-->
-                        <a href="evaluation.html">&#201;valuez-moi!</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="mentions-legales.html">Mentions légales</a>
-                    </div>
-                </nav>
-
-
-
-<!--! écran principal : B_1b , avec génération aléatoire de grille et un accord par mesure (sauf si connecté=> affiche la dernière grille utilisée) avec un random sur chaque mesure, user clique configure la mesure, rythme harmo, tout comme il peut laisser en random-->
-<!--je sais pourquoi j'ai tant tardé à m'y mettre, alors que c'est ma 2ème maquette : la maquette est en paysage, je ne voyais pas comment le faire en portrait... j'avais juste oublié que les boutons ne prennent pas autant de place!! :) ...et il y a plusieurs popups/écrans-->
-<!--TODO divers.js -->
-
-                
-
-
-                <!--?la grille-->
-                <div id="container-grille"><!--générée via du JS-->
-                <div id="construction">
-                    <h3>page en construction</h3>
-                    <button class="construction">Waiting for work</button>
+            <nav id="hamnav">
+                <label for="hamburger">&#9776;</label>
+                <input type="checkbox" id="hamburger" />
+                <h2>
+                    <a href="index.html">&larr; </a>
+                    HARMONIE
+                </h2>
+                <div id="hamitems">
+                    <a href="index.html">Métronome</a>
+                    <a href="transitions.html">Rythme avancé</a>
+                    <a href="speed.html">Speed training</a>
+                    <a href="harmo.html">Grille harmonique</a>
+                    <a href="accordeur.html">Accordeur<button class="construction petit">Waiting for work</button></a>
+                    <a href="preferences.html">Préférences</a>
+                    <a href="creation-connexion.html">Connexion / Création</a>
+                    <a href="compte.html">Compte utilisateur<button class="construction petit">Waiting for
+                            work</button></a>
+                    <!--ne s'affiche que si connecté-->
+                    <a href="evaluation.html">&#201;valuez-moi!</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
                 </div>
-                </div>
-                <!--?la grille-->
+            </nav>
 
-                <div id="param-grille">
-                    <form action="" method="post">
+            <!--! écran principal : B_1b , avec génération aléatoire de grille et un accord random par mesure (sauf si connecté=> affiche la dernière grille utilisée). C'est le User click qui configure la mesure, rythme harmo, tout comme il peut laisser en random-->
+
+            <!--TODO divers.js -->
+
+            <!--?la grille-->
+            <div id="container-grille">
+                <!--générée via du JS-->
+            </div>
+            <!--?la grille-->
+
+            <div id="param-grille">
+                <form action="" method="post">
+                    <div>
                         <div>
                             <label for="grille-mes">
-                                Nombre de mesure : 
-                                <input type="number" name="grille-mes" id="grille-mes" min="0" max="32" placeholder="12">
+                                Nombre de mesure :
+                                <input type="number" name="grille-mes" id="grille-mes" min="0" max="32"
+                                    placeholder="12">
                             </label>
-                        <!--le max est à régler selon ce que ça rend à l'écran-->
+                            <!--le max est à régler selon ce que ça rend à l'écran-->
                         </div>
                         <div>
                             <label for="grille-beats">
-                                Nombre de beats par mesure : 
-                                <input type="number" name="grille-beats" id="grille-beats" min="1" max="24" placeholder="8">
+                                Nombre de beats par mesure :
+                                <input type="number" name="grille-beats" id="grille-beats" min="1" max="24"
+                                    placeholder="8">
                             </label>
                         </div>
+                    </div>
+                    <div>
                         <div>
                             <label for="grille-repets">
-                                Répéter la mesure : 
+                                Répéter la mesure :
                                 <input type="number" name="grille-repet" id="grille-repeat" min="1" max="500">
-                                 x
+                                x
                             </label>
                         </div>
                         <div>
                             <label for="grille-bpm">
-                                Bpm : 
-                                <input type="number" name="grille-bpm" id="grille-bpm" min="1" max="400" placeholder="120">
+                                Bpm :
+                                <input type="number" name="grille-bpm" id="grille-bpm" min="1" max="400"
+                                    placeholder="120">
                             </label>
-                            
+
                         </div>
                         <button type="submit" class="btns">
                             Ok
                         </button>
-                    </form>
-                    <div id="grille_sl">
-                        <button id="grille-save" class="btn-sl btns">
-                            <a href="save.html">
-                                Save
-                            </a>
-                        </button>
-                        <button id="grille-load" class="btn-sl btns">
-                            <a href="load.html">
-                                Load
-                            </a>
-                        </button>
                     </div>
+                </form>
+                <div id="grille_sl">
+                    <button id="grille-save" class="btn-sl btns">
+                        <a href="save.html">
+                            Save
+                        </a>
+                    </button>
+                    <button id="grille-load" class="btn-sl btns">
+                        <a href="load.html">
+                            Load
+                        </a>
+                    </button>
+                    <button id="" class="btns">
+                        Play
+                    </button>
                 </div>
-
-
+            </div>
         </div>
     </main>
     <footer>
-    
+
     </footer>
-    
+
     <script src=""></script>
 </body>
 
