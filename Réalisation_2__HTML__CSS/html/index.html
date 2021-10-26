@@ -21,7 +21,7 @@
     </header>
     <!--TODO faire une nav "normale", en plus du hamburger, pour PC ?-->
     <main>
-        <div id="appareil" class="appareil_1">
+        <div class="appareil_1">
 
                 <nav id="hamnav">
                     <label for="hamburger">&#9776;</label>
@@ -48,7 +48,7 @@
             <div id="A0_signature">
                 <form action="" method="POST">
                     <label for="nb-bips">Nombre de beat :</label>
-                    <div id="A0_signature_nb-bips">
+                    <div>
                         <select name="nb-bips" id="nb-bips">
                             <!--TODO reliés à la gestion du rythme et du nombre de diodes-->
                             <option value="1">1</option>
@@ -78,7 +78,7 @@
                         </select>
                     </div>
                     <label for="nb-tps">Unité de temps :</label>
-                    <div id="A0_signature_nb-tps">
+                    <div>
                         <select name="nb-tps" id="nb-tps">
                             <!--TODO Est-ce bien utile au final, le nb de bips fait le job peut importe que tu compte en noire, en croche ou autre...Peut peut-être permettre des préréglages de la gestion du rythme sur tous les temps...mouaif...et une symétrie visuelle;)-->
                             <option value="1">1</option>
@@ -105,28 +105,28 @@
 <!--!la value sera dynamique-->
             <div id="A0_gestion_bpm">
                 <div id="A0_btn_gch" class="btn_gch">
-                    <button id="A0_btn-gch2" class="btn15 btns">
+                    <button class="btn15 btns">
                         +1
                     </button>
-                    <button id="A0_btn-gch5" class="btn15 btns">
+                    <button class="btn15 btns">
                         +5
                     </button>
                 </div>
                 <div id="A0_bpm" class="">
-                    <div id="A0_bpm_chiffres">
+                    <div>
                         120
                     </div>
                     <!--TODO à rendre dynamique avec JS-->
-                    <div id="A0_bpm_note">
+                    <div>
                         n
                     </div>
                     <!--?idem que pour nb-tps, bien utile, vraiment?-->
                 </div>
                 <div id="A0_btn_drt" class="btn_drt">
-                    <button id="A0_btn-drt1" class="btn15 btns">
+                    <button class="btn15 btns">
                         +1
                     </button>
-                    <button id="A0_btn-drt5" class="btn15 btns">
+                    <button class="btn15 btns">
                         +5
                     </button>
                 </div>
@@ -171,24 +171,24 @@
                         </form>
                     </div>
                 </div>
-                <button id="" class="btns btn-pp btn-pause">
+                <button class="btns btn-sub btn-pause">
                     Stop
                 </button>
-                <button id="" class="btns btn-pp btn-play">
+                <button class="btns btn-sub btn-play">
                     Play
                 </button>
-                <button id="A0_btn-tap" class="btns btn15">
+                <button class="btns btn15">
                     Tap
                 </button>
             </div>
 
             <div id="A0-speed-light">
-                <button id="A0_btn-speed" class="btns btn-sf">
+                <button id="A0_btn-speed" class="btns btn-sub">
                     <a href="speed.html">
                         Speed
                     </a>
                 </button>
-                <button id="A0_btn-light" class="btns btn-sf">
+                <button class="btns btn-sub">
                     Flash
                 </button>
 
@@ -196,13 +196,14 @@
 
             <div class="A0_rythme">
                 <div class="A0_rythme_diode">
-                    <button id="" class="btns A0_btn_rythme_avance">
+                    <button class="btns A0_btn_rythme_avance">
                         <a href="transitions.html">
                             Avancé
                         </a>
                     </button>
-                    <div id="" class="affiche-rythme A0_rythme_diode-affichage">
+                    <div class="affiche-rythme A0_rythme_diode-affichage">
                         <!--les diodes seront affichées/supprimées dynamiquement.-->
+                        <div id="A0_diode-1" class="diode"></div>
                         <div id="A0_diode-2" class="diode"></div>
                         <!--les diodes, simples div cliquables, ou autant de boutons?-->
                         <div id="A0_diode-3" class="diode"></div>
@@ -228,13 +229,13 @@
                         <div id="A0_diode-23" class="diode"></div>
                         <div id="A0_diode-24" class="diode"></div>/
                     </div>
-                    <div id="A0_btn_save-load">
-                        <button id="A0_btn-save" class="btn-sl btns">
+                    <div>
+                        <button class="btn-sl btns">
                             <a href="save.html">
                                 Save
                             </a>
                         </button>
-                        <button id="A0_btn-load" class="btn-sl btns">
+                        <button class="btn-sl btns">
                             <a href="load.html">
                                 Load
                             </a>
@@ -243,7 +244,7 @@
                 </div>
             </div>
 
-            <div id="ads">
+            <div class="ads">
                 PUB PUB PUB PUB PUB PUB PUB
             </div>
         </div>

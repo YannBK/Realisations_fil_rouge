@@ -11,7 +11,6 @@
     <!--CSS-->
     <link rel="stylesheet" href="../css/stylesreset.css">
     <link rel="stylesheet" href="../css/commun_flex.css">
-    <link rel="stylesheet" href="../css/contact-connexion.css">
 </head>
 
 <body>
@@ -19,7 +18,7 @@
         <h1>ZE METRONOME</h1>
     </header>
     <main>
-        <div id="appareil" class="appareil_2">
+        <div  class="appareil_2">
             <nav id="hamnav">
                 <label for="hamburger">&#9776;</label>
                 <input type="checkbox" id="hamburger" />
@@ -43,36 +42,34 @@
                     <a href="contact.html">Contact</a>
                     <a href="mentions-legales.html">Mentions légales</a>
             </nav>
-<div id="connexion-container">
-            <div>
-                <h3>Connexion</h3>
-                <form method="POST" action="" class="cc-form">
-                    <label for="nom">Login : <span class="star">*</span></label>
-                    <input type="text" name="login" id="login" minlength="2" maxlength="50" placeholder="Login"
-                        required>
-                    <label for="password">Mot de passe : <span class="star">*</span></label>
-                    <input type="password" name="password" id="password" minlength="2" maxlength="50"
-                        placeholder="ex : eG*8FDg$75" required>
 
-                    <button type="submit" value="Envoyer" class="btns">Se <br>connecter</button>
-                </form>
+            <div id="connexion-container">
+                <div>
+                    <h3>Connexion</h3>
+                    <form method="POST" action="" class="cc-form">
+                        <label for="nom">
+                            Login : <span class="star">*</span>
+                        </label>
+                        <input type="text" name="login" id="login" minlength="2" maxlength="50" placeholder="Login"
+                            required>
+                        <label for="password">
+                            Mot de passe : <span class="star">*</span>
+                        </label>
+                        <input type="password" name="password" id="password" minlength="2" maxlength="50"
+                            placeholder="ex : eG*8FDg$75" required>
+                        <div>
+                            <button type="submit" value="connection" class="btns btn-sub">
+                                Connexion
+                                <!--! faire un popup de confirmation et re-bienvenue-->
+                            </button>
+                            <button type="submit" value="creation" class="btns btn-sub">
+                                &nbsp;&nbsp;Création&nbsp;&nbsp;
+                                <!--! faire un popup de confirmation et bienvenue-->
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <!--! faire un popup de confirmation et re-bienvenue-->
-            <div>
-                <h3>Création de compte</h3>
-                <form method="POST" action="" class="cc-form">
-                    <label for="nom">Login : <span class="star">*</span></label>
-                    <input type="text" name="login" id="login" minlength="2" maxlength="50" placeholder="Login"
-                        required>
-                    <label for="password">Mot de passe : <span class="star">*</span></label>
-                    <input type="password" name="password" id="password" minlength="2" maxlength="50"
-                        placeholder="ex : eG*8FDg$75" required>
-
-                    <button type="submit" value="Envoyer" class="btns">Créer</button>
-                </form>
-            </div>
-            <!--! faire un popup de confirmation et bienvenue-->
-        </div>
         </div>
     </main>
     <footer>

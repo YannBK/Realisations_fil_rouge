@@ -11,7 +11,6 @@
     <!--CSS-->
     <link rel="stylesheet" href="../css/stylesreset.css">
     <link rel="stylesheet" href="../css/commun_flex.css">
-    <link rel="stylesheet" href="../css/transition.css">
 </head>
 
 <body>
@@ -19,7 +18,7 @@
         <h1>ZE METRONOME</h1>
     </header>
     <main>
-        <div id="appareil" class="appareil_2">
+        <div class="appareil_2">
             <nav id="hamnav">
                 <label for="hamburger">&#9776;</label>
                 <input type="checkbox" id="hamburger" />
@@ -47,54 +46,88 @@
             <!--TODO à générer, et possibilité de changer l'ordre (par drag&drop ou par btn haut/bas à rajouter)-->
             <div id="trans-conteneur-1">
                 <div id="trans_tableau">
-                    <div id="trans_ligne-1" class="trans-lignes">
-                        <button id="trans_schema-1">schéma</button>
-                        <button id="trans_btn-save" class="btns trans-sl"><a href="save.html">
+                    <div class="trans-lignes">
+                        <button>schéma</button>
+                        <button class="btns trans-sl">
+                            <a href="save.html">
                             Save
-                        </a></button>
-                        <button id="trans_btn-load" class="btns trans-sl"><a href="load.html">
+                            </a>
+                        </button>
+                        <button class="btns trans-sl">
+                            <a href="load.html">
                             Load
-                        </a></button>
+                            </a>
+                        </button>
                         <input type="number" placeholder="répét">
                         <input type="number" placeholder="120">
-                        <button id="trans_btn-suppr" class="btns btntrans">-</button>
-                        <button id="trans_btn-add" class="btns btntrans">+</button>
+                        <button class="btns btntrans">
+                            -
+                        </button>
+                        <button class="btns btntrans">
+                            +
+                        </button>
                 <!--!les deux boutons flèche sont à remplacer par du drag&drop-->
-                        <button id="move-top" class="btns btntrans">&#8593;</button>
-                        <button id="move-bottom" class="btns btntrans">&#8595;</button>
+                        <button class="btns btntrans">
+                            &#8593;
+                        </button>
+                        <button class="btns btntrans">
+                            &#8595;
+                        </button>
                     </div>
 
                     <div id="trans_ligne-2" class="trans-lignes">
-                        <button id="trans_schema-2">schéma</button>
-                        <button id="trans_btn-save" class="btns trans-sl"><a href="save.html">
+                        <button>
+                            schéma
+                        </button>
+                        <button class="btns trans-sl">
+                            <a href="save.html">
                             Save
-                        </a></button>
-                        <button id="trans_btn-load" class="btns trans-sl"><a href="load.html">
+                            </a>
+                        </button>
+                        <button class="btns trans-sl">
+                            <a href="load.html">
                             Load
-                        </a></button>
+                            </a>
+                        </button>
                         <input type="number" placeholder="répét">
                         <input type="number" placeholder="120">
-                        <button id="trans_btn-suppr" class="btns btntrans">-</button>
-                        <button id="trans_btn-add" class="btns btntrans">+</button>
+                        <button class="btns btntrans">
+                            -
+                        </button>
+                        <button class="btns btntrans">
+                            +
+                        </button>
                 <!--!les deux boutons flèche sont à remplacer par du drag&drop-->
-                        <button id="move-top" class="btns btntrans">&#8593;</button>
-                        <button id="move-bottom" class="btns btntrans">&#8595;</button>
+                        <button class="btns btntrans">
+                            &#8593;
+                        </button>
+                        <button class="btns btntrans">
+                            &#8595;
+                        </button>
                     </div>
                 </div>
 
                 <div id="trans_total">
-                    <button id="trans_total-save" class="btn-submit btns">save</button>
-                    <button type="submit" id="trans_total-ok" class="btns">OK</button>
+                    <button class="btn-sub btns">
+                        Save
+                    </button>
+                    <button type="submit" class="btns btn-sub">
+                        OK
+                    </button>
                 </div>
             </div>
 
 
             <div id="trans-rythme">
                 <div id="A2_inputs">
-                    nb de beat : <input type="number" name="A2_inputs_nbBips" id="A2_inputs_nb-bips" placeholder="8">
-                    unité de temps : <input type="number" name="A2_inputs_tps-mesure" id="A2_inputs_tps-mesure"
+                    <label for="A2_nb-bips">
+                        Nb de beat : 
+                    </label>
+                    <input type="number" name="A2_nb-bips" id="A2_nb-Bbps" placeholder="8">
+                    <label for="A2_tps-mesure">Unité de temps : </label>
+                    <input type="number" name="A2_tps-mesure" id="A2_tps-mesure"
                         placeholder="2">
-                    <button id="" class="btns ">
+                    <button class="btns">
                         Play / Stop
                     </button>
                 </div>
@@ -102,18 +135,18 @@
                 <div class="A0_rythme">
                     <div class="A0_rythme_diode">
                         <div class="A2_btn_save-load">
-                            <button id="A0_btn-save" class="btn-sl btns">
+                            <button class="btn-sl btns">
                                 <a href="save.html">
                                     Save
                                 </a>
                             </button>
-                            <button id="A0_btn-load" class="btn-sl btns">
+                            <button class="btn-sl btns">
                                 <a href="load.html">
                                     Load
                                 </a>
                             </button>
                         </div>
-                        <div id="" class="affiche-rythme A0_rythme_diode-affichage">
+                        <div class="affiche-rythme A0_rythme_diode-affichage">
                             <div id="A0_diode-1" class="diode"></div>
                             <div id="A0_diode-2" class="diode"></div>
                             <div id="A0_diode-3" class="diode"></div>
@@ -123,7 +156,7 @@
                             <div id="A0_diode-7" class="diode"></div>
                             <div id="A0_diode-8" class="diode"></div>/
                         </div>
-                        <button type="submit" id="B1b_btn-ok" class="btns">OK</button>
+                        <button type="submit" class="btns">OK</button>
                     </div>
                 </div>
             </div>

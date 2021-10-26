@@ -45,12 +45,6 @@ body {
     border-radius: 100%;
 }
 
-/*_________ Btn Speed / Flash _______________*/
-.btn-sf {
-    width: 60px;
-    height: 40px;
-}
-
 /*_________ Btn Save / Load _______________*/
 .btn-sl {
     height:50%;
@@ -69,10 +63,6 @@ body {
 }
 
 /*______________ Btn Play / Pause _____________*/
-.btn-pp {
-    width: 60px;
-    height: 40px;
-}
 
 .btn-play:hover {
     background-color: rgb(2, 129, 19);
@@ -81,7 +71,20 @@ body {
 .btn-pause:hover {
     background-color: rgb(151, 1, 1);
 }
+/*______________ Faux Btn Speed _____________*/
+#A0_btn-speed {
+    padding: 0;
+}
 
+#A0_btn-speed a { /*TODO pas se faire chier avec les liens DANS les boutons, plutôt faire un lien qui RESSEMBLE à un bouton*/
+    padding: 9px 10px 9px 8px;
+    text-decoration: none;
+    color: black;
+}
+
+#A0_btn-speed a:hover {
+    color: rgb(236, 235, 235);
+}
 /*______________ Btn Transition _____________*/
 .btntrans {
     width: 30px;
@@ -89,19 +92,19 @@ body {
 }
 
 /*______________ Btn Submit _____________*/
-.btn-submit {
+.btn-sub {
     width: max-content;
     min-width: 60px;
     margin: 5px;
     padding: 5px;
 }
 
-button[type*="submit"] {
+/* button[type*="submit"] {
     width: max-content;
     min-width: 60px;
     margin: 5px;
     padding: 5px;
-}
+} */
 
 /* __________________________ Inputs __________________________*/
 select {
@@ -410,19 +413,6 @@ input[type='range']::-webkit-slider-thumb {
     margin: 40px auto 20px auto;
 }
 
-#A0_btn-speed {
-    padding: 0;
-}
-#A0_btn-speed a { /*TODO pas se faire chier avec les liens DANS les boutons, plutôt faire un lien qui RESSEMBLE à un bouton*/
-    padding: 13px 10px 12px 12px;
-    text-decoration: none;
-    color: black;
-}
-
-#A0_btn-speed a:hover {
-    color: rgb(236, 235, 235);
-}
-
 /*------------------------------------------------------------------------------*/
 /*-----------------------------------EDITEUR RYTHME ----------------------------*/
 /*------------------------------------------------------------------------------*/
@@ -466,7 +456,7 @@ color: black;
 /*------------------------------------------------------------------------------*/
 /*--------------------------------------PUBS -----------------------------------*/
 /*------------------------------------------------------------------------------*/
-#ads {
+.ads {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -764,7 +754,6 @@ form {
 }
 
 #connexion-container div:last-child {
-    border-top: solid 1px black;
     margin-top: 20px;
 }
 
