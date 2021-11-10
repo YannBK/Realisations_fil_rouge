@@ -1,5 +1,6 @@
 
-
+/* sur internet explorer c'est mort...en même temps il faut arrêter son utilisation sous perfusion.*/
+/*régler les couleurs de mon écran gauche, c'est chaud c'est rouge...mais pas représentatif des écrans du commun des mortels*/
 /*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ GENERAL _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 body {
     background-color: rgb(46, 46, 46);
@@ -10,19 +11,19 @@ body {
 .appareil_1,
 .appareil_2 {
     position: relative;
-    margin: 15vh auto auto auto;
+    margin: 10vh auto auto auto;
     background-color: rgba(53, 53, 53, 0.9);
+    /* background-color: rgba(255, 238, 217, 0.9); */
     border-radius: 10px;
     width: 60vw;
     height: auto; 
     min-height: 600px;
-    color: rgb(236, 235, 235);
-    /* overflow: scroll;  */
-    /*TODO on ne peut pas avoir le scroll apparent QUE lorsqu'il y en a besoin ?*/
+    color: rgb(255, 238, 217);
+    /* color: rgb(53,53,53); */
 }
 
 /* _____________________ Boutons ____________________*/
-/*TODO harmoniser tous ces boutons au maximum ! c'i le boldel ! */
+/* --------- btns généraux --------- */
 .btns {
     background-color: #575757;
     border-radius: 10px;
@@ -31,7 +32,7 @@ body {
 
 .btns:hover {
     background-color: #424242;
-    color: rgb(236, 235, 235);
+    color: rgb(255, 238, 217);
     cursor: pointer;
 }
 
@@ -39,13 +40,20 @@ body {
     border-color: azure;
 }
 
+.btn-sub {
+    width: max-content;
+    min-width: 60px;
+    margin: 5px;
+    padding: 5px;
+}
+/* --------- btns écran principal --------- */
 .btn15 {
     width: 40px;
     height: 40px;
     border-radius: 100%;
 }
 
-/*_________ Btn Save / Load _______________*/
+/* ______ Save / Load ______ */
 .btn-sl {
     height:50%;
     width: 60px;
@@ -59,10 +67,10 @@ body {
 }
 
 .btn-sl a:hover {
-    color: rgb(236, 235, 235);
+    color: rgb(255, 238, 217);
 }
 
-/*______________ Btn Play / Pause _____________*/
+/* ______ Play / Pause ______ */
 
 .btn-play:hover {
     background-color: rgb(2, 129, 19);
@@ -71,40 +79,25 @@ body {
 .btn-pause:hover {
     background-color: rgb(151, 1, 1);
 }
-/*______________ Faux Btn Speed _____________*/
+/* ______ Faux Btn Speed ______ */
 #A0_btn-speed {
     padding: 0;
 }
 
-#A0_btn-speed a { /*TODO pas se faire chier avec les liens DANS les boutons, plutôt faire un lien qui RESSEMBLE à un bouton*/
+#A0_btn-speed a { 
     padding: 9px 10px 9px 8px;
     text-decoration: none;
     color: black;
 }
 
 #A0_btn-speed a:hover {
-    color: rgb(236, 235, 235);
+    color: rgb(255, 238, 217);
 }
-/*______________ Btn Transition _____________*/
+/* --------- Btn Ecran Transition --------- */
 .btntrans {
     width: 30px;
     height: 30px;
 }
-
-/*______________ Btn Submit _____________*/
-.btn-sub {
-    width: max-content;
-    min-width: 60px;
-    margin: 5px;
-    padding: 5px;
-}
-
-/* button[type*="submit"] {
-    width: max-content;
-    min-width: 60px;
-    margin: 5px;
-    padding: 5px;
-} */
 
 /* __________________________ Inputs __________________________*/
 select {
@@ -113,7 +106,8 @@ select {
 }
 
 select:hover {
-    color: rgb(236, 235, 235);
+    color: rgb(255, 238, 217);
+    cursor: pointer;
 }
 
 input[type*="number"] {
@@ -121,6 +115,9 @@ input[type*="number"] {
     height: 20px;
 }
 
+.text{
+    height: 20px;
+}
 textarea {
     width: 70%;
     height: 8rem;
@@ -145,7 +142,7 @@ h1 {
     color: #000;
     font-size: 2rem;
     position: fixed;
-    top: 50px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -160,8 +157,9 @@ h2 {
 
 h2 a {
     text-decoration: none;
-    color: rgb(236, 235, 235);
+    color: rgb(255, 238, 217);
     font-size: 1.3rem;
+    margin-right: 10px;
 }
 
 h3 {
@@ -183,6 +181,13 @@ h5 {
     display: block;
     min-width: 100px;
 }
+h6 {
+    display: none;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    font-size: 1rem;
+}
 
 /*_________________ Divers ______________*/
 p {
@@ -191,16 +196,18 @@ p {
 }
 
 .ecran-texte {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .star {
     color: red;
 }
 
-/*-------------------------------------------------*/
-/* ------------------ bouton switch ----------------*/
-/*-------------------------------------------------*/
+/*----------------------------------------------------------------------*/
+/* ------------------------- boutons switch -----------------------------*/
+/*----------------------------------------------------------------------*/
 /* Label contenant le slider */
 .switch {
     position: relative;
@@ -265,7 +272,7 @@ input:checked + .slider::before {
 /*-------------------------------------------BURGER----------------------------*/
 /*------------------------------------------------------------------------------*/
 
-#hamnav { /*menu nav hamburger*/ /*TODO besoin de mettre un genre de overflow:scroll pour les mobiles en format paysage ?*/
+#hamnav { /*menu nav hamburger*/
     width: 100%;
     height: 50px;
     background: #000;
@@ -274,11 +281,9 @@ input:checked + .slider::before {
 }
 
 #hamitems { /*div de liens*/
-    /* display: flex;  */
     display: none; 
     background: #000;
-    position: sticky; /*comme d'hab pb si la page scroll*//* il faudrait pouvoir l'accrocher à un point, un élément...*/
-    /*TODO position:sticky ? => pas sûr du tout, ici ça marche mais c'est peut-être un hasard*/
+    position: sticky;
     width: 60vw;
     border-radius: 10px;
     z-index: 100;
@@ -290,7 +295,7 @@ input:checked + .slider::before {
     margin: 0;
     padding: 13px;
     box-sizing: border-box;
-    color: rgb(236, 235, 235);
+    color: rgb(255, 238, 217);
     text-decoration: none;
     text-align: center;
     border-top: 1px solid #333;
@@ -318,6 +323,10 @@ input:checked + .slider::before {
     text-align: center;
     justify-content: center;
     border-radius: 10px 10px 0 0;    
+}
+
+#hamnav label:hover {
+    cursor: pointer;
 }
 
 #hamnav input:checked ~ #hamitems { 
@@ -435,7 +444,7 @@ color: black;
 }
 
 .A0_btn_rythme_avance a:hover {
-    color: rgb(236, 235, 235);
+    color: rgb(255, 238, 217);
 }
 
 .A0_rythme_diode{
@@ -472,7 +481,7 @@ color: black;
 /*------------------------------------------------------------------------------*/
 #A0_liste-sons {
     position: relative;
-    text-align: center; /*TODO les centrer mais alignés sur la droite, en gros les btn radio en ligne verticale... ou alors cacher les btn, mais alors il me faut le chgmt de couleur de la radio activée*/
+    text-align: center; /* les centrer mais alignés sur la droite, en gros les btn radio en ligne verticale... ou alors cacher les btn, mais alors il me faut le chgmt de couleur de la radio activée*/
     left: 0;
 }
 /* Masquez la forme Popup */
@@ -481,7 +490,6 @@ color: black;
     position: fixed;/*sticky ? */
     top:20vh;
     left: 20vw;
-    z-index: 9;
     margin: 0;
     padding: 0;
     border-radius: 10px;
@@ -500,7 +508,7 @@ color: black;
 #A0_liste-sons_form label{
     border-top: 1px solid #000;
     font-size: 1.2em;
-    padding: 10px;
+    padding: 10px 0;
     width: 100%;
 }
 
@@ -510,7 +518,7 @@ color: black;
 
 #A0_liste-sons_form input:checked{
     /* background-color: rgb(197, 13, 13); */
-    /*TODO ^^ via CSS, sinon via JS => quand input:radio checked, son label change de bckgrd*/
+    /*TODO  via JS => quand input:radio checked, son label change de bckgrd*/
 }
 
 #checksons-label {
@@ -530,12 +538,8 @@ color: black;
 
 #checksons-label:hover {
     background-color: #424242;
-    color: rgb(236, 235, 235);
+    color: rgb(255, 238, 217);
     cursor: pointer;
-}
-
-#checksons-label:active {
-    border-color: azure;
 }
 
 #checksons {
@@ -554,20 +558,19 @@ color: black;
     border: none;
     padding-bottom: 12px;
     padding-top: 12px;
-    color: rgb(236, 235, 235);
+    color: rgb(255, 238, 217);
 }
 
 #A0_sons-play:hover {
     background: #401408; 
 }
 
-
 /*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ ECRANS _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 /*------------------------------------------------------------------------------*/
 /*------------------------Ecran TRANSITION  -----------------------*/
 /*------------------------------------------------------------------------------*/
 #trans_tableau {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     padding: 5px;
 }
 
@@ -609,7 +612,7 @@ color: black;
 }
 
 .trans-sl a:hover {
-    color: rgb(236, 235, 235);
+    color: rgb(255, 238, 217);
 }
 
 .A0_rythme_diode button[type*="submit"] {
@@ -622,8 +625,12 @@ color: black;
     border-bottom: solid 1px black;
 }
 
+.btn-schema{
+    width: 100px;
+}
+
 /*------------------------------------------------------------------------------*/
-/*------------------------Ecran HARMONIE  -----------------------*/
+/*-------------------------------------- Ecran HARMONIE  -----------------------*/
 /*------------------------------------------------------------------------------*/
 #container-grille {
     background-color: rgba(0, 245, 172, 0.3);
@@ -662,9 +669,9 @@ form {
     margin-right: 5px;
 }
 
-/*------------------------------------------------------------------------------*/
-/*------------------------Ecran BOX-TIROIR (speed, préf)  -----------------------*/
-/*------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*-------------------- Ecrans BOX-TIROIR (speed, préf, accord)  -------------------*/
+/*---------------------------------------------------------------------------------*/
 .box-div {
     border-bottom: solid 1px #000;
 }
@@ -735,6 +742,41 @@ form {
     margin: auto;
 }
 
+/*____________________ Ecran ACCORD ______________________*/
+#diapason-bandeau {
+    display: none;
+}
+
+#diapason-jauge {
+    background-color: rgba(0, 245, 172, 0.3);
+    height: 200px;
+    max-width: 100%;
+    margin: 0 20px;
+}
+#diapason-detection {
+    text-align: center;
+}
+
+#choix-alt {
+    text-align: center;
+}
+
+#transposition #transpo:checked ~ form,
+#oreille #oreil:checked ~ form{
+    display: block;
+}
+
+.accord-form {
+    display: none;
+    text-align:center;
+    margin: auto;
+}
+
+#oreille form div {
+    margin : 5px;
+}
+
+
 /*------------------------------------------------------------------------------*/
 /*----------------------------Ecran CONTACT / CONNEXION  -----------------------*/
 /*------------------------------------------------------------------------------*/
@@ -766,6 +808,7 @@ form {
     justify-content: space-between;
     height: 30px;
     margin: 10px;
+    padding: 5px;
     border: solid 1px black;
     background-color: #777777;
 }
@@ -784,6 +827,99 @@ form {
 
 .saves button:last-child {
     margin: 0;
+}
+
+/*------------------------------------------------------------------------------*/
+/*--------------------------------- POPUP SAVE ---------------------------------*/
+/*------------------------------------------------------------------------------*/
+
+.popup-save{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53,53,53,0.6);
+}
+
+.form-save{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(43,43,43,0.9);
+    border: solid 1px rgb(255, 238, 217);
+    border-radius: 5px;
+    margin: 30vh auto;
+    padding: 30px 20px;
+    width: 250px;
+    /* max-width: 90vw; */
+    text-align: center;
+}
+
+.form-save input{
+    margin: 10px;
+}
+
+.close-save{
+    position: absolute;
+    color: rgb(159, 159, 159);
+    top: 0;
+    right: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.close-save:hover{
+    color: rgb(255, 238, 217);
+    cursor: pointer;
+}
+
+/*------------------------------------------------------------------------------*/
+/*----------------------------------- POPUP DIODE ------------------------------*/
+/*------------------------------------------------------------------------------*/
+/*TODO à mettre en forme, et rajouter une légende colorée à la place des radio*/
+.popup-diode{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53,53,53,0.6);
+}
+
+.form-diode{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(43,43,43,0.9);
+    border: solid 1px rgb(255, 238, 217);
+    border-radius: 5px;
+    margin: 30vh auto;
+    padding: 30px 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.form-diode input{
+    margin: 10px;
+}
+
+.close-diode{
+    position: absolute;
+    color: rgb(159, 159, 159);
+    top: 0;
+    right: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.close-diode:hover{
+    color: rgb(255, 238, 217);
+    cursor: pointer;
 }
 
 /*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ MEDIA _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
@@ -941,3 +1077,5 @@ form {
         opacity: 0;
     }
 }
+
+

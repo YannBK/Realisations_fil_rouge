@@ -23,15 +23,15 @@
                     <label for="hamburger">&#9776;</label>
                     <input type="checkbox" id="hamburger" />
                     <h2>
-                        <a href="index.html">&larr; </a>
+                        <a href="index.html"><!--&#9750;-->&larr;</a>
                         SPEED TRAINING
                     </h2>
                     <div id="hamitems">
                         <a href="index.html">Métronome</a>
                         <a href="transitions.html">Rythme avancé</a>
-                        <a href="speed.html">Speed training</a>
+                        <!-- <a href="speed.html">Speed training</a> -->
                         <a href="harmo.html">Grille harmonique</a>
-                        <a href="accordeur.html">Accordeur<button class="construction petit"><span>Waiting</span> for work</button></a>
+                        <a href="accordeur.html">Accordeur</a>
                         <a href="preferences.html">Préférences</a>
                         <a href="creation-connexion.html">Connexion / Création</a>
                         <a href="compte.html">Compte utilisateur<button class="construction petit"><span>Waiting</span> for work</button></a><!--ne s'affiche que si connecté-->
@@ -48,7 +48,6 @@
                         </h4>
                     </label>
                         <input type="radio" name="speed" class="box-none" id="count">
-                    <!--! UTILISER LES SECTION !!!! -->
                     <form  action="" method="POST" id="decompte" class="speed-form">
                         <div>
                             <label for="nb-count">
@@ -86,7 +85,7 @@
                         </div>        
                         <fieldset>
                             <div>
-                                <input type="radio" name="inc" id="inc-mesure" value="inc-mesure">
+                                <input type="radio" name="inc" id="inc-mesure" value="inc-mesure" checked>
                                 <label for="inc-mesure">
                                     nb de mesure
                                 </label>
@@ -144,7 +143,7 @@
                         </div>
                             <fieldset>
                                 <div>
-                                    <input type="radio" name="dec" id="dec-mesure" value="dec-mesure">
+                                    <input type="radio" name="dec" id="dec-mesure" value="dec-mesure" checked>
                                     <label for="dec">  
                                         nb de mesure
                                     </label>
@@ -190,7 +189,7 @@
                             <label for="choix-mute">
                                 Régulier
                             </label>
-                            <input type="radio" name="choix-mute" id="mute-reg" value="mute-reg">
+                            <input type="radio" name="choix-mute" id="mute-reg" value="mute-reg" checked>
                         </div>
                         <div>
                                 <label for="mes-jouees"

@@ -18,12 +18,12 @@
         <h1>ZE METRONOME</h1>
     </header>
     <main>
-        <div  class="appareil_1">
+        <div  class="appareil_2">
             <nav id="hamnav">
                 <label for="hamburger">&#9776;</label>
                 <input type="checkbox" id="hamburger" />
                 <h2>
-                    <a href="index.html">&larr; </a>
+                    <a href="index.html"><!--&#9750;-->&larr;</a>
                     ACCORDEUR
                 </h2>
                 <div id="hamitems">
@@ -31,8 +31,7 @@
                     <a href="transitions.html">Rythme avancé</a>
                     <a href="speed.html">Speed training</a>
                     <a href="harmo.html">Grille harmonique</a>
-                    <a href="accordeur.html">Accordeur<button class="construction petit"><span>Waiting</span> for
-                            work</button></a>
+                    <!-- <a href="accordeur.html">Accordeur</a> -->
                     <a href="preferences.html">Préférences</a>
                     <a href="creation-connexion.html">Connexion / Création</a>
                     <a href="compte.html">Compte utilisateur<button class="construction petit"><span>Waiting</span> for
@@ -44,56 +43,55 @@
                 </div>
             </nav>
 
-
-            <!--!popup autorisation accès microphone + enregistrement à l'ouverture de la page-->
-            <!--faire déjà une ébauche de ce qu'il faut, avec une belle div vide pour le diapason proprement dit-->
-            <!--faire double emploi : un diapason si accès microphone, et jouer les notes si pas accès-->
+            <!--popup autorisation accès microphone + enregistrement à l'ouverture de la page-->
             <!--!pour les fréquences, soundcorset les indique en haut...mais on doit pouvoir trouver des tableaux (A1=55Hz B1b= 58Hz...)-->
             <div id="diapason">
                 <div id="diapason-graphique">
-                    <div id="diapason_jauge">
+                    <div id="diapason-jauge">
 
                         <div id="construction">
                             <h3>page en construction</h3>
-                            <button class="construction"><span>Waiting</span> for work</button>
+                            <button class="construction"><span>Waiting</span> for JS</button>
                         </div>
 
                     </div>
 
-                    <div id="diapason_bandeau">
-
-                        <div id="construction">
-                            <button class="construction"><span>Waiting</span> for work</button>
-                        </div>
+                    <div id="diapason-bandeau">
                     
                     </div>
 
                 </div>
-                <div id="diapason-détection">
+                <!-- <div id="diapason-detection">
                     <div id="bandeau">
                         <div id="aff-note">
                             Ré
                         </div>
                         <div id="aff-alteration">
-                            #
+                            &#9839;
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div id="choix-alt">
                     <form action="" method="post">
                         <fieldset>
-                            <legend>Choix d'altération</legend>
+                            <legend>Choix d'altération affichée</legend>
                             <input type="radio" name="alt" id="#" value="#" checked>
-                            <label for="#">#</label>
+                            <label for="#">&#9839;</label>
                             <input type="radio" name="alt" id="b" value="b">
-                            <label for="b">b</label>
+                            <label for="b">&#9837;</label>
                         </fieldset>
                     </form>
                 </div>
             </div>
-            <div id="transpositon">
-                <h3>Transposition</h3>
-                <form action="" method="post">
+
+            <div id="transposition" class="box-div">
+                <label for="transpo" class="box-choix">
+                    <h4>
+                        Transposition
+                    </h4>
+                </label>
+                    <input type="radio" name="accord" class="box-none" id="transpo">
+                <form action="" method="post" class="accord-form">
                     <fieldset>
                         <legend>Quelle tonalité d'instrument? :</legend>
                         <label for="note-transpo"></label>
@@ -104,7 +102,7 @@
                         <input type="radio" name="note-transpo" id="C#" value="C#">
                         <label for="C#">
                             <span>C</span>
-                            <span>#</span><!--c'est pas en mettant des spans que que vais pouvoir changer l'affichage de notations et des altérations, mais ça permet de mettre des commentaires gros comme ça pour ne pas oublier quand on passera au code dynamique-->
+                            <span>&#9839;</span><!--c'est pas en mettant des spans que que vais pouvoir changer l'affichage de notations et des altérations, mais ça permet de mettre des commentaires gros comme ça pour ne pas oublier quand on passera au code dynamique-->
                         </label>
                         <input type="radio" name="note-transpo" id="D" value="D">
                         <label for="D">
@@ -112,7 +110,7 @@
                         <input type="radio" name="note-transpo" id="D#" value="D#">
                         <label for="D#">
                             <span>D</span>
-                            <span>#</span>
+                            <span>&#9839;</span>
                         </label>
                         <input type="radio" name="note-transpo" id="E" value="E">
                         <label for="E">
@@ -123,7 +121,7 @@
                         <input type="radio" name="note-transpo" id="F#" value="F#">
                         <label for="F#">
                             <span>F</span>
-                            <span>#</span>
+                            <span>&#9839;</span>
                         </label>
                         <input type="radio" name="note-transpo" id="G" value="G">
                         <label for="G">
@@ -131,7 +129,7 @@
                         <input type="radio" name="note-transpo" id="G#" value="G#">
                         <label for="G#">
                             <span>G</span>
-                            <span>#</span>
+                            <span>&#9839;</span>
                         </label>
                         <input type="radio" name="note-transpo" id="A" value="A">
                         <label for="A">
@@ -139,7 +137,7 @@
                         <input type="radio" name="note-transpo" id="A#" value="A#">
                         <label for="A#">
                             <span>A</span>
-                            <span>#</span>
+                            <span>&#9839;</span>
                         </label>
                         <input type="radio" name="note-transpo" id="B" value="B">
                         <label for="B">
@@ -148,10 +146,15 @@
                     </fieldset>
                 </form>
             </div>
-<!--! l'id sert à être identifié par le label, ok, et doit être unique, ok, Mais la value peut-elle e^tre la m^me. Oui je pense, puisque son utilité est de transmettre de l'information pour charger les bonnes données. Et do c'est do, peut importe qu'il ait 16 données reliées à lui, comme sa fréquence, ses fréquences, des fichiers audio, des strings associées etc. oui je pense-->
-            <div id="oreille">
-                <h3>Accordage d'oreille</h3>
-                <form action="" method="post">
+
+            <div id="oreille" class="box-div">
+                <label for="oreil" class="box-choix">
+                    <h4>
+                        Accordage d'oreille
+                    </h4>
+                </label>
+                    <input type="radio" name="accord" class="box-none" id="oreil">
+                <form action="" method="post" class="accord-form">
                     <fieldset>
                         <legend>Quelle tonalité d'instrument? :</legend>
                         <label for="note-oreille"></label>
@@ -162,7 +165,7 @@
                         <input type="radio" name="note-transpo" id="C#" value="C#">
                         <label for="C#">
                             <span>C</span>
-                            <span>#</span>
+                            <span>&#9839;</span>
                         </label>
                         <input type="radio" name="note-transpo" id="D" value="D">
                         <label for="D">
@@ -170,7 +173,7 @@
                         <input type="radio" name="note-transpo" id="D#" value="D#">
                         <label for="D#">
                             <span>D</span>
-                            <span>#</span>
+                            <span>&#9839;</span>
                         </label>
                         <input type="radio" name="note-transpo" id="E" value="E">
                         <label for="E">
@@ -181,7 +184,7 @@
                         <input type="radio" name="note-transpo" id="F#" value="F#">
                         <label for="F#">
                             <span>F</span>
-                            <span>#</span>
+                            <span>&#9839;</span>
                         </label>
                         <input type="radio" name="note-transpo" id="G" value="G">
                         <label for="G">
@@ -189,7 +192,7 @@
                         <input type="radio" name="note-transpo" id="G#" value="G#">
                         <label for="G#">
                             <span>G</span>
-                            <span>#</span>
+                            <span>&#9839;</span>
                         </label>
                         <input type="radio" name="note-transpo" id="A" value="A">
                         <label for="A">
@@ -197,7 +200,7 @@
                         <input type="radio" name="note-transpo" id="A#" value="A#">
                         <label for="A#">
                             <span>A</span>
-                            <span>#</span>
+                            <span>&#9839;</span>
                         </label>
                         <input type="radio" name="note-transpo" id="B" value="B">
                         <label for="B">
@@ -230,15 +233,6 @@
 
                     <button type="submit" class="btns btn-sub">Play</button>
                 </form>
-
-
-
-
-
-
-
-
-
             </div>
 
         </div>

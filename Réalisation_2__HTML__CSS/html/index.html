@@ -11,15 +11,12 @@
     <!--CSS-->
     <link rel="stylesheet" href="../css/stylesreset.css">
     <link rel="stylesheet" href="../css/commun_flex.css">
-
-    <!--TODO TODO.js-->
 </head>
 
 <body>
     <header>
         <h1>ZE METRONOME</h1>
     </header>
-    <!--TODO faire une nav "normale", en plus du hamburger, pour PC ?-->
     <main>
         <div class="appareil_1">
 
@@ -27,15 +24,15 @@
                     <label for="hamburger">&#9776;</label>
                     <input type="checkbox" id="hamburger" />
                     <h2>
-                        <!--!la flèche du titre sur les autres écrans, soit faire un réel retour à la page précédente, soit la changer en logo "maison", c'est plus parlant-->
+                        <!--la flèche du titre sur les autres écrans, soit faire un réel retour à la page précédente, soit la changer en logo "maison", c'est plus parlant-->
                         METRONOME
                     </h2>
                     <div id="hamitems">
-                        <a href="index.html">Métronome</a>
+                        <!-- <a href="index.html">Métronome</a> -->
                         <a href="transitions.html">Rythme avancé</a>
                         <a href="speed.html">Speed training</a>
                         <a href="harmo.html">Grille harmonique</a>
-                        <a href="accordeur.html">Accordeur<button class="construction petit"><span>Waiting</span> for work</button></a>
+                        <a href="accordeur.html">Accordeur</a>
                         <a href="preferences.html">Préférences</a>
                         <a href="creation-connexion.html">Connexion / Création</a>
                         <a href="compte.html">Compte utilisateur<button class="construction petit"><span>Waiting</span> for work</button></a><!--ne s'affiche que si connecté-->
@@ -50,7 +47,7 @@
                     <label for="nb-bips">Nombre de beat :</label>
                     <div>
                         <select name="nb-bips" id="nb-bips">
-                            <!--TODO reliés à la gestion du rythme et du nombre de diodes-->
+                            <!-- reliés à la gestion du rythme et du nombre de diodes-->
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -80,7 +77,6 @@
                     <label for="nb-tps">Unité de temps :</label>
                     <div>
                         <select name="nb-tps" id="nb-tps">
-                            <!--TODO Est-ce bien utile au final, le nb de bips fait le job peut importe que tu compte en noire, en croche ou autre...Peut peut-être permettre des préréglages de la gestion du rythme sur tous les temps...mouaif...et une symétrie visuelle;)-->
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="4" selected>4</option>
@@ -93,22 +89,22 @@
             </div>
 
             <div id="A0_affichage">
-                <!--à l'intérieur affichage via code en dur, pour harmo, flash, défilement rythme?-->
+                <!--à l'intérieur affichage via code en dur, pour harmo, flash, défilement rythme-->
                 <div id="A0_affichage_defilement-simple">
-                    <p>affichage déroulant, dynamique et tout ce que tu veux, et plus encore mon grand !sfsfsfsfsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfghghghghghghghghghghghghghghghghghghghghghghghghghghghghghghgh</p>
+                    <p>affichage déroulant, dynamique et tout ce que tu veux, et plus encore mon grand ! &#9834;&#9835;&#9834;&#9835;&#9835;&#9833;&#9834;&#9836;&#9836;&#9834;&#9833;&#9835;&#9834;</p>
                 </div>
             </div>
 
             <form id="A0_range">
                 <input type="range" name="barre-tactile" id="A0_tempo_barre-tactile" min="1" max="400" value="120">
             </form>
-<!--!la value sera dynamique-->
+<!--la value sera dynamique-->
             <div id="A0_gestion_bpm">
                 <div id="A0_btn_gch" class="btn_gch">
-                    <button class="btn15 btns">
+                    <button class="btns btn15">
                         +1
                     </button>
-                    <button class="btn15 btns">
+                    <button class="btns btn15">
                         +5
                     </button>
                 </div>
@@ -116,17 +112,16 @@
                     <div>
                         120
                     </div>
-                    <!--TODO à rendre dynamique avec JS-->
+                    <!-- à rendre dynamique avec JS-->
                     <div>
-                        n
+                        &nbsp;&#9834;
                     </div>
-                    <!--?idem que pour nb-tps, bien utile, vraiment?-->
                 </div>
                 <div id="A0_btn_drt" class="btn_drt">
-                    <button class="btn15 btns">
+                    <button class="btns btn15">
                         +1
                     </button>
-                    <button class="btn15 btns">
+                    <button class="btns btn15">
                         +5
                     </button>
                 </div>
@@ -134,12 +129,11 @@
 
             <div id="A0_btn_bas" class="btn_bas">
 
-                <div id="A0_liste-sons"><!--<form> ?-->
+                <div id="A0_liste-sons"><!--!décalé sur Brave-->
                     <label for="checksons" id="checksons-label" class="btns btn15">                
                     Bip
                 </label>
                     <input type="checkbox" name="checksons" id="checksons">
-                    <!--!pb si checked d'une radio de la liste -> c'est réinitialisé à l'affichage suivant...-->
                     <div id="A0_liste-sons-popup">
                         <form action="" method="POST" id="A0_liste-sons_form">
                             <label for="son_1">
@@ -174,7 +168,7 @@
                 <button class="btns btn-sub btn-pause">
                     Stop
                 </button>
-                <button class="btns btn-sub btn-play">
+                <button class="btn-play btns btn-sub">
                     Play
                 </button>
                 <button class="btns btn15">
@@ -191,21 +185,20 @@
                 <button class="btns btn-sub">
                     Flash
                 </button>
-
             </div>
 
             <div class="A0_rythme">
                 <div class="A0_rythme_diode">
                     <button class="btns A0_btn_rythme_avance">
                         <a href="transitions.html">
-                            Avancé
+                            Avancé<!--!décalé sur Firefox-->
                         </a>
                     </button>
                     <div class="affiche-rythme A0_rythme_diode-affichage">
                         <!--les diodes seront affichées/supprimées dynamiquement.-->
+                        <!--il faudra assigner une valeur à chacune, ce sera surement des inputs au final-->
                         <div id="A0_diode-1" class="diode"></div>
                         <div id="A0_diode-2" class="diode"></div>
-                        <!--les diodes, simples div cliquables, ou autant de boutons?-->
                         <div id="A0_diode-3" class="diode"></div>
                         <div id="A0_diode-4" class="diode"></div>/
                         <div id="A0_diode-5" class="diode"></div>
@@ -230,10 +223,8 @@
                         <div id="A0_diode-24" class="diode"></div>/
                     </div>
                     <div>
-                        <button class="btn-sl btns">
-                            <a href="save.html">
+                        <button class="btn-sl btns save">
                                 Save
-                            </a>
                         </button>
                         <button class="btn-sl btns">
                             <a href="load.html">
@@ -247,12 +238,48 @@
             <div class="ads">
                 PUB PUB PUB PUB PUB PUB PUB
             </div>
+
+            <div class="popup-diode">
+                <form action="" method="post" class="form-diode"> <span class="close-diode">&times;</span>
+                    <label for="diode-null">
+                        <input type="radio" name="diode-value" id="diode-null" class="" value="diode-null">Null
+                    </label>
+                    <label for="diode-1">
+                        <input type="radio" name="diode-value" id="diode-1" class="" value="diode-1" checked>Son 1
+                    </label>
+                    <label for="diode-2">
+                        <input type="radio" name="diode-value" id="diode-2" class="" value="diode-2">Son 2
+                    </label>
+                    <label for="diode-3">
+                        <input type="radio" name="diode-value" id="diode-3" class="" value="diode-3">Son 3
+                    </label>
+                    <label for="diode-acc">
+                        <input type="radio" name="diode-value" id="diode-acc" class="" value="diode-acc">Accord
+                    </label>
+                    <label for="diode-acc-bip">
+                        <input type="radio" name="diode-value" id="diode-acc-bip" class="" value="diode-acc-bip">Accord + bip
+                    </label>
+                    <button type="submit" name="submit" class="btns btn-sub">Ok</button>
+                </form>
+            </div>
+
+            <div class="popup-save">
+                <form action="" method="post" class="form-save"> <span class="close-save">&times;</span>
+                        <h3>Sauvegarder</h3>
+                        <label for="name-save"> Donnez un nom : <span class="star">*</span></label>
+                        <input type="text" class="text" name="name-save" placeholder="Ma sauvegarde" required>
+                        <div class="btn-div-save">
+                            <button type="reset" name="reset" class="btns btn-sub reset-save">Annuler</button>
+                            <button type="submit" name="submit" class="btns btn-sub">Confirmer</button>
+                        </div>
+                </form>
+            </div>
         </div>
     </main>
     <footer>
 
     </footer>
 
-    <script src=""></script>
+    <script src="../js/popup-save.js"></script>
 </body>
 </html>
