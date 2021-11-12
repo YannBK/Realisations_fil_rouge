@@ -1,6 +1,6 @@
 
 /* sur internet explorer c'est mort...en même temps il faut arrêter son utilisation sous perfusion.*/
-/*régler les couleurs de mon écran gauche, c'est chaud c'est rouge...mais pas représentatif des écrans du commun des mortels*/
+/*régler les couleurs de mon écran gauche, c'est chaud, c'est rouge...mais pas représentatif des écrans du commun des mortels*/
 /*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ GENERAL _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 body {
     background-color: rgb(46, 46, 46);
@@ -9,7 +9,7 @@ body {
 }
 /*TODO il y a un vide sous l'appareil sur certains écrans*/
 .appareil_1,
-.appareil_2 {
+.appareil_2 { /*j'ai l'impression que ça va me faire c***r cette histoire lors de l'utilisation d'un template commun*/
     position: relative;
     margin: 10vh auto auto auto;
     background-color: rgba(53, 53, 53, 0.9);
@@ -79,20 +79,7 @@ body {
 .btn-pause:hover {
     background-color: rgb(151, 1, 1);
 }
-/* ______ Faux Btn Speed ______ */
-#A0_btn-speed {
-    padding: 0;
-}
 
-#A0_btn-speed a { 
-    padding: 9px 10px 9px 8px;
-    text-decoration: none;
-    color: black;
-}
-
-#A0_btn-speed a:hover {
-    color: rgb(255, 238, 217);
-}
 /* --------- Btn Ecran Transition --------- */
 .btntrans {
     width: 30px;
@@ -195,12 +182,6 @@ p {
     padding: 10px;
 }
 
-.ecran-texte {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .star {
     color: red;
 }
@@ -269,7 +250,7 @@ input:checked + .slider::before {
 }
 
 /*------------------------------------------------------------------------------*/
-/*-------------------------------------------BURGER----------------------------*/
+/*------------------------------------ NAV / BURGER ----------------------------*/
 /*------------------------------------------------------------------------------*/
 
 #hamnav { /*menu nav hamburger*/
@@ -333,6 +314,40 @@ input:checked + .slider::before {
     display: block; 
 }
 
+.checked-ok {
+    display: inline;
+    position: absolute;
+    right: 40px;
+    top: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:rgb(2, 129, 19);
+}
+
+.checked-none {
+    display: inline;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgb(151, 1, 1);
+    cursor: pointer;
+}
+
+.login{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+nav button {
+    position: absolute;
+    right: 20px;
+    top: 6px;   
+}
 
 /*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ METRONOME _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 /*------------------------------------------------------------------------------*/
@@ -434,7 +449,6 @@ input[type='range']::-webkit-slider-thumb {
 
 .A0_btn_rythme_avance {
     height: 100%;
-    padding: 0;
 }
 
 .A0_btn_rythme_avance a {
@@ -487,8 +501,8 @@ color: black;
 /* Masquez la forme Popup */
 #A0_liste-sons-popup {
     display: none;
-    position: fixed;/*sticky ? */
-    top:20vh;
+    position: fixed;
+    top:10vh;
     left: 20vw;
     margin: 0;
     padding: 0;
@@ -510,6 +524,10 @@ color: black;
     font-size: 1.2em;
     padding: 10px 0;
     width: 100%;
+}
+
+#A0_liste-sons_form label:first-child{
+    border-top: none;
 }
 
 #A0_liste-sons_form label:hover {
@@ -830,6 +848,23 @@ form {
 }
 
 /*------------------------------------------------------------------------------*/
+/*-------------------------------------Ecran EVALUATION  -----------------------*/
+/*------------------------------------------------------------------------------*/
+.ecran-texte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ecran-texte p{
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.ecran-texte form input{
+    margin: 5px;
+}
+/*------------------------------------------------------------------------------*/
 /*--------------------------------- POPUP SAVE ---------------------------------*/
 /*------------------------------------------------------------------------------*/
 
@@ -879,7 +914,7 @@ form {
 /*------------------------------------------------------------------------------*/
 /*----------------------------------- POPUP DIODE ------------------------------*/
 /*------------------------------------------------------------------------------*/
-/*TODO à mettre en forme, et rajouter une légende colorée à la place des radio*/
+/*TODO à mettre en forme, et rajouter une légende colorée à la place/en plus des radio*/
 .popup-diode{
     display: none;
     position: fixed;

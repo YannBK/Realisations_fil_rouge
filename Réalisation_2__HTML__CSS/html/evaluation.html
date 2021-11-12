@@ -34,29 +34,44 @@
                     <a href="accordeur.html">Accordeur</a>
                     <a href="preferences.html">Préférences</a>
                     <a href="creation-connexion.html">Connexion / Création</a>
-                    <a href="compte.html">Compte utilisateur<button class="construction petit">Waiting for work</button></a><!--ne s'affiche que si connecté-->
-                    <!-- <a href="evaluation.html">&#201;valuez-moi!</a> -->
+                    <a href="compte.html">Compte utilisateur</a><!--ne s'affiche que si connecté-->
+                    <a href="evaluation.html">&#201;valuez-moi!</a>
                     <a href="contact.html">Contact</a>
                     <a href="mentions-legales.html">Mentions légales</a>
                 </div>
+                <a href="creation-connexion.html">
+                    <button type="submit" value="connection" class="btns btn-sub">
+                    Connexion
+                    </button>
+                </a>
+                <span class="login">
+                    Login
+                </span>
+                <div class="checked-none">
+                    &times;
+                </div>
+                <div class="checked-ok">
+                    &#10004;
+                </div>
             </nav>
+
             <div class="ecran-texte">
                 <h3>&#201;valuez-moi</h3>
-                <p>En prenant le temps de noter cette petite application, vous lui permettez de s'améliorer! <br>Merci à
+                <p>En prenant le temps de noter cette petite application, vous lui permettez de s'améliorer! Si vous souhaitez détailler, direction l'onglet "Contact".<br>Merci à
                     vous.</p>
                 <form action="note.php" method="post">
                     <label for="note">
                         Votre note sur 5 :
                     </label>
-                        <input type="number" name="note" id="note" min="0" max="5" placeholder="5">
-                        <button type="submit" class="btns btn-sub">
+                    <input type="number" name="note" id="note" min="0" max="5" placeholder="5">
+                    <button type="submit" class="btns btn-sub">
                             Go
-                    </button>
+                    </button><!--!popup "merci de votre retour. Musicalement votre"-->
                 </form>
-                <p>Si vous voulez contribuer plus profondément à l'amélioration du métronome, et détailler vos louanges,
-                    critiques, et pistes de développement, n'hésitez pas à me contacter via le menu "Contact"</p>
-                <p>Merci encore de votre retour.</p>
-                <p>Musicalement votre</p>
+
+                <h3>Soutenez-moi</h3>
+                <p>Vous voulez contribuer plus profondément à l'amélioration du métronome, et encourager le développeur?</p>
+                <p>Proposer méthodes de dons (paypal, cb, crypto, soyons fous!</p>
             </div>
         </div>
     </main>
