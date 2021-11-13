@@ -11,33 +11,33 @@ body {
 .appareil_1,
 .appareil_2 { /*j'ai l'impression que ça va me faire c***r cette histoire lors de l'utilisation d'un template commun*/
     position: relative;
-    margin: 10vh auto auto auto;
-    background-color: rgba(53, 53, 53, 0.9);
+    margin: 10vh 20vw auto 20vw;
+    background-color: rgba(50, 48, 39, 0.9);
     /* background-color: rgba(255, 238, 217, 0.9); */
     border-radius: 10px;
     width: 60vw;
     height: auto; 
     min-height: 600px;
     color: rgb(255, 238, 217);
-    /* color: rgb(53,53,53); */
+    /* color: rgb(55,48,39); */
 }
 
 /* _____________________ Boutons ____________________*/
 /* --------- btns généraux --------- */
 .btns {
-    background-color: #575757;
+    background-color: rgb(80,74,72);
     border-radius: 10px;
     padding: 5px;
 }
 
 .btns:hover {
-    background-color: #424242;
+    background-color: rgb(66,60,58);
     color: rgb(255, 238, 217);
     cursor: pointer;
 }
 
 .btns:active {
-    border-color: azure;
+    border-color: rgb(255, 238, 217);
 }
 
 .btn-sub {
@@ -80,6 +80,14 @@ body {
     background-color: rgb(151, 1, 1);
 }
 
+.btn-play:active {
+    background-color: rgb(0, 82, 12);
+}
+
+.btn-pause:active {
+    background-color: rgb(94, 0, 0);
+}
+
 /* --------- Btn Ecran Transition --------- */
 .btntrans {
     width: 30px;
@@ -88,7 +96,7 @@ body {
 
 /* __________________________ Inputs __________________________*/
 select {
-    background-color: #575757;
+    background-color: rgb(87,87,87);
     border-radius: 10px;
 }
 
@@ -178,12 +186,17 @@ h6 {
 
 /*_________________ Divers ______________*/
 p {
-    text-align: justify;
+    text-align: center;
+    line-height: 1.5rem;
     padding: 10px;
 }
 
 .star {
     color: red;
+}
+
+.affichages{
+    background-color: rgba(0, 255, 157,0.4);
 }
 
 /*----------------------------------------------------------------------*/
@@ -210,7 +223,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(189, 189, 189);
+    background-color: rgba(100, 93, 84,1);
     -webkit-transition: .4s;
     transition: .2s;
 }
@@ -222,17 +235,17 @@ p {
     width: 20px;
     left: 0;
     bottom: 0;
-    background-color: rgba(12, 141, 102, 0.5);
+    background-color: rgba(0, 255, 157,0.5);
     -webkit-transition: .2s;
     transition: .2s;
 }
 
 input:checked + .slider {
-    background-color: rgba(71, 252, 197, 0.5);
+    /* background-color: rgba(0, 255, 157,0.4); */
 }
 
 input:checked + .slider::before {
-    background-color: #fff;
+    /* background-color: rgb(255, 238, 217); */
 }
 /* translation curseur */
 input:checked + .slider::before {
@@ -256,14 +269,14 @@ input:checked + .slider::before {
 #hamnav { /*menu nav hamburger*/
     width: 100%;
     height: 50px;
-    background: #000;
+    background: rgb(0,0,0);
     margin: 0;
     border-radius: 10px 10px 0 0;
 }
 
 #hamitems { /*div de liens*/
     display: none; 
-    background: #000;
+    background: rgb(0,0,0);
     position: sticky;
     width: 60vw;
     border-radius: 10px;
@@ -296,7 +309,7 @@ input:checked + .slider::before {
 
 #hamnav label { 
     display: inline-block; 
-    background: #000;
+    background: rgb(0,0,0);
     font-style: normal;
     font-size: 1.2em;
     padding: 10px;
@@ -335,6 +348,11 @@ input:checked + .slider::before {
     cursor: pointer;
 }
 
+.checked-none:hover,
+.checked-none:focus {
+    color: rgb(200, 0, 0);
+}
+
 .login{
     position: absolute;
     right: 60px;
@@ -347,6 +365,24 @@ nav button {
     position: absolute;
     right: 20px;
     top: 6px;   
+}
+
+.infobulle {
+    position: relative;
+}
+
+.infobulle:hover::after,
+.infobulle:focus::after {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    z-index: 1;
+    color:black;
+    font-size: 1rem;
+    padding: 5px 5px;
+    background-color:rgb(255, 238, 217);
+    border-radius: 3px;
 }
 
 /*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ METRONOME _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
@@ -376,7 +412,7 @@ nav button {
 
 #A0_affichage_defilement-simple{
     height: 100px;
-    background-color: rgba(71, 252, 197, 0.3);
+    /* background-color: rgba(0, 255, 157,0.4); */
     max-width: 100%;
     word-wrap: break-word;
     overflow: hidden;
@@ -420,7 +456,6 @@ input[type='range']::-webkit-slider-thumb {
     justify-content: center;
     align-items: center;
     width: 30vw;
-    background-color: rgba(0, 245, 172, 0.3);
 }
 
 #A0_btn_drt,
@@ -468,12 +503,12 @@ color: black;
     width: 100%;
 }
 
-.A0_rythme_diode-affichage {
+.affiche-rythme {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    background-color: rgba(71, 252, 197, 0.3);
+    /* height: 80px; */
 }
 
 /*------------------------------------------------------------------------------*/
@@ -483,8 +518,8 @@ color: black;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #000;
-    color: darkgoldenrod;
+    background-color: rgb(0,0,0);
+    color: rgb(184, 134, 11);
     height: 50px;
     width: 100%;
     border-radius: 0 0 10px 10px;
@@ -515,12 +550,12 @@ color: black;
     flex-direction: column;
     max-width: 60vw;
     margin: 0;
-    background-color: rgba(53, 53, 53, 1);
+    background-color: rgb(50, 48, 39);
     border-radius: 10px;
 }
 
 #A0_liste-sons_form label{
-    border-top: 1px solid #000;
+    border-top: 1px solid rgb(0,0,0);
     font-size: 1.2em;
     padding: 10px 0;
     width: 100%;
@@ -531,7 +566,7 @@ color: black;
 }
 
 #A0_liste-sons_form label:hover {
-    background-color: #401408;
+    background-color: rgb(64,20,8);
 }
 
 #A0_liste-sons_form input:checked{
@@ -540,24 +575,30 @@ color: black;
 }
 
 #checksons-label {
-    background-color: #575757;
-    border-radius: 100%;
-    padding: 8px;
-    color: #000;
+    /* background-color: rgb(80,74,72); */
+    border-radius: 50%;
+    padding: 10px 8px;
+    color: rgb(0,0,0);
     border: solid 2px;
-    border-top-color: #868686;/*trouver les bonnes couleurs de boutons*/
-    border-left-color: #868686;
-    border-bottom-color: #707070;
-    border-right-color: #707070;
+    border-top-color: rgb(110,110,110);
+    border-left-color: rgb(110,110,110);
+    border-bottom-color: rgb(116,116,116);
+    border-right-color: rgb(116,116,116);
     border-style: outset;
     position: relative;
     top: 15px;
 }
 
 #checksons-label:hover {
-    background-color: #424242;
     color: rgb(255, 238, 217);
-    cursor: pointer;
+}
+
+#checksons-label:active {
+    border-style:solid;/*en laissant outset le bas-droit n'arrive pas à être plus clair que gris clair*/
+    border-top-color: rgb(155,155,155);
+    border-left-color: rgb(155,155,155);
+    border-bottom-color: rgb(255, 238, 217);
+    border-right-color: rgb(255, 238, 217);
 }
 
 #checksons {
@@ -571,7 +612,7 @@ color: black;
 #A0_sons-play {
     width: 100%;
     margin: 0;
-    background-color: #000;
+    background-color: rgb(0,0,0);
     border-radius: 10px;
     border: none;
     padding-bottom: 12px;
@@ -580,7 +621,7 @@ color: black;
 }
 
 #A0_sons-play:hover {
-    background: #401408; 
+    background: rgb(64,20,8); 
 }
 
 /*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ ECRANS _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
@@ -640,7 +681,7 @@ color: black;
 }
 
 #trans-conteneur-1 {
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px rgb(0,0,0);
 }
 
 .btn-schema{
@@ -651,7 +692,6 @@ color: black;
 /*-------------------------------------- Ecran HARMONIE  -----------------------*/
 /*------------------------------------------------------------------------------*/
 #container-grille {
-    background-color: rgba(0, 245, 172, 0.3);
     height: 300px;
     max-width: 100%;
     margin:20px;
@@ -687,15 +727,29 @@ form {
     margin-right: 5px;
 }
 
+.cases{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(255,255,255);
+    border: solid 1px rgb(0,0,0);
+    color: rgb(50, 48, 39);
+    text-align: center;
+    line-height: 3rem;
+    font-weight: 900;
+}
+
+
+
+
 /*---------------------------------------------------------------------------------*/
 /*-------------------- Ecrans BOX-TIROIR (speed, préf, accord)  -------------------*/
 /*---------------------------------------------------------------------------------*/
 .box-div {
-    border-bottom: solid 1px #000;
+    border-bottom: solid 1px rgb(0,0,0);
 }
 
 .box-div:hover {
-    background-color: #333; 
+    background-color: rgb(50,48,39); 
 }
 
 .box-div form input,
@@ -766,7 +820,7 @@ form {
 }
 
 #diapason-jauge {
-    background-color: rgba(0, 245, 172, 0.3);
+    /* background-color: rgba(0, 255, 157,0.4); */
     height: 200px;
     max-width: 100%;
     margin: 0 20px;
@@ -794,10 +848,27 @@ form {
     margin : 5px;
 }
 
+/*_____________ Ecran CONNECTION / CREATION ______________*/
+#box-connect #connect:checked ~ form,
+#box-create #create:checked ~ form{
+    display: flex;
+}
 
-/*------------------------------------------------------------------------------*/
-/*----------------------------Ecran CONTACT / CONNEXION  -----------------------*/
-/*------------------------------------------------------------------------------*/
+.cocr-form {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.cocr-form input {
+    width: 50%;
+    border-radius: 5px;
+}
+#box-connect a{
+    color:rgb(245, 172, 78);
+}
+/*_____________ Ecran CONTACT ______________*/
 .cc-form {
     display: flex;
     flex-direction: column;
@@ -813,10 +884,6 @@ form {
     border-radius: 5px;
 }
 
-#connexion-container div:last-child {
-    margin-top: 20px;
-}
-
 /*------------------------------------------------------------------------------*/
 /*-------------------------------------------Ecran LOAD  -----------------------*/
 /*------------------------------------------------------------------------------*/
@@ -827,8 +894,8 @@ form {
     height: 30px;
     margin: 10px;
     padding: 5px;
-    border: solid 1px black;
-    background-color: #777777;
+    border: solid 1px rgb(0,0,0);
+    background-color: rgb(119,119,119);
 }
 
 .saves div img {
@@ -854,11 +921,6 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.ecran-texte p{
-    text-align: center;
-    line-height: 1.5rem;
 }
 
 .ecran-texte form input{
@@ -897,7 +959,7 @@ form {
     margin: 10px;
 }
 
-.close-save{
+.close{
     position: absolute;
     color: rgb(159, 159, 159);
     top: 0;
@@ -906,7 +968,7 @@ form {
     font-weight: bold;
 }
 
-.close-save:hover{
+.close:hover{
     color: rgb(255, 238, 217);
     cursor: pointer;
 }
@@ -943,20 +1005,73 @@ form {
     margin: 10px;
 }
 
-.close-diode{
-    position: absolute;
-    color: rgb(159, 159, 159);
+
+/*___________________ popup grille-case ____________________*/
+.popup-case{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
     top: 0;
-    right: 5px;
-    font-size: 1.5rem;
-    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53,53,53,0.6);
 }
 
-.close-diode:hover{
-    color: rgb(255, 238, 217);
-    cursor: pointer;
+.window-case{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(43,43,43,0.9);
+    border: solid 1px rgb(255, 238, 217);
+    border-radius: 10px;
+    margin: 10vh 22vw auto 22vw;
+    width: 56vw;
+    height: auto; 
+    min-height: 600px;
+    text-align: center;
 }
 
+.rythme-case {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 10px auto;
+}
+
+#ryth-custom {
+    height: max-content;
+}
+.form-case input{
+    margin: 10px;
+}
+
+.diodeH {
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.diodeH:hover {
+    background-color: green;
+}
+
+#harmo-custom-bip #bipH:checked ~ form,
+#harmo-custom-accor #accorH:checked ~ form{
+    display: block;/*flex?*/
+}
+
+.form-case {
+    display: none;
+    text-align:center;
+    margin: auto;
+}
+
+.diode-custom {
+    display: none;
+}
 /*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ MEDIA _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 /*------------------------------------------------------------------------------*/
 /*----------------------------------------MEDIA  1000 -------------------------------*/
@@ -965,6 +1080,11 @@ form {
     .appareil_1, 
     .appareil_2 {
         width: 80vw;
+        margin: 10vh 10vw auto 10vw;
+    }
+    .window-case{
+        margin: 10vh 12vw auto 12vw;
+        width: 76vw;
     }
     #hamitems {
         width: 80vw;
@@ -993,6 +1113,10 @@ form {
         flex-direction: column;
         justify-content: space-between;
         border-radius: 0;
+    }
+    .window-case{
+        margin: 0 2vw auto 2vw;
+        width: 96vw;
     }
     .appareil_2 {
         justify-content: flex-start;
@@ -1051,7 +1175,7 @@ form {
     width: 80px;
     margin-top: 10vh;
     background-color: transparent;
-    color: #fff;
+    color: rgb(255,255,255);
     font-weight: bold;
     animation: btn4 5s infinite linear;
     animation-timing-function: cubic-bezier(.58,.23,.52,.81);

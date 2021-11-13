@@ -49,6 +49,7 @@
                         Login
                     </span>
                     <div class="checked-none">
+                        <span class="infobulle" aria-label="Déconnexion">
                         &times;
                     </div>
                     <div class="checked-ok">
@@ -104,7 +105,7 @@
 
             <div id="A0_affichage">
                 <!--à l'intérieur affichage via code en dur, pour harmo, flash, défilement rythme-->
-                <div id="A0_affichage_defilement-simple">
+                <div id="A0_affichage_defilement-simple" class="affichages">
                     <p>affichage déroulant, dynamique et tout ce que tu veux, et plus encore mon grand ! &#9834;&#9835;&#9834;&#9835;&#9835;&#9833;&#9834;&#9836;&#9836;&#9834;&#9833;&#9835;&#9834;</p>
                 </div>
             </div>
@@ -122,7 +123,7 @@
                         +5
                     </button>
                 </div>
-                <div id="A0_bpm" class="">
+                <div id="A0_bpm" class="affichages">
                     <div>
                         120
                     </div>
@@ -143,7 +144,7 @@
 
             <div id="A0_btn_bas" class="btn_bas">
 
-                <div id="A0_liste-sons"><!--!décalé sur Brave-->
+                <div id="A0_liste-sons">
                     <label for="checksons" id="checksons-label" class="btns btn15">                
                     Bip
                 </label>
@@ -205,10 +206,10 @@
                 <div class="A0_rythme_diode">
                     <a href="transitions.html">
                         <button class="btns A0_btn_rythme_avance">
-                            Avancé<!--!décalé sur Firefox-->
+                            Avancé
                         </button>
                     </a>
-                    <div class="affiche-rythme A0_rythme_diode-affichage">
+                    <div class=" affiche-rythme affichages">
                         <!--les diodes seront affichées/supprimées dynamiquement.-->
                         <!--il faudra assigner une valeur à chacune, ce sera surement des inputs au final-->
                         <div id="A0_diode-1" class="diode"></div>
@@ -254,7 +255,7 @@
             </div>
 
             <div class="popup-diode">
-                <form action="" method="post" class="form-diode"> <span class="close-diode">&times;</span>
+                <form action="" method="post" class="form-diode"> <span class="close-diode close">&times;</span>
                     <label for="diode-null">
                         <input type="radio" name="diode-value" id="diode-null" class="" value="diode-null">Null
                     </label>
@@ -267,18 +268,12 @@
                     <label for="diode-3">
                         <input type="radio" name="diode-value" id="diode-3" class="" value="diode-3">Son 3
                     </label>
-                    <label for="diode-acc">
-                        <input type="radio" name="diode-value" id="diode-acc" class="" value="diode-acc">Accord
-                    </label>
-                    <label for="diode-acc-bip">
-                        <input type="radio" name="diode-value" id="diode-acc-bip" class="" value="diode-acc-bip">Accord + bip
-                    </label>
                     <button type="submit" name="submit" class="btns btn-sub">Ok</button>
                 </form>
             </div>
 
             <div class="popup-save">
-                <form action="" method="post" class="form-save"> <span class="close-save">&times;</span>
+                <form action="" method="post" class="form-save"> <span class="close-save close">&times;</span>
                         <h3>Sauvegarder</h3>
                         <label for="name-save"> Donnez un nom : <span class="star">*</span></label>
                         <input type="text" class="text" name="name-save" placeholder="Ma sauvegarde" required>
