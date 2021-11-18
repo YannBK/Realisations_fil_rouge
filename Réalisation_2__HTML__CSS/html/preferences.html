@@ -11,6 +11,8 @@
     <!--CSS-->
     <link rel="stylesheet" href="../css/stylesreset.css">
     <link rel="stylesheet" href="../css/commun_flex.css">
+    <link rel="stylesheet" href="../css/ecrans.css">
+    <link rel="stylesheet" href="../css/media.css">
 </head>
 
 <body>
@@ -18,15 +20,16 @@
         <h1>ZE METRONOME</h1>
     </header>
     <main>
-        <div  class="appareil_2">
-            <nav id="hamnav">
+        <div  class="device_2">
+<!--Navigation-->
+            <nav>
                 <label for="hamburger">&#9776;</label>
                 <input type="checkbox" id="hamburger" />
                 <h2>
                     <a href="index.html"><!--&#9750;-->&larr; </a>
                     PR&#201;F&#201;RENCES
                 </h2>
-                <div id="hamitems">
+                <div>
                     <a href="index.html">Métronome</a>
                     <a href="transitions.html">Rythme avancé</a>
                     <a href="speed.html">Speed training</a>
@@ -44,20 +47,23 @@
                     Connexion
                     </button>
                 </a>
-                <span class="login">
-                    Login
-                </span>
-                <div class="checked-none">
-                    <span class="infobulle" aria-label="Déconnexion">
-                    &times;
-                </div>
-                <div class="checked-ok">
-                    &#10004;
-                </div>
+                <section>
+                    <span class="login">
+                        Login
+                    </span>
+                    <span class="checked-ok">
+                        &#10004;
+                    </span>
+                    <span class="checked-none">
+                        <span class="infobulle" aria-label="Déconnexion">
+                            &times;
+                        </span>
+                    </span>
+                </section>
             </nav>
-
+<!--Mode couleur-->
             <div id="mode" class="box-div">
-                <label for="mod" class="box-choix">
+                <label for="mod" class="box-choice">
                     <h4>
                         Mode sombre / clair
                     </h4>
@@ -73,9 +79,9 @@
                 </form>
             </div>
 
-
+<!--Mode flash-->
             <!-- <div id="flashy" class="box-div">
-                <label for="flash" class="box-choix">
+                <label for="flash" class="box-choice">
                     <h4>
                         Flash screen
                     </h4>
@@ -89,9 +95,9 @@
                     </label>
                 </form>
             </div> -->
-
+<!--Notation-->
             <div id="notation" class="box-div">
-                <label for="nota" class="box-choix">
+                <label for="nota" class="box-choice">
                     <h4>
                         Notation des accords
                     </h4>
@@ -106,9 +112,9 @@
                     Européenne
                 </form>
             </div>
-
+<!--Max bpm-->
             <div id="maxy" class="box-div">
-                <label for="max" class="box-choix">
+                <label for="max" class="box-choice">
                     <h4>
                         Maximum Bpm
                     </h4>
@@ -119,16 +125,16 @@
                         <label for="max-bpm">
                             Max Bpm :
                         </label>
-                            <input type="number" name="max-bpm" id="max-bpm" min="1" max="500" placeholder="400">
+                            <input type="number" id="max-bpm" min="1" max="500" placeholder="400">
                     </div>
                     <button type="submit" class="btns btn-sub">
                         Ok
                     </button>
                 </form>
             </div>
-
+<!--Statistiques-->
             <div id="stats" class="box-div">
-                <label for="stat" class="box-choix">
+                <label for="stat" class="box-choice">
                     <h4>
                         Statistiques d'utilisation
                     </h4>
@@ -138,7 +144,10 @@
                     à voir
                 </form>
             </div>
-
+        </div>
+<!--Pubs-->
+        <div class="ads">
+            PUB PUB PUB PUB PUB PUB PUB
         </div>
     </main>
     <footer>

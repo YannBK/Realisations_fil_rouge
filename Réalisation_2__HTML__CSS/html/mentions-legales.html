@@ -11,6 +11,8 @@
     <!--CSS-->
     <link rel="stylesheet" href="../css/stylesreset.css">
     <link rel="stylesheet" href="../css/commun_flex.css">
+    <link rel="stylesheet" href="../css/ecrans.css">
+    <link rel="stylesheet" href="../css/media.css">
 </head>
 
 <body>
@@ -18,15 +20,16 @@
         <h1>ZE METRONOME</h1>
     </header>
     <main>
-        <div  class="appareil_2">
-            <nav id="hamnav">
+        <div  class="device_2">
+<!--Navigation-->
+            <nav>
                 <label for="hamburger">&#9776;</label>
                 <input type="checkbox" id="hamburger" />
                 <h2>
                     <a href="index.html"><!--&#9750;-->&larr; </a>
                     MENTIONS L&#201;GALES
                 </h2>
-                <div id="hamitems">
+                <div>
                     <a href="index.html">Métronome</a>
                     <a href="transitions.html">Rythme avancé</a>
                     <a href="speed.html">Speed training</a>
@@ -44,18 +47,22 @@
                     Connexion
                     </button>
                 </a>
-                <span class="login">
-                    Login
-                </span>
-                <div class="checked-none">
-                    <span class="infobulle" aria-label="Déconnexion">
-                    &times;
-                </div>
-                <div class="checked-ok">
-                    &#10004;
-                </div>
+                <section>
+                    <span class="login">
+                        Login
+                    </span>
+                    <span class="checked-ok">
+                        &#10004;
+                    </span>
+                    <span class="checked-none">
+                        <span class="infobulle" aria-label="Déconnexion">
+                            &times;
+                        </span>
+                    </span>
+                </section>
             </nav>
-            <div id="mentions" class="ecran-texte">
+<!--Contenu-->
+            <div class="text-screen">
                 <h3>CGU CGV CGT CFTC CFDT CGG</h3>
                 <h4>LOREM</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quod maiores soluta at sunt ipsa
@@ -110,6 +117,10 @@
                     doloremque nihil suscipit omnis dignissimos. In tempore deserunt aliquid ullam fuga, ab corrupti
                     molestiae consequatur!</p>
             </div>
+        </div>
+<!--Pubs-->
+        <div id="ads-mention" class="ads">
+            PUB PUB PUB PUB PUB PUB PUB
         </div>
     </main>
     <footer>

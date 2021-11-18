@@ -11,6 +11,9 @@
     <!--CSS-->
     <link rel="stylesheet" href="../css/stylesreset.css">
     <link rel="stylesheet" href="../css/commun_flex.css">
+    <link rel="stylesheet" href="../css/ecrans.css">
+    <link rel="stylesheet" href="../css/modales.css">
+    <link rel="stylesheet" href="../css/media.css">
 </head>
 
 <body>
@@ -18,8 +21,9 @@
         <h1>ZE METRONOME</h1>
     </header>
     <main>
-        <div class="appareil_2">
-            <nav id="hamnav">
+        <div class="device_2">
+<!--Navigation-->
+            <nav>
                 <label for="hamburger">&#9776;</label>
                 <input type="checkbox" id="hamburger" />
                 <h2>
@@ -28,7 +32,7 @@
                     </a>
                     HARMONIE
                 </h2>
-                <div id="hamitems">
+                <div>
                     <a href="index.html">Métronome</a>
                     <a href="transitions.html">Rythme avancé</a>
                     <a href="speed.html">Speed training</a>
@@ -47,21 +51,24 @@
                         Connexion
                     </button>
                 </a>
-                <span class="login">
-                    Login
-                </span>
-                <div class="checked-none">
-                    <span class="infobulle" aria-label="Déconnexion">
-                        &times;
-                </div>
-                <div class="checked-ok">
-                    &#10004;
-                </div>
+                <section>
+                    <span class="login">
+                        Login
+                    </span>
+                    <span class="checked-ok">
+                        &#10004;
+                    </span>
+                    <span class="checked-none">
+                        <span class="infobulle" aria-label="Déconnexion">
+                            &times;
+                        </span>
+                    </span>
+                </section>
             </nav>
-
+<!--Grille-->
             <h6></h6>
             <!--?la grille-->
-            <div id="container-grille" class="affichages">
+            <div id="container-grid" class="shows">
                 <!--générée via du JS-->
                 <div class="cases">F</div>
                 <div id="construction">
@@ -70,38 +77,38 @@
                 </div>
             </div>
             <!--?la grille-->
-
-            <div id="param-grille">
+<!--Paramêtres-->
+            <div id="param-grid">
                 <form action="" method="post">
                     <div>
                         <div>
-                            <label for="grille-mes">
+                            <label for="grid-bar">
                                 Nombre de mesure :
-                                <input type="number" name="grille-mes" id="grille-mes" min="0" max="32"
+                                <input type="number" id="grid-bar" min="0" max="32"
                                     placeholder="12">
                             </label>
                             <!--le max est à régler selon ce que ça rend à l'écran-->
                         </div>
                         <div>
-                            <label for="grille-beats">
+                            <label for="grid-bar-beats">
                                 Nombre de beats par mesure :
-                                <input type="number" name="grille-beats" id="grille-beats" min="1" max="24"
+                                <input type="number" id="grid-bar-beats" min="1" max="24"
                                     placeholder="8">
                             </label>
                         </div>
                     </div>
                     <div>
                         <div>
-                            <label for="grille-repets">
+                            <label for="grid-repeat">
                                 Répéter la mesure :
-                                <input type="number" name="grille-repet" id="grille-repeat" min="1" max="500"
+                                <input type="number" id="grille-repeat" min="1" max="500"
                                     placeholder="4">
                             </label>
                         </div>
                         <div>
-                            <label for="grille-bpm">
+                            <label for="grid-bpm">
                                 Bpm :
-                                <input type="number" name="grille-bpm" id="grille-bpm" min="1" max="400"
+                                <input type="number" id="grid-bpm" min="1" max="400"
                                     placeholder="120">
                             </label>
 
@@ -111,7 +118,7 @@
                         </button>
                     </div>
                 </form>
-                <div id="grille_sl">
+                <div id="grid-sl">
                     <button class="btns btn-sl save">
                         Save
                     </button>
@@ -126,61 +133,59 @@
                     </button>
                 </div>
             </div>
-
-            <div class="popup-save">
-                <form action="" method="post" class="form-save"> <span class="close-save close">&times;</span>
+<!--Modal save-->
+            <div class="modal modal-save">
+                <form action="" method="post"> <span class="close-save close">&times;</span>
                     <h3>Sauvegarder</h3>
                     <label for="name-save"> Donnez un nom : <span class="star">*</span></label>
-                    <input type="text" class="text" name="name-save" placeholder="Ma sauvegarde" required>
+                    <input type="text" class="text" placeholder="Ma sauvegarde" required>
                     <div class="btn-div-save">
-                        <button type="reset" name="reset" class="btns btn-sub reset-save">Annuler</button>
-                        <button type="submit" name="submit" class="btns btn-sub">Confirmer</button>
+                        <button type="reset" class="btns btn-sub reset-save">Annuler</button>
+                        <button type="submit" class="btns btn-sub">Confirmer</button>
                     </div>
                 </form>
             </div>
-
-            <div class="popup-case">
+<!--Modal case-->
+            <div class="modal modal-case">
                 <div class="window-case">
                     <h3>Configuration mesure</h3>
                     <span class="close-case close">&times;</span>
-                    <label for="grille-beats">
+                    <label for="grid-beats">
                         Nombre de beats de la mesure :
-                        <input type="number" name="grille-beats" id="grille-beats" min="1" max="24" placeholder="8">
+                        <input type="number" id="grid-beats" min="1" max="24" placeholder="8">
                     </label>
-                    <div class="rythme-case">
-                        <div id ="ryth-custom" class="A0_rythme_diode">
-                            <div class="affiche-rythme affichages">
-                                <div id="A0_diode-1" class="diodeH"></div>
-                                <div id="A0_diode-2" class="diodeH"></div>
-                                <div id="A0_diode-3" class="diodeH"></div>
-                                <div id="A0_diode-4" class="diodeH"></div>/
-                                <div id="A0_diode-5" class="diodeH"></div>
-                                <div id="A0_diode-6" class="diodeH"></div>
-                                <div id="A0_diode-7" class="diodeH"></div>
-                                <div id="A0_diode-8" class="diodeH"></div>/
-                                <div id="A0_diode-1" class="diodeH"></div>
-                                <div id="A0_diode-2" class="diodeH"></div>
-                                <div id="A0_diode-3" class="diodeH"></div>
-                                <div id="A0_diode-4" class="diodeH"></div>/
-                                <div id="A0_diode-5" class="diodeH"></div>
-                                <div id="A0_diode-6" class="diodeH"></div>
-                                <div id="A0_diode-7" class="diodeH"></div>
-                                <div id="A0_diode-8" class="diodeH"></div>/
-                                <div id="A0_diode-1" class="diodeH"></div>
-                                <div id="A0_diode-2" class="diodeH"></div>
-                                <div id="A0_diode-3" class="diodeH"></div>
-                                <div id="A0_diode-4" class="diodeH"></div>/
-                                <div id="A0_diode-5" class="diodeH"></div>
-                                <div id="A0_diode-6" class="diodeH"></div>
-                                <div id="A0_diode-7" class="diodeH"></div>
-                                <div id="A0_diode-8" class="diodeH"></div>/
-                            </div>
+                    <div id ="rhythm-custom" class="rhythm_diode">
+                        <div class="show-rhythm shows">
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>/
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>/
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>/
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>/
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>/
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>
+                            <div class="diodeH"></div>/
                         </div>
                     </div>
-
+<!--Configuration diodes-->
                     <div class="diode-custom">
                         <div id="harmo-custom-bip" class="box-div">
-                            <label for="bipH" class="box-choix">
+                            <label for="bipH" class="box-choice">
                                 <h4>
                                     Bip
                                 </h4>
@@ -188,18 +193,18 @@
                             <input type="radio" name="diodesH" class="box-none" id="bipH">
                             <form action="" method="POST" class="form-case">
                                 <label for="diode-null">
-                                    <input type="radio" name="diode-value" id="diode-null" class=""
+                                    <input type="radio" name="diode-value" id="diode-null"
                                         value="diode-null">Null
                                 </label>
                                 <label for="diode-1">
-                                    <input type="radio" name="diode-value" id="diode-1" class="" value="diode-1"
+                                    <input type="radio" name="diode-value" id="diode-1" value="diode-1"
                                         checked>Son 1
                                 </label>
                                 <label for="diode-2">
-                                    <input type="radio" name="diode-value" id="diode-2" class="" value="diode-2">Son 2
+                                    <input type="radio" name="diode-value" id="diode-2" value="diode-2">Son 2
                                 </label>
                                 <label for="diode-3">
-                                    <input type="radio" name="diode-value" id="diode-3" class="" value="diode-3">Son 3
+                                    <input type="radio" name="diode-value" id="diode-3" value="diode-3">Son 3
                                 </label>
                                 <button type="button" class="btns btn-sub close-custom">
                                     Ok
@@ -207,7 +212,7 @@
                             </form>
                         </div>
                         <div id="harmo-custom-accor" class="box-div">
-                            <label for="accorH" class="box-choix">
+                            <label for="accorH" class="box-choice">
                                 <h4>
                                     Accord
                                 </h4>
@@ -217,7 +222,7 @@
                                 <label for="harmo-note">
                                     Note :
                                 </label>
-                                <select name="harmo-note" id="harmo-note">
+                                <select id="harmo-note">
                                     <option value="C">C</option>
                                     <option value="D">D</option>
                                     <option value="E">E</option>
@@ -229,15 +234,15 @@
                                 <label for="harmo-alt">
                                     Altération :
                                 </label>
-                                <select name="harmo-alt" id="harmo-alt">
-                                    <option value="becarre">&#9838;</option>
+                                <select id="harmo-alt">
+                                    <option value="becarre">-</option>
                                     <option value="diese">&#9839;</option>
                                     <option value="bemol">&#9837;</option>
                                 </select>
                                 <label for="harmo-accbip">
                                     Bip joué :
                                 </label>
-                                <select name="harmo-accbip" id="harmo-accbip">
+                                <select id="harmo-accbip">
                                     <option value="diode-null">Null</option>
                                     <option value="diode-1">Son 1</option>
                                     <option value="diode-2">Son 2</option>
@@ -253,12 +258,16 @@
                 </div>
             </div>
         </div>
+<!--Pubs-->
+        <div class="ads">
+            PUB PUB PUB PUB PUB PUB PUB
+        </div>
     </main>
     <footer>
 
     </footer>
 
-    <script src="../js/popup-save.js"></script>
+    <script src="../js/modal-save.js"></script>
 </body>
 
 

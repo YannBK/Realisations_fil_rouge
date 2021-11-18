@@ -11,6 +11,8 @@
     <!--CSS-->
     <link rel="stylesheet" href="../css/stylesreset.css">
     <link rel="stylesheet" href="../css/commun_flex.css">
+    <link rel="stylesheet" href="../css/ecrans.css">
+    <link rel="stylesheet" href="../css/media.css">
 </head>
 
 <body>
@@ -18,15 +20,16 @@
         <h1>ZE METRONOME</h1>
     </header>
     <main>
-        <div  class="appareil_2">
-            <nav id="hamnav">
+        <div class="device_2">
+<!--Navigation-->
+            <nav>
                 <label for="hamburger">&#9776;</label>
                 <input type="checkbox" id="hamburger" />
                 <h2>
                     <a href="index.html"><!--&#9750;-->&larr;</a>
                     ACCORDEUR
                 </h2>
-                <div id="hamitems">
+                <div>
                     <a href="index.html">Métronome</a>
                     <a href="transitions.html">Rythme avancé</a>
                     <a href="speed.html">Speed training</a>
@@ -45,23 +48,27 @@
                     Connexion
                     </button>
                 </a>
-                <span class="login">
-                    Login
-                </span>
-                <div class="checked-none">
-                    <span class="infobulle" aria-label="Déconnexion">
-                    &times;
-                </div>
-                <div class="checked-ok">
-                    &#10004;
-                </div>
+                <section>
+                    <span class="login">
+                        Login
+                    </span>
+                    <span class="checked-ok">
+                        &#10004;
+                    </span>
+                    <span class="checked-none">
+                        <span class="infobulle" aria-label="Déconnexion">
+                            &times;
+                        </span>
+                    </span>
+                </section>
             </nav>
 
             <!--popup autorisation accès microphone + enregistrement à l'ouverture de la page-->
             <!--!pour les fréquences, soundcorset les indique en haut...mais on doit pouvoir trouver des tableaux (A1=55Hz B1b= 58Hz...)-->
+<!--Affichage diapason-->
             <div id="diapason">
                 <div id="diapason-graphique">
-                    <div id="diapason-jauge" class="affichages">
+                    <div id="diapason-jauge" class="shows">
 
                         <div id="construction">
                             <h3>page en construction</h3>
@@ -70,7 +77,7 @@
 
                     </div>
 
-                    <div id="diapason-bandeau" class="affichages">
+                    <div id="diapason-bandeau" class="shows">
                     
                     </div>
 
@@ -85,21 +92,21 @@
                         </div>
                     </div>
                 </div> -->
-                <div id="choix-alt">
+                <div id="choice-alt">
                     <form action="" method="post">
                         <fieldset>
                             <legend>Choix d'altération affichée</legend>
-                            <input type="radio" name="alt" id="#" value="#" checked>
-                            <label for="#">&#9839;</label>
-                            <input type="radio" name="alt" id="b" value="b">
-                            <label for="b">&#9837;</label>
+                            <input type="radio" name="alt" id="diese" value="diese" checked>
+                            <label for="diese">&#9839;</label>
+                            <input type="radio" name="alt" id="bemol" value="bemol">
+                            <label for="bemol">&#9837;</label>
                         </fieldset>
                     </form>
                 </div>
             </div>
-
+<!--Transposition-->
             <div id="transposition" class="box-div">
-                <label for="transpo" class="box-choix">
+                <label for="transpo" class="box-choice">
                     <h4>
                         Transposition
                     </h4>
@@ -108,61 +115,32 @@
                 <form action="" method="post" class="accord-form">
                     <fieldset>
                         <legend>Quelle tonalité d'instrument? :</legend>
-                        <label for="note-transpo"></label>
-                        <input type="radio" name="note-transpo" id="C" value="C" checked>
-                        <label for="C">
-                            <span>C</span> <!--affichage selon préférences de notation => écran préférences-->
-                        </label>
-                        <input type="radio" name="note-transpo" id="C#" value="C#">
-                        <label for="C#">
-                            <span>C</span>
-                            <span>&#9839;</span><!--c'est pas en mettant des spans que que vais pouvoir changer l'affichage de notations et des altérations, mais ça permet de mettre des commentaires gros comme ça pour ne pas oublier quand on passera au code dynamique-->
-                        </label>
-                        <input type="radio" name="note-transpo" id="D" value="D">
-                        <label for="D">
-                            <span>D</span></label>
-                        <input type="radio" name="note-transpo" id="D#" value="D#">
-                        <label for="D#">
-                            <span>D</span>
-                            <span>&#9839;</span>
-                        </label>
-                        <input type="radio" name="note-transpo" id="E" value="E">
-                        <label for="E">
-                            <span>E</span></label>
-                        <input type="radio" name="note-transpo" id="F" value="F">
-                        <label for="F">
-                            <span>F</span></label>
-                        <input type="radio" name="note-transpo" id="F#" value="F#">
-                        <label for="F#">
-                            <span>F</span>
-                            <span>&#9839;</span>
-                        </label>
-                        <input type="radio" name="note-transpo" id="G" value="G">
-                        <label for="G">
-                            <span>G</span></label>
-                        <input type="radio" name="note-transpo" id="G#" value="G#">
-                        <label for="G#">
-                            <span>G</span>
-                            <span>&#9839;</span>
-                        </label>
-                        <input type="radio" name="note-transpo" id="A" value="A">
-                        <label for="A">
-                            <span>A</span></label>
-                        <input type="radio" name="note-transpo" id="A#" value="A#">
-                        <label for="A#">
-                            <span>A</span>
-                            <span>&#9839;</span>
-                        </label>
-                        <input type="radio" name="note-transpo" id="B" value="B">
-                        <label for="B">
-                            <span>B</span>
-                        </label>
+                            <label for="harmo-note-transpo">
+                                Note :
+                            </label>
+                            <select id="harmo-note-transpo">
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                            </select>
+                            <label for="harmo-alt">
+                                Altération :
+                            </label>
+                            <select name="harmo-alt" id="harmo-alt">
+                                <option value="becarre">-</option>
+                                <option value="diese">&#9839;</option>
+                                <option value="bemol">&#9837;</option>
+                            </select>
                     </fieldset>
                 </form>
             </div>
-
+<!--Accordage d'oreille-->
             <div id="oreille" class="box-div">
-                <label for="oreil" class="box-choix">
+                <label for="oreil" class="box-choice">
                     <h4>
                         Accordage d'oreille
                     </h4>
@@ -170,60 +148,31 @@
                     <input type="radio" name="accord" class="box-none" id="oreil">
                 <form action="" method="post" class="accord-form">
                     <fieldset>
-                        <legend>Quelle tonalité d'instrument? :</legend>
-                        <label for="note-oreille"></label>
-                        <input type="radio" name="note-transpo" id="C" value="C" checked>
-                        <label for="C">
-                            <span>C</span>
+                        <legend>Quelle note voulez-vous entendre ? :</legend>
+                        <label for="harmo-note_or">
+                            Note :
                         </label>
-                        <input type="radio" name="note-transpo" id="C#" value="C#">
-                        <label for="C#">
-                            <span>C</span>
-                            <span>&#9839;</span>
+                        <select id="harmo-note-or">
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="F">F</option>
+                            <option value="G">G</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                        </select>
+                        <label for="harmo-alt">
+                            Altération :
                         </label>
-                        <input type="radio" name="note-transpo" id="D" value="D">
-                        <label for="D">
-                            <span>D</span></label>
-                        <input type="radio" name="note-transpo" id="D#" value="D#">
-                        <label for="D#">
-                            <span>D</span>
-                            <span>&#9839;</span>
-                        </label>
-                        <input type="radio" name="note-transpo" id="E" value="E">
-                        <label for="E">
-                            <span>E</span></label>
-                        <input type="radio" name="note-transpo" id="F" value="F">
-                        <label for="F">
-                            <span>F</span></label>
-                        <input type="radio" name="note-transpo" id="F#" value="F#">
-                        <label for="F#">
-                            <span>F</span>
-                            <span>&#9839;</span>
-                        </label>
-                        <input type="radio" name="note-transpo" id="G" value="G">
-                        <label for="G">
-                            <span>G</span></label>
-                        <input type="radio" name="note-transpo" id="G#" value="G#">
-                        <label for="G#">
-                            <span>G</span>
-                            <span>&#9839;</span>
-                        </label>
-                        <input type="radio" name="note-transpo" id="A" value="A">
-                        <label for="A">
-                            <span>A</span></label>
-                        <input type="radio" name="note-transpo" id="A#" value="A#">
-                        <label for="A#">
-                            <span>A</span>
-                            <span>&#9839;</span>
-                        </label>
-                        <input type="radio" name="note-transpo" id="B" value="B">
-                        <label for="B">
-                            <span>B</span>
-                        </label>
+                        <select id="harmo-alt">
+                            <option value="becarre">-</option>
+                            <option value="diese">&#9839;</option>
+                            <option value="bemol">&#9837;</option>
+                        </select>
                     </fieldset>
                     <div>
                         <label for="octave">Hauteur de la note : </label>
-                        <select name="octave" id="octave">
+                        <select id="octave">
                             <option value="basse">Basse</option>
                             <option value="moyenne" selected>Moyenne</option>
                             <option value="haute">Haute</option>
@@ -234,7 +183,7 @@
                             <legend>
                                 Affichage détecteur
                             </legend>
-                            <input type="radio" name="aveugle" id="aveugle" checked>
+                            <input type="radio" name="tricheur" id="aveugle" checked>
                             <label for="aveugle">
                                 Cacher
                             </label>
@@ -248,7 +197,9 @@
                     <button type="submit" class="btns btn-sub">Play</button>
                 </form>
             </div>
-
+        </div>
+        <div class="ads">
+            PUB PUB PUB PUB PUB PUB PUB
         </div>
     </main>
     <footer>

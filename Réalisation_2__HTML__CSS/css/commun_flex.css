@@ -1,15 +1,15 @@
 
 /* sur internet explorer c'est mort...en même temps il faut arrêter son utilisation sous perfusion.*/
-/*régler les couleurs de mon écran gauche, c'est chaud, c'est rouge...mais pas représentatif des écrans du commun des mortels*/
+
 /*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ GENERAL _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 body {
     background-color: rgb(46, 46, 46);
     background: url(../images/music-2.jpg) center;
     background-attachment: fixed;
 }
-/*TODO il y a un vide sous l'appareil sur certains écrans*/
-.appareil_1,
-.appareil_2 { /*j'ai l'impression que ça va me faire c***r cette histoire lors de l'utilisation d'un template commun*/
+
+.device_1,
+.device_2 {
     position: relative;
     margin: 10vh 20vw auto 20vw;
     background-color: rgba(50, 48, 39, 0.9);
@@ -19,6 +19,7 @@ body {
     height: auto; 
     min-height: 600px;
     color: rgb(255, 238, 217);
+    padding-bottom: 10px;
     /* color: rgb(55,48,39); */
 }
 
@@ -44,30 +45,18 @@ body {
     width: max-content;
     min-width: 60px;
     margin: 5px;
-    padding: 5px;
 }
-/* --------- btns écran principal --------- */
-.btn15 {
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-}
-
 /* ______ Save / Load ______ */
 .btn-sl {
     height:50%;
     width: 60px;
     padding: 0;
 }
-
-.btn-sl a {
-    padding: 10px 25%;
-    text-decoration: none;
-    color: black;
-}
-
-.btn-sl a:hover {
-    color: rgb(255, 238, 217);
+/* --------- btns écran principal --------- */
+.btn15 {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
 }
 
 /* ______ Play / Pause ______ */
@@ -98,6 +87,7 @@ body {
 select {
     background-color: rgb(87,87,87);
     border-radius: 10px;
+    margin: 5px;
 }
 
 select:hover {
@@ -191,82 +181,43 @@ p {
     padding: 10px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 20px;
+    text-align: center;
+}
+
 .star {
     color: red;
 }
 
-.affichages{
+.shows{
     background-color: rgba(0, 255, 157,0.4);
 }
 
-/*----------------------------------------------------------------------*/
-/* ------------------------- boutons switch -----------------------------*/
-/*----------------------------------------------------------------------*/
-/* Label contenant le slider */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-}
-/* Hide default HTML checkbox */
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-/* Le slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
+.ads {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(0,0,0);
+    color: rgb(184, 134, 11);
+    height: 100px;
+    width: 100%;
+    position:fixed; /*!passer en sticky por les écrans < 900px de haut*/
     bottom: 0;
-    background-color: rgba(100, 93, 84,1);
-    -webkit-transition: .4s;
-    transition: .2s;
-}
-/* Création et positionnement du curseur*/
-.slider::before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(0, 255, 157,0.5);
-    -webkit-transition: .2s;
-    transition: .2s;
 }
 
-input:checked + .slider {
-    /* background-color: rgba(0, 255, 157,0.4); */
-}
-
-input:checked + .slider::before {
-    /* background-color: rgb(255, 238, 217); */
-}
-/* translation curseur */
-input:checked + .slider::before {
-    -webkit-transform: translateX(20px);
-    -ms-transform: translateX(20px);
-    transform: translateX(20px);
-}
-/* Slider arrondi */
-.slider.round {
-    border-radius: 34px;
-}
-/* Curseur arrondi */
-.slider.round:before {
-    border-radius: 50%;
+#ads-mention {
+    position:sticky;   
 }
 
 /*------------------------------------------------------------------------------*/
 /*------------------------------------ NAV / BURGER ----------------------------*/
 /*------------------------------------------------------------------------------*/
 
-#hamnav { /*menu nav hamburger*/
+nav { /*menu nav hamburger*/
     width: 100%;
     height: 50px;
     background: rgb(0,0,0);
@@ -274,7 +225,7 @@ input:checked + .slider::before {
     border-radius: 10px 10px 0 0;
 }
 
-#hamitems { /*div de liens*/
+nav div:first-of-type { /*div de liens*/
     display: none; 
     background: rgb(0,0,0);
     position: sticky;
@@ -283,7 +234,7 @@ input:checked + .slider::before {
     z-index: 100;
 }
 
-#hamitems a { /*liens*/
+nav div:first-of-type a { /*liens*/
     display: block;
     width: 100%;
     margin: 0;
@@ -295,19 +246,15 @@ input:checked + .slider::before {
     border-top: 1px solid #333;
 }
 
-#hamitems a:hover { 
+nav div:first-of-type a:hover { 
     background: #401408; 
 }
 
-#hamburger { /*checkbox*/
+nav input { /*btn hamburger*/
     display: none; 
 }
 
-#hamitems a:first-of-type {
-    border-top: none;
-}
-
-#hamnav label { 
+nav label { 
     display: inline-block; 
     background: rgb(0,0,0);
     font-style: normal;
@@ -319,14 +266,25 @@ input:checked + .slider::before {
     border-radius: 10px 10px 0 0;    
 }
 
-#hamnav label:hover {
+nav label:hover {
     cursor: pointer;
 }
 
-#hamnav input:checked ~ #hamitems { 
+nav input:checked ~ div:first-of-type { 
     display: block; 
 }
 
+nav section {
+    display: none;
+}
+
+.login{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
 .checked-ok {
     display: inline;
     position: absolute;
@@ -353,13 +311,6 @@ input:checked + .slider::before {
     color: rgb(200, 0, 0);
 }
 
-.login{
-    position: absolute;
-    right: 60px;
-    top: 20px;
-    margin-right: 10px;
-    font-size: 1rem;
-}
 
 nav button {
     position: absolute;
@@ -404,15 +355,14 @@ nav button {
 /*------------------------------------------------------------------------------*/
 /*-------------------------------------AFFICHAGE DEROULANT ---------------------*/
 /*------------------------------------------------------------------------------*/
-#A0_affichage{
+#A0_show{
     display: flex;
     justify-content: space-evenly;
     margin:20px;
 }
 
-#A0_affichage_defilement-simple{
+#A0_show div{
     height: 100px;
-    /* background-color: rgba(0, 255, 157,0.4); */
     max-width: 100%;
     word-wrap: break-word;
     overflow: hidden;
@@ -426,7 +376,7 @@ nav button {
     justify-content: space-evenly;
 }
 
-#A0_tempo_barre-tactile{
+#A0_range input{
     height: 5px;
     margin:30px;
     width: 100%;
@@ -445,27 +395,27 @@ input[type='range']::-webkit-slider-thumb {
     width:10px;
 } */
 /*TODO ^^ c'est bien, mais il faudrait pouvoir différencier l'avant et après curseur*/
-#A0_gestion_bpm {
+#A0_manage_bpm {
     display: flex;
     justify-content: space-evenly;
     margin: 20px auto;
 }
 
-#A0_bpm{
+#A0_manage_bpm div:nth-child(2){
     display: flex;
     justify-content: center;
     align-items: center;
     width: 30vw;
 }
 
-#A0_btn_drt,
-#A0_btn_gch {
+#A0_manage_bpm div:nth-child(1),
+#A0_manage_bpm div:nth-child(3) {
     display: flex;
     justify-content: space-evenly;
     width: 30vw;
 }
 
-#A0_btn_bas,
+#A0_btn_down,
 #A0-speed-light {
     display: flex;
     justify-content: space-evenly;
@@ -475,35 +425,35 @@ input[type='range']::-webkit-slider-thumb {
 /*------------------------------------------------------------------------------*/
 /*-----------------------------------EDITEUR RYTHME ----------------------------*/
 /*------------------------------------------------------------------------------*/
-.A0_rythme {
+.A0_rhythm {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin: 0 20px;
 }
 
-.A0_btn_rythme_avance {
+.A0_big-btn {
     height: 100%;
 }
 
-.A0_btn_rythme_avance a {
+.A0_big-btn a {
 padding: 30px 10px;
 text-decoration: none;
 color: black;
 }
 
-.A0_btn_rythme_avance a:hover {
+.A0_big-btn a:hover {
     color: rgb(255, 238, 217);
 }
 
-.A0_rythme_diode{
+.rhythm_diode{
     display:flex;
     flex-direction: row;
     height: 80px;
     width: 100%;
 }
 
-.affiche-rythme {
+.show-rhythm {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -512,29 +462,15 @@ color: black;
 }
 
 /*------------------------------------------------------------------------------*/
-/*--------------------------------------PUBS -----------------------------------*/
+/*--------------------------------------DROPDOWN-SONS -----------------------------*/
 /*------------------------------------------------------------------------------*/
-.ads {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: rgb(0,0,0);
-    color: rgb(184, 134, 11);
-    height: 50px;
-    width: 100%;
-    border-radius: 0 0 10px 10px;
-}
-
-/*------------------------------------------------------------------------------*/
-/*--------------------------------------POPUP-SONS -----------------------------*/
-/*------------------------------------------------------------------------------*/
-#A0_liste-sons {
+#A0_btn_down div:first-child {
     position: relative;
     text-align: center; /* les centrer mais alignés sur la droite, en gros les btn radio en ligne verticale... ou alors cacher les btn, mais alors il me faut le chgmt de couleur de la radio activée*/
     left: 0;
 }
-/* Masquez la forme Popup */
-#A0_liste-sons-popup {
+/* Masquez la forme DROPDOWN */
+#A0_btn_down div:first-child div {
     display: none;
     position: fixed;
     top:10vh;
@@ -545,7 +481,7 @@ color: black;
     width: 60vw;
 }
 /* Styles pour le conteneur du form */
-#A0_liste-sons_form {
+#A0_btn_down div:first-child div form {
     display: flex;
     flex-direction: column;
     max-width: 60vw;
@@ -554,28 +490,27 @@ color: black;
     border-radius: 10px;
 }
 
-#A0_liste-sons_form label{
+#A0_btn_down div:first-child div form label{
     border-top: 1px solid rgb(0,0,0);
     font-size: 1.2em;
     padding: 10px 0;
     width: 100%;
 }
 
-#A0_liste-sons_form label:first-child{
+#A0_btn_down div:first-child div form label:first-child{
     border-top: none;
 }
 
-#A0_liste-sons_form label:hover {
+#A0_btn_down div:first-child div form label:hover {
     background-color: rgb(64,20,8);
 }
 
-#A0_liste-sons_form input:checked{
+#A0_btn_down div:first-child div form input:checked ~ label{
     /* background-color: rgb(197, 13, 13); */
-    /*TODO  via JS => quand input:radio checked, son label change de bckgrd*/
+    /*TODO via JS => quand input:radio checked, son label change de bckgrd*/
 }
 
-#checksons-label {
-    /* background-color: rgb(80,74,72); */
+#A0_btn_down div label:only-of-type {
     border-radius: 50%;
     padding: 10px 8px;
     color: rgb(0,0,0);
@@ -589,11 +524,11 @@ color: black;
     top: 15px;
 }
 
-#checksons-label:hover {
+#A0_btn_down div label:only-of-type:hover {
     color: rgb(255, 238, 217);
 }
 
-#checksons-label:active {
+#A0_btn_down div label:only-of-type:active {
     border-style:solid;/*en laissant outset le bas-droit n'arrive pas à être plus clair que gris clair*/
     border-top-color: rgb(155,155,155);
     border-left-color: rgb(155,155,155);
@@ -601,15 +536,20 @@ color: black;
     border-right-color: rgb(255, 238, 217);
 }
 
-#checksons {
+#A0_btn_down div input:only-of-type {
     display: none;
 }
 
-#A0_liste-sons #checksons:checked ~ #A0_liste-sons-popup {
+#A0_btn_down div input:only-of-type:checked ~ div {
     display: block;
 }
 
-#A0_sons-play {
+#A0_btn_down div input:only-of-type:checked ~ div input {
+    display: inline;
+    /* float: left; */
+}
+
+#A0_btn_down div div form button {
     width: 100%;
     margin: 0;
     background-color: rgb(0,0,0);
@@ -620,551 +560,12 @@ color: black;
     color: rgb(255, 238, 217);
 }
 
-#A0_sons-play:hover {
+#A0_btn_down div div form button:hover {
     background: rgb(64,20,8); 
 }
 
-/*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ ECRANS _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 /*------------------------------------------------------------------------------*/
-/*------------------------Ecran TRANSITION  -----------------------*/
-/*------------------------------------------------------------------------------*/
-#trans_tableau {
-    /* border: solid 1px red; */
-    padding: 5px;
-}
-
-.trans-lignes {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px;
-}
-
-#trans_total {
-    text-align: center;
-    margin: 5px;
-}
-
-#trans-rythme {
-    position: absolute;
-    bottom: 20px;
-    width: 95%;
-}
-
-#A2_inputs {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-left: 20px;
-}
-
-#A2_inputs input {
-    margin: 5px;
-}
-
-.A2_btn_save-load {
-    max-width: min-content;
-}
-
-.trans-sl a {
-    text-decoration: none;
-    color: black;
-}
-
-.trans-sl a:hover {
-    color: rgb(255, 238, 217);
-}
-
-.A0_rythme_diode button[type*="submit"] {
-    margin: 0;
-    padding: 0;
-    width: 60px;
-}
-
-#trans-conteneur-1 {
-    border-bottom: solid 1px rgb(0,0,0);
-}
-
-.btn-schema{
-    width: 100px;
-}
-
-/*------------------------------------------------------------------------------*/
-/*-------------------------------------- Ecran HARMONIE  -----------------------*/
-/*------------------------------------------------------------------------------*/
-#container-grille {
-    height: 300px;
-    max-width: 100%;
-    margin:20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 20px;
-}
-#param-grille form div {
-    display: flex;
-    align-items: baseline;
-    margin: 5px auto;
-}
-#grille_sl {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-#grille_sl button {
-    margin: 10px;
-    width: 60px;
-    height: 30px;
-}
-#param-grille form div input {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.cases{
-    height: 50px;
-    width: 50px;
-    background-color: rgb(255,255,255);
-    border: solid 1px rgb(0,0,0);
-    color: rgb(50, 48, 39);
-    text-align: center;
-    line-height: 3rem;
-    font-weight: 900;
-}
-
-
-
-
-/*---------------------------------------------------------------------------------*/
-/*-------------------- Ecrans BOX-TIROIR (speed, préf, accord)  -------------------*/
-/*---------------------------------------------------------------------------------*/
-.box-div {
-    border-bottom: solid 1px rgb(0,0,0);
-}
-
-.box-div:hover {
-    background-color: rgb(50,48,39); 
-}
-
-.box-div form input,
-.box-div form label {
-    margin: 5px;
-}
-
-.box-choix {
-    display: flex;
-}
-
-.box-none {
-    display: none;
-}
-
-/*______________________ Ecran SPEED _______________________*/
-#speed_count #count:checked ~ form,
-#increase #acc:checked ~ form,
-#decrease #dec:checked ~ form,
-#mute #mut:checked ~ form {
-    display: flex;
-    justify-content: space-between;
-}
-
-.speed-form {
-    margin-right: 5px;
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    text-align:center;
-    margin: auto;
-    align-items: center;
-}
-
-.speed-form div {
-    display: flex;
-    align-items: baseline;
-}
-
-#nb-count {
-    width: 80px;
-}
-
-#mute {
-    border-radius: 0 0 10px 10px;
-}
-
-/*______________________ Ecran PREF _______________________*/
-#mode #mod:checked ~ form,
-#flashy #flash:checked ~ form,
-#notation #nota:checked ~ form,
-#maxy #max:checked ~ form,
-#stats #stat:checked ~ form {
-    display: block;
-}
-
-.pref-form {
-    margin-right: 5px;
-    width: 60%;
-    display: none;
-    text-align:center;
-    margin: auto;
-}
-
-/*____________________ Ecran ACCORD ______________________*/
-#diapason-bandeau {
-    display: none;
-}
-
-#diapason-jauge {
-    /* background-color: rgba(0, 255, 157,0.4); */
-    height: 200px;
-    max-width: 100%;
-    margin: 0 20px;
-}
-#diapason-detection {
-    text-align: center;
-}
-
-#choix-alt {
-    text-align: center;
-}
-
-#transposition #transpo:checked ~ form,
-#oreille #oreil:checked ~ form{
-    display: block;
-}
-
-.accord-form {
-    display: none;
-    text-align:center;
-    margin: auto;
-}
-
-#oreille form div {
-    margin : 5px;
-}
-
-/*_____________ Ecran CONNECTION / CREATION ______________*/
-#box-connect #connect:checked ~ form,
-#box-create #create:checked ~ form{
-    display: flex;
-}
-
-.cocr-form {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.cocr-form input {
-    width: 50%;
-    border-radius: 5px;
-}
-#box-connect a{
-    color:rgb(245, 172, 78);
-}
-/*_____________ Ecran CONTACT ______________*/
-.cc-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.cc-form label {
-    margin: 10px auto;
-}
-
-.cc-form input {
-    width: 50%;
-    border-radius: 5px;
-}
-
-/*------------------------------------------------------------------------------*/
-/*-------------------------------------------Ecran LOAD  -----------------------*/
-/*------------------------------------------------------------------------------*/
-.saves {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 30px;
-    margin: 10px;
-    padding: 5px;
-    border: solid 1px rgb(0,0,0);
-    background-color: rgb(119,119,119);
-}
-
-.saves div img {
-    max-height: 30px;
-    min-height: 30px;
-    margin-right: 5px;
-}
-
-.saves button {
-    margin-right: 5px;
-    width: 80px;
-    height: 100%;
-}
-
-.saves button:last-child {
-    margin: 0;
-}
-
-/*------------------------------------------------------------------------------*/
-/*-------------------------------------Ecran EVALUATION  -----------------------*/
-/*------------------------------------------------------------------------------*/
-.ecran-texte {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.ecran-texte form input{
-    margin: 5px;
-}
-/*------------------------------------------------------------------------------*/
-/*--------------------------------- POPUP SAVE ---------------------------------*/
-/*------------------------------------------------------------------------------*/
-
-.popup-save{
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(53,53,53,0.6);
-}
-
-.form-save{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(43,43,43,0.9);
-    border: solid 1px rgb(255, 238, 217);
-    border-radius: 5px;
-    margin: 30vh auto;
-    padding: 30px 20px;
-    width: 250px;
-    /* max-width: 90vw; */
-    text-align: center;
-}
-
-.form-save input{
-    margin: 10px;
-}
-
-.close{
-    position: absolute;
-    color: rgb(159, 159, 159);
-    top: 0;
-    right: 5px;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.close:hover{
-    color: rgb(255, 238, 217);
-    cursor: pointer;
-}
-
-/*------------------------------------------------------------------------------*/
-/*----------------------------------- POPUP DIODE ------------------------------*/
-/*------------------------------------------------------------------------------*/
-/*TODO à mettre en forme, et rajouter une légende colorée à la place/en plus des radio*/
-.popup-diode{
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(53,53,53,0.6);
-}
-
-.form-diode{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(43,43,43,0.9);
-    border: solid 1px rgb(255, 238, 217);
-    border-radius: 5px;
-    margin: 30vh auto;
-    padding: 30px 20px;
-    width: 250px;
-    text-align: center;
-}
-
-.form-diode input{
-    margin: 10px;
-}
-
-
-/*___________________ popup grille-case ____________________*/
-.popup-case{
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(53,53,53,0.6);
-}
-
-.window-case{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(43,43,43,0.9);
-    border: solid 1px rgb(255, 238, 217);
-    border-radius: 10px;
-    margin: 10vh 22vw auto 22vw;
-    width: 56vw;
-    height: auto; 
-    min-height: 600px;
-    text-align: center;
-}
-
-.rythme-case {
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
-    margin: 10px auto;
-}
-
-#ryth-custom {
-    height: max-content;
-}
-.form-case input{
-    margin: 10px;
-}
-
-.diodeH {
-    height: 30px;
-    width: 30px;
-    background-color: red;
-    border-radius: 50%;
-    margin: 5px;
-}
-
-.diodeH:hover {
-    background-color: green;
-}
-
-#harmo-custom-bip #bipH:checked ~ form,
-#harmo-custom-accor #accorH:checked ~ form{
-    display: block;/*flex?*/
-}
-
-.form-case {
-    display: none;
-    text-align:center;
-    margin: auto;
-}
-
-.diode-custom {
-    display: none;
-}
-/*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ MEDIA _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
-/*------------------------------------------------------------------------------*/
-/*----------------------------------------MEDIA  1000 -------------------------------*/
-/*------------------------------------------------------------------------------*/
-@media screen and (max-width:1000px){
-    .appareil_1, 
-    .appareil_2 {
-        width: 80vw;
-        margin: 10vh 10vw auto 10vw;
-    }
-    .window-case{
-        margin: 10vh 12vw auto 12vw;
-        width: 76vw;
-    }
-    #hamitems {
-        width: 80vw;
-    }
-    #A0_liste-sons-popup {
-        left: 10vw;
-        width: 80vw;
-    }
-    #A0_liste-sons_form {
-        max-width: 80vw;
-    }
-    header {
-        display: none;
-    }
-}
-/*------------------------------------------------------------------------------*/
-/*----------------------------------------MEDIA  700 -------------------------------*/
-/*------------------------------------------------------------------------------*/
-@media screen and (max-width:700px){
-    .appareil_1, 
-    .appareil_2 {
-        width: 100vw;
-        min-height: 100vh;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-radius: 0;
-    }
-    .window-case{
-        margin: 0 2vw auto 2vw;
-        width: 96vw;
-    }
-    .appareil_2 {
-        justify-content: flex-start;
-    }
-    #hamitems {
-        width: 100vw;
-    }
-    #A0_liste-sons-popup {
-        left: 0;
-        top: 50px;
-        width: 100vw;
-    }
-    #A0_liste-sons_form {
-        max-width: 100vw;
-    }
-    #A0_rythme {
-        margin: 0 5px;
-    }
-    #A0_btn_bas {
-        width: 100%;
-        margin: 20px auto 0 auto;
-    }
-    #A0-speed-light {
-        width: 100%;
-        margin: 20px auto 10px auto;
-    }
-    .trans-lignes input{
-        width: 20px;
-    }
-    .saves button {
-        width: 60px;
-    }
-    .saves div img {
-        width: 50%;
-        min-width: 100px;
-    }
-    .apercus {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-/*TODO @media format paysage */
-/*TODO IPad Pro et NestHub*/
-/*TODO Galaxy Fold*/
-
-/*------------------------------------------------------------------------------*/
-/*------------------------------------- CONSTRUCTION -------------------------------*/
+/*--------------------------------- CONSTRUCTION -------------------------------*/
 /*------------------------------------------------------------------------------*/
 #construction {
     text-align: center;

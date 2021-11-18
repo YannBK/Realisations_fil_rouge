@@ -11,6 +11,9 @@
     <!--CSS-->
     <link rel="stylesheet" href="../css/stylesreset.css">
     <link rel="stylesheet" href="../css/commun_flex.css">
+    <link rel="stylesheet" href="../css/ecrans.css">
+    <link rel="stylesheet" href="../css/modales.css">
+    <link rel="stylesheet" href="../css/media.css">
 </head>
 
 <body>
@@ -18,45 +21,48 @@
         <h1>ZE METRONOME</h1>
     </header>
     <main>
-        <div class="appareil_1">
-
-                <nav id="hamnav">
-                    <label for="hamburger">&#9776;</label>
-                    <input type="checkbox" id="hamburger" />
-                    <h2>
-                        <!--la flèche du titre sur les autres écrans, soit faire un réel retour à la page précédente, soit la changer en logo "maison", c'est plus parlant-->
-                        METRONOME
-                    </h2>
-                    <div id="hamitems">
-                        <a href="index.html">Métronome</a>
-                        <a href="transitions.html">Rythme avancé</a>
-                        <a href="speed.html">Speed training</a>
-                        <a href="harmo.html">Grille harmonique</a>
-                        <a href="accordeur.html">Accordeur</a>
-                        <a href="preferences.html">Préférences</a>
-                        <a href="creation-connexion.html">Connexion / Création</a>
-                        <a href="compte.html">Compte utilisateur</a><!--ne s'affiche que si connecté-->
-                        <a href="evaluation.html">&#201;valuez-moi!</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="mentions-legales.html">Mentions légales</a>
-                    </div>
-                    <a href="creation-connexion.html">
-                        <button type="submit" value="connection" class="btns btn-sub">
+        <div class="device_1">
+<!--Navigation-->
+            <nav id="hamnav">
+                <label for="hamburger">&#9776;</label>
+                <input type="checkbox" id="hamburger" />
+                <h2>
+                    METRONOME
+                </h2>
+                <div id="hamitems">
+                    <a href="index.html">Métronome</a>
+                    <a href="transitions.html">Rythme avancé</a>
+                    <a href="speed.html">Speed training</a>
+                    <a href="harmo.html">Grille harmonique</a>
+                    <a href="accordeur.html">Accordeur</a>
+                    <a href="preferences.html">Préférences</a>
+                    <a href="creation-connexion.html">Connexion / Création</a>
+                    <a href="compte.html">Compte utilisateur</a>
+                    <!--ne s'affiche que si connecté-->
+                    <a href="evaluation.html">&#201;valuez-moi!</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </div>
+                <a href="creation-connexion.html">
+                    <button type="submit" value="connection" class="btns btn-sub">
                         Connexion
-                        </button>
-                    </a>
+                    </button>
+                </a>
+                <section>
                     <span class="login">
                         Login
                     </span>
-                    <div class="checked-none">
-                        <span class="infobulle" aria-label="Déconnexion">
-                        &times;
-                    </div>
-                    <div class="checked-ok">
+                    <span class="checked-ok">
                         &#10004;
-                    </div>
-                </nav>
-
+                    </span>
+                    <span class="checked-none">
+                        <span class="infobulle" aria-label="Déconnexion">
+                            &times;
+                        </span>
+                    </span>
+                </section>
+            </nav>
+<!--Signature rythmique-->
             <div id="A0_signature">
                 <form action="" method="POST">
                     <label for="nb-bips">Nombre de beat :</label>
@@ -102,20 +108,21 @@
                     </div>
                 </form>
             </div>
-
-            <div id="A0_affichage">
+<!--Affichage-->
+            <div id="A0_show">
                 <!--à l'intérieur affichage via code en dur, pour harmo, flash, défilement rythme-->
-                <div id="A0_affichage_defilement-simple" class="affichages">
-                    <p>affichage déroulant, dynamique et tout ce que tu veux, et plus encore mon grand ! &#9834;&#9835;&#9834;&#9835;&#9835;&#9833;&#9834;&#9836;&#9836;&#9834;&#9833;&#9835;&#9834;</p>
+                <div id="A0_show_simple-scroll" class="shows">
+                    <p>affichage déroulant, dynamique et tout ce que tu veux, et plus encore mon grand !
+                        &#9834;&#9835;&#9834;&#9835;&#9835;&#9833;&#9834;&#9836;&#9836;&#9834;&#9833;&#9835;&#9834;</p>
                 </div>
             </div>
-
-            <form id="A0_range">
-                <input type="range" name="barre-tactile" id="A0_tempo_barre-tactile" min="1" max="400" value="120">
-            </form>
-<!--la value sera dynamique-->
-            <div id="A0_gestion_bpm">
-                <div id="A0_btn_gch" class="btn_gch">
+<!--Range <=> Gamme ?-->
+            <div id="A0_range">
+                <input type="range" name="touch-range" min="1" max="400" value="120">
+            </div>
+<!--Gestion Bpm-->
+            <div id="A0_manage_bpm">
+                <div>
                     <button class="btns btn15">
                         +1
                     </button>
@@ -123,16 +130,11 @@
                         +5
                     </button>
                 </div>
-                <div id="A0_bpm" class="affichages">
-                    <div>
-                        120
-                    </div>
-                    <!-- à rendre dynamique avec JS-->
-                    <div>
-                        &nbsp;&#9834;
-                    </div>
+                <div class="shows">
+                    120
+                    &nbsp;&#9834;
                 </div>
-                <div id="A0_btn_drt" class="btn_drt">
+                <div>
                     <button class="btns btn15">
                         +1
                     </button>
@@ -142,41 +144,40 @@
                 </div>
             </div>
 
-            <div id="A0_btn_bas" class="btn_bas">
-
-                <div id="A0_liste-sons">
-                    <label for="checksons" id="checksons-label" class="btns btn15">                
-                    Bip
-                </label>
-                    <input type="checkbox" name="checksons" id="checksons">
-                    <div id="A0_liste-sons-popup">
-                        <form action="" method="POST" id="A0_liste-sons_form">
+            <div id="A0_btn_down" class="btn_down">
+                <div>
+                    <label for="check-sound" class="btns btn15">
+                        Bip
+                    </label>
+                    <input type="checkbox" id="check-sound">
+                    <div>
+                        <form action="" method="POST">
                             <label for="son_1">
-                                <input type="radio" name="son" id="son_1" class="" value="clave1">Clave 1
+                                <input type="radio" name="son" id="son_1" value="clave1">Clave 1
                             </label>
                             <label for="son_2">
-                                <input type="radio" name="son" id="son_2" class="" value="clave2">Clave 2
+                                <input type="radio" name="son" id="son_2" value="clave2">Clave 2
                             </label>
                             <label for="son_3">
-                                <input type="radio" name="son" id="son_3" class="" value="electro1">Electro 1
+                                <input type="radio" name="son" id="son_3" value="electro1">Electro 1
                             </label>
                             <label for="son_4">
-                                <input type="radio" name="son" id="son_4" class="" value="electro2">Electro 2
+                                <input type="radio" name="son" id="son_4" value="electro2">Electro 2
                             </label>
                             <label for="son_5">
-                                <input type="radio" name="son" id="son_5" class="" value="electro3">Electro 3
+                                <input type="radio" name="son" id="son_5" value="electro3">Electro 3
                             </label>
                             <label for="son_6">
-                                <input type="radio" name="son" id="son_6" class="" value="hihat">Hi-hat
+                                <input type="radio" name="son" id="son_6" value="hihat">Hi-hat
                             </label>
                             <label for="son_7">
-                                <input type="radio" name="son" id="son_7" class="" value="gc">Grosse caisse
+                                <input type="radio" name="son" id="son_7" value="gc">Grosse caisse
                             </label>
                             <label for="son_8">
-                                <input type="radio" name="son" id="son_8" class="" value="beep">et bien d'autres à venir
+                                <input type="radio" name="son" id="son_8" value="beep">et bien d'autres à venir
                             </label>
 
-                            <button type="submit" name="submit-sons" id="A0_sons-play" class="btn_sons-ps">Fermer</button>
+                            <button type="submit" name="submit-sons" class="btn_sons-ps">Fermer</button>
                         </form>
                     </div>
                 </div>
@@ -190,10 +191,10 @@
                     Tap
                 </button>
             </div>
-
+<!--Btn speed + flash-->
             <div id="A0-speed-light">
                 <a href="speed.html">
-                    <button id="A0_btn-speed" class="btns btn-sub">
+                    <button class="btns btn-sub">
                         Speed
                     </button>
                 </a>
@@ -201,45 +202,45 @@
                     Flash
                 </button>
             </div>
-
-            <div class="A0_rythme">
-                <div class="A0_rythme_diode">
+<!--Gestion rythme-->
+            <div class="A0_rhythm">
+                <div class="rhythm_diode">
                     <a href="transitions.html">
-                        <button class="btns A0_btn_rythme_avance">
+                        <button class="btns A0_big-btn">
                             Avancé
                         </button>
                     </a>
-                    <div class=" affiche-rythme affichages">
+                    <div class="show-rhythm shows">
                         <!--les diodes seront affichées/supprimées dynamiquement.-->
                         <!--il faudra assigner une valeur à chacune, ce sera surement des inputs au final-->
-                        <div id="A0_diode-1" class="diode"></div>
-                        <div id="A0_diode-2" class="diode"></div>
-                        <div id="A0_diode-3" class="diode"></div>
-                        <div id="A0_diode-4" class="diode"></div>/
-                        <div id="A0_diode-5" class="diode"></div>
-                        <div id="A0_diode-6" class="diode"></div>
-                        <div id="A0_diode-7" class="diode"></div>
-                        <div id="A0_diode-8" class="diode"></div>/
-                        <div id="A0_diode-9" class="diode"></div>
-                        <div id="A0_diode-10" class="diode"></div>
-                        <div id="A0_diode-11" class="diode"></div>
-                        <div id="A0_diode-12" class="diode"></div>/
-                        <div id="A0_diode-13" class="diode"></div>
-                        <div id="A0_diode-14" class="diode"></div>
-                        <div id="A0_diode-15" class="diode"></div>
-                        <div id="A0_diode-16" class="diode"></div>/
-                        <div id="A0_diode-17" class="diode"></div>
-                        <div id="A0_diode-18" class="diode"></div>
-                        <div id="A0_diode-19" class="diode"></div>
-                        <div id="A0_diode-20" class="diode"></div>/
-                        <div id="A0_diode-21" class="diode"></div>
-                        <div id="A0_diode-22" class="diode"></div>
-                        <div id="A0_diode-23" class="diode"></div>
-                        <div id="A0_diode-24" class="diode"></div>/
+                        <div class="diode"></div>
+                        <div class="diode"></div>
+                        <div class="diode"></div>
+                        <div class="diode"></div>/
+                        <div class="diode"></div>
+                        <div class="diode"></div>
+                        <div class="diode"></div>
+                        <div class="diode"></div>/
+                        <div class="diode"></div>
+                        <div class="diode"></div>
+                        <div class="diode"></div>
+                        <div class="diode"></div>/
+                        <div class="diode"></div>
+                        <div class="diode"></div>
+                        <div class="diode"></div>
+                        <div class="diode"></div>/
+                        <div class="diode"></div>
+                        <div class="diode"></div>
+                        <div class="diode"></div>
+                        <div class="diode"></div>/
+                        <div class="diode"></div>
+                        <div class="diode"></div>
+                        <div class="diode"></div>
+                        <div class="diode"></div>/
                     </div>
                     <div>
                         <button class="btn-sl btns save">
-                                Save
+                            Save
                         </button>
                         <a href="load.html">
                             <button class="btn-sl btns">
@@ -249,46 +250,47 @@
                     </div>
                 </div>
             </div>
-
-            <div class="ads">
-                PUB PUB PUB PUB PUB PUB PUB
-            </div>
-
-            <div class="popup-diode">
-                <form action="" method="post" class="form-diode"> <span class="close-diode close">&times;</span>
+<!--Modal diodes-->
+            <div class="modal modal-diode">
+                <form action="" method="post"> <span class="close close-diode">&times;</span>
                     <label for="diode-null">
-                        <input type="radio" name="diode-value" id="diode-null" class="" value="diode-null">Null
+                        <input type="radio" name="diode-value" id="diode-null"value="diode-null">Null
                     </label>
                     <label for="diode-1">
-                        <input type="radio" name="diode-value" id="diode-1" class="" value="diode-1" checked>Son 1
+                        <input type="radio" name="diode-value" id="diode-1"value="diode-1" checked>Son 1
                     </label>
                     <label for="diode-2">
-                        <input type="radio" name="diode-value" id="diode-2" class="" value="diode-2">Son 2
+                        <input type="radio" name="diode-value" id="diode-2"value="diode-2">Son 2
                     </label>
                     <label for="diode-3">
-                        <input type="radio" name="diode-value" id="diode-3" class="" value="diode-3">Son 3
+                        <input type="radio" name="diode-value" id="diode-3"value="diode-3">Son 3
                     </label>
-                    <button type="submit" name="submit" class="btns btn-sub">Ok</button>
+                    <button type="submit" class="btns btn-sub">Ok</button>
                 </form>
             </div>
-
-            <div class="popup-save">
-                <form action="" method="post" class="form-save"> <span class="close-save close">&times;</span>
-                        <h3>Sauvegarder</h3>
-                        <label for="name-save"> Donnez un nom : <span class="star">*</span></label>
-                        <input type="text" class="text" name="name-save" placeholder="Ma sauvegarde" required>
-                        <div class="btn-div-save">
-                            <button type="reset" name="reset" class="btns btn-sub reset-save">Annuler</button>
-                            <button type="submit" name="submit" class="btns btn-sub">Confirmer</button>
-                        </div>
+<!--Modal save-->
+            <div class="modal modal-save">
+                <form action="" method="post"> <span class="close close-save">&times;</span>
+                    <h3>Sauvegarder</h3>
+                    <label for="name-save"> Donnez un nom : <span class="star">*</span></label>
+                    <input type="text" class="text" placeholder="Ma sauvegarde" required>
+                    <div class="btn-div-save">
+                        <button type="reset" class="btns btn-sub reset-save">Annuler</button>
+                        <button type="submit" class="btns btn-sub">Confirmer</button>
+                    </div>
                 </form>
             </div>
+        </div>
+<!--Pubs-->
+        <div class="ads">
+            PUB PUB PUB PUB PUB PUB PUB
         </div>
     </main>
     <footer>
 
     </footer>
 
-    <script src="../js/popup-save.js"></script>
+    <script src="../js/modal-save.js"></script>
 </body>
+
 </html>
