@@ -1,0 +1,191 @@
+/*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ METRONOME _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
+/*------------------------------------------------------------------------------*/
+/*---------------------------------SIGNATURE RYTHMIQUE -------------------------*/
+/*------------------------------------------------------------------------------*/
+#A0_signature form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin:10px auto;
+}
+
+#A0_signature label{
+    padding-right: 10px;
+    text-align: right;
+}
+
+/*------------------------------------------------------------------------------*/
+/*-------------------------------------AFFICHAGE DEROULANT ---------------------*/
+/*------------------------------------------------------------------------------*/
+#A0_show{
+    display: flex;
+    justify-content: space-evenly;
+    margin:20px;
+}
+
+#A0_show div{
+    height: 100px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+/*------------------------------------------------------------------------------*/
+/*--------------------------------------CHOIX TEMPO ----------------------------*/
+/*------------------------------------------------------------------------------*/
+#A0_range {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#A0_range input{
+    height: 5px;
+    margin:30px;
+    width: 100%;
+/*TODO changer la couleur du range*/
+}
+/*input[type='range'] {
+    -webkit-appearance: none !important;
+    background:rgb(224, 15, 15);
+    height:7px;
+    border-radius: 10px;
+}
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background:blue;
+    height:10px;
+    width:10px;
+} */
+/*TODO ^^ c'est bien, mais il faudrait pouvoir différencier l'avant et après curseur*/
+#A0_range div {
+    display: none;
+}
+#A0_manage_bpm {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
+
+#A0_manage_bpm div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+}
+
+#A0_manage_bpm div:nth-child(1),
+#A0_manage_bpm div:nth-child(3) {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30vw;
+}
+
+#A0_btn_down,
+#A0-speed-light {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px auto 20px auto;
+}
+
+/*------------------------------------------------------------------------------*/
+/*--------------------------------------DROPDOWN-SONS -----------------------------*/
+/*------------------------------------------------------------------------------*/
+#A0_btn_down div:first-child {
+    position: relative;
+    text-align: center; /* les centrer mais alignés sur la droite, en gros les btn radio en ligne verticale... ou alors cacher les btn, mais alors il me faut le chgmt de couleur de la radio activée*/
+    left: 0;
+}
+/* Masquez la forme DROPDOWN */
+#A0_btn_down div:first-child div {
+    display: none;
+    position: fixed;
+    top:10vh;
+    left: 20vw;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    width: 60vw;
+}
+/* Styles pour le conteneur du form */
+#A0_btn_down div:first-child div form {
+    display: flex;
+    flex-direction: column;
+    max-width: 60vw;
+    margin: 0;
+    background-color: rgb(50, 48, 39);
+    border-radius: 10px;
+}
+
+#A0_btn_down div:first-child div form label{
+    border-top: 1px solid rgb(0,0,0);
+    font-size: 1.2em;
+    padding: 10px 0;
+    width: 100%;
+}
+
+#A0_btn_down div:first-child div form label:first-child{
+    border-top: none;
+}
+
+#A0_btn_down div:first-child div form label:hover {
+    background-color: rgb(64,20,8);
+}
+
+#A0_btn_down div:first-child div form input:checked ~ label{
+    /* background-color: rgb(197, 13, 13); */
+    /*TODO via JS => quand input:radio checked, son label change de bckgrd*/
+}
+
+#A0_btn_down div label:only-of-type {
+    border-radius: 50%;
+    padding: 10px 8px;
+    color: rgb(0,0,0);
+    border: solid 2px;
+    border-top-color: rgb(110,110,110);
+    border-left-color: rgb(110,110,110);
+    border-bottom-color: rgb(116,116,116);
+    border-right-color: rgb(116,116,116);
+    border-style: outset;
+    position: relative;
+    top: 15px;
+}
+
+#A0_btn_down div label:only-of-type:hover {
+    color: rgb(255, 238, 217);
+}
+
+#A0_btn_down div label:only-of-type:active {
+    border-style:solid;/*en laissant outset le bas-droit n'arrive pas à être plus clair que gris clair*/
+    border-top-color: rgb(155,155,155);
+    border-left-color: rgb(155,155,155);
+    border-bottom-color: rgb(255, 238, 217);
+    border-right-color: rgb(255, 238, 217);
+}
+
+#A0_btn_down div input:only-of-type {
+    display: none;
+}
+
+#A0_btn_down div input:only-of-type:checked ~ div {
+    display: block;
+}
+
+#A0_btn_down div input:only-of-type:checked ~ div input {
+    display: inline;
+    /* float: left; */
+}
+
+#A0_btn_down div div form button {
+    width: 100%;
+    margin: 0;
+    background-color: rgb(0,0,0);
+    border-radius: 10px;
+    border: none;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    color: rgb(255, 238, 217);
+}
+
+#A0_btn_down div div form button:hover {
+    background: rgb(64,20,8); 
+}

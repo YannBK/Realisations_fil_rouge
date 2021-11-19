@@ -31,10 +31,6 @@
     margin-left: 20px;
 }
 
-#A2_inputs input {
-    margin: 5px;
-}
-
 .A2_btn_save-load {
     max-width: min-content;
 }
@@ -90,10 +86,6 @@
     width: 60px;
     height: 30px;
 }
-#param-grid form div input {
-    margin-left: 5px;
-    margin-right: 5px;
-}
 
 .cases{
     height: 50px;
@@ -117,7 +109,6 @@
     background-color: rgb(50,48,39); 
 }
 
-.box-div form input,
 .box-div form label {
     margin: 5px;
 }
@@ -145,14 +136,6 @@
 .speed-form div {
     display: flex;
     align-items: baseline;
-}
-
-#nb-count {
-    width: 80px;
-}
-
-#mute {
-    border-radius: 0 0 10px 10px;
 }
 
 /*______________________ Ecran PREF _______________________*/
@@ -272,10 +255,6 @@ input:checked + .slider::before {
     display: none;
 }
 
-.cocr-form input {
-    width: 50%;
-    border-radius: 5px;
-}
 #box-connect a{
     color:rgb(245, 172, 78);
 }
@@ -283,11 +262,6 @@ input:checked + .slider::before {
 
 .cc-form label {
     margin: 10px auto;
-}
-
-.cc-form input {
-    width: 50%;
-    border-radius: 5px;
 }
 
 /*------------------------------------------------------------------------------*/
