@@ -1,11 +1,9 @@
 
 /*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ MEDIA _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
-/*------------------------------------------------------------------------------*/
-/*----------------------------------------MEDIA  1000 -------------------------------*/
-/*------------------------------------------------------------------------------*/
+
+/* _-_-_-_-_-_-_-_ MEDIA  w1000 _-_-_-_-_-_-_-_ */
 @media screen and (max-width:1000px){
-    .device_1, 
-    .device_2 {
+    .device {
         width: 80vw;
         margin: 10vh 10vw auto 10vw;
     }
@@ -16,63 +14,37 @@
     nav div:first-of-type {
         width: 80vw;
     }
-    #A0_btn_down div:first-child div {
-        left: 10vw;
-        width: 80vw;
-    }
-    #A0_btn_down div:first-child div form {
-        max-width: 80vw;
-    }
     header {
         display: none;
     }
 }
-/*------------------------------------------------------------------------------*/
-/*----------------------------------------MEDIA  700 -------------------------------*/
-/*------------------------------------------------------------------------------*/
+
+/* _-_-_-_-_-_-_-_ MEDIA w700 _-_-_-_-_-_-_-_ */
 @media screen and (max-width:700px){
-    .device_1, 
-    .device_2 {
+    /* _____ Commun _____ */
+    .device{
         width: 100vw;
         min-height: 100vh;
         margin: 0;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        border-radius: 0;
-    }
-    .window-case{
-        margin: 0 2vw auto 2vw;
-        width: 96vw;
-    }
-    .device_2 {
         justify-content: flex-start;
+        border-radius: 0;
     }
     nav div:first-of-type {
         width: 100vw;
     }
-    #A0_btn_down div:first-child div {
-        left: 0;
-        top: 50px;
-        width: 100vw;
-    }
-    #A0_btn_down div:first-child div form {
-        max-width: 100vw;
-    }
     .A0_rhythm {
         margin: 0 5px;
     }
-    #A0_btn_down {
-        width: 100%;
-        margin: 20px auto 0 auto;
+    .ads {/*scroll latéral sur écran principal => n'existe pas en vrai ?*/
+        position:sticky;/*ou fixed...choisir*/
     }
+    /* _____ E metronome _____ */    
     #A0-speed-light {
         width: 100%;
-        margin: 20px auto 10px auto;
     }
-    .trans-rows input{
-        width: 20px;
-    }
+    /* _____ E load _____ */
     .saves button {
         width: 60px;
     }
@@ -84,12 +56,25 @@
         display: flex;
         justify-content: center;
     }
-    .ads {/*scroll latéral sur écran principal => n'existe pas en vrai ?*/
-        position:sticky;
-        bottom: 0;
+    /* _____ E transition _____ */
+    .trans-rows input{
+        width: 20px;
+    }
+    .btn-schema{
+        width: 60px;
+    }
+    /* _____ E harmo _____ */
+    .window-case{
+        margin: 0 2vw auto 2vw;
+        width: 96vw;
     }
 }
 
+/* _-_-_-_-_-_-_-_ MEDIA  h900 _-_-_-_-_-_-_-_ */
+@media screen and (max-height:900px){
+    .ads {
+    position:sticky;
+}
 /*TODO @media format paysage */
 /*TODO IPad Pro et NestHub*/
 /*TODO Galaxy Fold*/

@@ -22,7 +22,7 @@
         <h1>ZE METRONOME</h1>
     </header>
     <main>
-        <div class="device_1">
+        <div class="device">
 <!--Navigation-->
             <nav id="hamnav">
                 <label for="hamburger">&#9776;</label>
@@ -49,6 +49,7 @@
                         Connexion
                     </button>
                 </a>
+                <!--switch en connexion-->
                 <section>
                     <span class="login">
                         Login
@@ -69,7 +70,6 @@
                     <label for="nb-bips">Nombre de beat :</label>
                     <div>
                         <select name="nb-bips" id="nb-bips">
-                            <!-- reliés à la gestion du rythme et du nombre de diodes-->
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -111,10 +111,9 @@
             </div>
 <!--Affichage-->
             <div id="A0_show">
-                <!--à l'intérieur affichage via code en dur, pour harmo, flash, défilement rythme-->
                 <div id="A0_show_simple-scroll" class="shows">
-                    <p>affichage déroulant, dynamique et tout ce que tu veux, et plus encore mon grand !
-                        &#9834;&#9835;&#9834;&#9835;&#9835;&#9833;&#9834;&#9836;&#9836;&#9834;&#9833;&#9835;&#9834;</p>
+                    <p>
+                        &#9834; &#9835;&#9834;&#9835;&#9835;&#9833;&#9834;&#9836;&#9836;&#9834;&#9833;&#9835; &#9834;&#9834;&#9835;&#9834; &#9835;&#9835;&#9833;&#9834;&#9836;&#9836;&#9834;&#9833;&#9835;&#9834;&#9834; &#9835;&#9834;&#9835;&#9835; &#9833;&#9834;&#9836;&#9836;&#9834;&#9833;&#9835;&#9834;&#9834;&#9835;&#9834;&#9835;&#9835;&#9833;&#9834;&#9836;&#9836;&#9834; &#9833;&#9835;&#9834;&#9834;&#9835;&#9834;&#9835;&#9835;&#9833;&#9834;&#9836;&#9836; &#9834;&#9833;&#9835;&#9834; &#9834;&#9835;&#9834;&#9835;&#9835;&#9833;&#9834;&#9836;&#9836;&#9834;&#9833;&#9835;&#9834;</p>
                 </div>
             </div>
 <!--Range <=> Gamme ?-->
@@ -126,10 +125,10 @@
             <div id="A0_manage_bpm">
                 <div>
                     <button class="btns btn15">
-                        +1
+                        +5
                     </button>
                     <button class="btns btn15">
-                        +5
+                        +1
                     </button>
                 </div>
                 <div class="shows">
@@ -147,50 +146,11 @@
             </div>
 
             <div id="A0_btn_down" class="btn_down">
-                <div>
-                    <label for="check-sound" class="btns btn15">
-                        Bip
-                    </label>
-                    <input type="checkbox" id="check-sound">
-                    <div>
-                        <form action="" method="POST">
-                            <label for="son_1">
-                                <input type="radio" name="son" id="son_1" value="clave1">Clave 1
-                            </label>
-                            <label for="son_2">
-                                <input type="radio" name="son" id="son_2" value="clave2">Clave 2
-                            </label>
-                            <label for="son_3">
-                                <input type="radio" name="son" id="son_3" value="electro1">Electro 1
-                            </label>
-                            <label for="son_4">
-                                <input type="radio" name="son" id="son_4" value="electro2">Electro 2
-                            </label>
-                            <label for="son_5">
-                                <input type="radio" name="son" id="son_5" value="electro3">Electro 3
-                            </label>
-                            <label for="son_6">
-                                <input type="radio" name="son" id="son_6" value="hihat">Hi-hat
-                            </label>
-                            <label for="son_7">
-                                <input type="radio" name="son" id="son_7" value="gc">Grosse caisse
-                            </label>
-                            <label for="son_8">
-                                <input type="radio" name="son" id="son_8" value="beep">et bien d'autres à venir
-                            </label>
-
-                            <button type="submit" name="submit-sons" class="btn_sons-ps">Fermer</button>
-                        </form>
-                    </div>
-                </div>
                 <button class="btns btn-sub btn-pause">
                     Stop
                 </button>
                 <button class="btn-play btns btn-sub">
                     Play
-                </button>
-                <button class="btns btn15">
-                    Tap
                 </button>
             </div>
 <!--Btn speed + flash-->
@@ -213,8 +173,6 @@
                         </button>
                     </a>
                     <div class="show-rhythm shows">
-                        <!--les diodes seront affichées/supprimées dynamiquement.-->
-                        <!--il faudra assigner une valeur à chacune, ce sera surement des inputs au final-->
                         <div class="diode"></div>
                         <div class="diode"></div>
                         <div class="diode"></div>
@@ -266,6 +224,23 @@
                     </label>
                     <label for="diode-3">
                         <input type="radio" name="diode-value" id="diode-3"value="diode-3">Son 3
+                    </label>
+                    <label for="diode-4">
+                        <input type="radio" name="diode-value" id="diode-4"value="diode-4">Autre
+                        <select id="">
+                            <option value="">clave1</option>
+                            <option value="">clave2</option>
+                            <option value="">clave3</option>
+                            <option value="">hihat1</option>
+                            <option value="">hihat2</option>
+                            <option value="">hihat3</option>
+                            <option value="">bell1</option>
+                            <option value="">bell2</option>
+                            <option value="">bell3</option>
+                            <option value="">snap1</option>
+                            <option value="">snap2</option>
+                            <option value="">snap3</option>
+                        </select>
                     </label>
                     <button type="submit" class="btns btn-sub">Ok</button>
                 </form>

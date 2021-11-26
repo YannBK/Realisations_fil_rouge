@@ -8,8 +8,7 @@ body {
     background-attachment: fixed;
 }
 
-.device_1,
-.device_2 {
+.device {
     position: relative;
     margin: 10vh 20vw auto 20vw;
     background-color: rgba(50, 48, 39, 0.9);
@@ -23,7 +22,7 @@ body {
     /* color: rgb(55,48,39); */
 }
 
-/* _____________________ Boutons ____________________*/
+/* ________ Boutons ________ */
 /* --------- btns généraux --------- */
 .btns {
     background-color: rgb(80,74,72);
@@ -46,44 +45,14 @@ body {
     min-width: 60px;
     margin: 5px;
 }
-/* ______ Save / Load ______ */
+
 .btn-sl {
     height:50%;
     width: 60px;
     padding: 0;
 }
-/* --------- btns écran principal --------- */
-.btn15 {
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-}
 
-/* ______ Play / Pause ______ */
-
-.btn-play:hover {
-    background-color: rgb(2, 129, 19);
-}
-
-.btn-pause:hover {
-    background-color: rgb(151, 1, 1);
-}
-
-.btn-play:active {
-    background-color: rgb(0, 82, 12);
-}
-
-.btn-pause:active {
-    background-color: rgb(94, 0, 0);
-}
-
-/* --------- Btn Ecran Transition --------- */
-.btntrans {
-    width: 30px;
-    height: 30px;
-}
-
-/* __________________________ Inputs __________________________*/
+/* ________ Inputs ________ */
 select {
     background-color: rgb(87,87,87);
     border-radius: 10px;
@@ -114,7 +83,7 @@ textarea {
     border-radius: 5px;
 }
 
-/* ___________________________ Diodes _________________________*/
+/* ________ Diodes ________ */
 .diode {
     height: 15px;
     width: 15px;
@@ -127,7 +96,7 @@ textarea {
     background-color: green;
 }
 
-/* ___________________________ Titres __________________________*/
+/* ________ Titres ________ */
 h1 {
     color: #000;
     font-size: 2rem;
@@ -178,7 +147,7 @@ h5 {
     line-height: 1rem;
 }
 
-/*_________________ Divers ______________*/
+/* ________ Divers ________ */
 p {
     text-align: center;
     line-height: 1.5rem;
@@ -209,7 +178,7 @@ form {
     color: rgb(184, 134, 11);
     height: 100px;
     width: 100%;
-    position:fixed; /*!passer en sticky por les écrans < 900px de haut*/
+    position:fixed;
     bottom: 0;
 }
 
@@ -217,9 +186,9 @@ form {
     position:sticky;   
 }
 
-/*------------------------------------------------------------------------------*/
-/*------------------------------------ NAV / BURGER ----------------------------*/
-/*------------------------------------------------------------------------------*/
+
+/* _-_-_-_-_-_-_-_ NAV / BURGER _-_-_-_-_-_-_-_ */
+
 
 nav { /*menu nav hamburger*/
     width: 100%;
@@ -340,9 +309,8 @@ nav button {
     border-radius: 3px;
 }
 
-/*------------------------------------------------------------------------------*/
-/*-----------------------------------EDITEUR RYTHME ----------------------------*/
-/*------------------------------------------------------------------------------*/
+/* _-_-_-_-_-_-_-_ EDITEUR RYTHME _-_-_-_-_-_-_-_ */
+
 .A0_rhythm {
     display: flex;
     justify-content: space-between;
@@ -379,9 +347,9 @@ color: black;
     /* height: 80px; */
 }
 
-/*------------------------------------------------------------------------------*/
-/*--------------------------------- CONSTRUCTION -------------------------------*/
-/*------------------------------------------------------------------------------*/
+
+/* _-_-_-_-_-_-_-_ CONSTRUCTION _-_-_-_-_-_-_-_ */
+
 #construction {
     text-align: center;
 }

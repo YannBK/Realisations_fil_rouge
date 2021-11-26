@@ -1,8 +1,8 @@
 
 /*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ ECRANS _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
-/*------------------------------------------------------------------------------*/
-/*---------------------------------Ecran TRANSITION  ---------------------------*/
-/*------------------------------------------------------------------------------*/
+
+/* _-_-_-_-_-_-_-_ Ecran TRANSITION _-_-_-_-_-_-_-_ */
+
 #trans-table {
     padding: 5px;
 }
@@ -11,6 +11,12 @@
     display: flex;
     justify-content: space-between;
     margin: 5px;
+    align-items: baseline;
+}
+
+.btntrans {
+    width: 30px;
+    height: 30px;
 }
 
 #trans_total {
@@ -56,11 +62,12 @@
 
 .btn-schema{
     width: 100px;
+    height: 30px;
 }
 
-/*------------------------------------------------------------------------------*/
-/*-------------------------------------- Ecran HARMONIE  -----------------------*/
-/*------------------------------------------------------------------------------*/
+
+/* _-_-_-_-_-_-_-_ Ecran HARMONIE _-_-_-_-_-_-_-_ */
+
 #container-grid {
     height: 300px;
     max-width: 100%;
@@ -76,10 +83,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 #grid-sl button {
     margin: 10px;
@@ -98,9 +101,7 @@
     font-weight: 900;
 }
 
-/*---------------------------------------------------------------------------------*/
-/*-------------------- Ecrans BOX-TIROIR (speed, préf, accord)  -------------------*/
-/*---------------------------------------------------------------------------------*/
+/* _-_-_-_-_-_-_-_ Ecrans BOX-TIROIR (speed, préf, accord,cocr) _-_-_-_-_-_-_-_ */
 .box-div {
     border-bottom: solid 1px rgb(0,0,0);
 }
@@ -140,7 +141,7 @@
 
 /*______________________ Ecran PREF _______________________*/
 #mode #mod:checked ~ form,
-#flashy #flash:checked ~ form,
+#family #fam:checked ~ form,
 #notation #nota:checked ~ form,
 #maxy #max:checked ~ form,
 #stats #stat:checked ~ form {
@@ -214,33 +215,6 @@ input:checked + .slider::before {
 }
 
 /*____________________ Ecran ACCORD ______________________*/
-#diapason-bandeau {
-    display: none;
-}
-
-#diapason-jauge {
-    /* background-color: rgba(0, 255, 157,0.4); */
-    height: 200px;
-    max-width: 100%;
-    margin: 0 20px;
-}
-#diapason-detection {
-    text-align: center;
-}
-
-#choice-alt {
-    text-align: center;
-}
-
-#transposition #transpo:checked ~ form,
-#oreille #oreil:checked ~ form{
-    display: block;
-}
-
-.accord-form {
-    display: none;
-}
-
 #oreille form div {
     margin : 5px;
 }
@@ -258,15 +232,14 @@ input:checked + .slider::before {
 #box-connect a{
     color:rgb(245, 172, 78);
 }
-/*_____________ Ecran CONTACT ______________*/
 
+/* _-_-_-_-_-_-_-_ Ecran CONTACT _-_-_-_-_-_-_-_ */
 .cc-form label {
     margin: 10px auto;
 }
 
-/*------------------------------------------------------------------------------*/
-/*-------------------------------------------Ecran LOAD  -----------------------*/
-/*------------------------------------------------------------------------------*/
+
+/* _-_-_-_-_-_-_-_ Ecran LOAD _-_-_-_-_-_-_-_ */
 .saves {
     display: flex;
     align-items: center;
@@ -294,9 +267,7 @@ input:checked + .slider::before {
     margin: 0;
 }
 
-/*------------------------------------------------------------------------------*/
-/*-------------------------------------Ecran EVALUATION  -----------------------*/
-/*------------------------------------------------------------------------------*/
+/* _-_-_-_-_-_-_-_ Ecran EVALUATION _-_-_-_-_-_-_-_ */
 .text-screen {
     display: flex;
     flex-direction: column;

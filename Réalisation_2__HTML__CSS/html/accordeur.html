@@ -20,7 +20,7 @@
         <h1>ZE METRONOME</h1>
     </header>
     <main>
-        <div class="device_2">
+        <div class="device">
 <!--Navigation-->
             <nav>
                 <label for="hamburger">&#9776;</label>
@@ -62,90 +62,10 @@
                     </span>
                 </section>
             </nav>
-
-            <!--popup autorisation accès microphone + enregistrement à l'ouverture de la page-->
-            <!--!pour les fréquences, soundcorset les indique en haut...mais on doit pouvoir trouver des tableaux (A1=55Hz B1b= 58Hz...)-->
-<!--Affichage diapason-->
-            <div id="diapason">
-                <div id="diapason-graphique">
-                    <div id="diapason-jauge" class="shows">
-
-                        <div id="construction">
-                            <h3>page en construction</h3>
-                            <button class="construction"><span>Waiting</span> for JS</button>
-                        </div>
-
-                    </div>
-
-                    <div id="diapason-bandeau" class="shows">
-                    
-                    </div>
-
-                </div>
-                <!-- <div id="diapason-detection">
-                    <div id="bandeau">
-                        <div id="aff-note">
-                            Ré
-                        </div>
-                        <div id="aff-alteration">
-                            &#9839;
-                        </div>
-                    </div>
-                </div> -->
-                <div id="choice-alt">
-                    <form action="" method="post">
-                        <fieldset>
-                            <legend>Choix d'altération affichée</legend>
-                            <input type="radio" name="alt" id="diese" value="diese" checked>
-                            <label for="diese">&#9839;</label>
-                            <input type="radio" name="alt" id="bemol" value="bemol">
-                            <label for="bemol">&#9837;</label>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-<!--Transposition-->
-            <div id="transposition" class="box-div">
-                <label for="transpo" class="box-choice">
-                    <h4>
-                        Transposition
-                    </h4>
-                </label>
-                    <input type="radio" name="accord" class="box-none" id="transpo">
-                <form action="" method="post" class="accord-form">
-                    <fieldset>
-                        <legend>Quelle tonalité d'instrument? :</legend>
-                            <label for="harmo-note-transpo">
-                                Note :
-                            </label>
-                            <select id="harmo-note-transpo">
-                                <option value="C">C</option>
-                                <option value="D">D</option>
-                                <option value="E">E</option>
-                                <option value="F">F</option>
-                                <option value="G">G</option>
-                                <option value="A">A</option>
-                                <option value="B">B</option>
-                            </select>
-                            <label for="harmo-alt">
-                                Altération :
-                            </label>
-                            <select name="harmo-alt" id="harmo-alt">
-                                <option value="becarre">-</option>
-                                <option value="diese">&#9839;</option>
-                                <option value="bemol">&#9837;</option>
-                            </select>
-                    </fieldset>
-                </form>
-            </div>
-<!--Accordage d'oreille-->
-            <div id="oreille" class="box-div">
-                <label for="oreil" class="box-choice">
-                    <h4>
+            <!--!et pour la détection des fréquences et le traitement du signal reçu, je passe en parallèle un diplome d'ingénieur du son, pourquoi pas-->
+                    <h3>
                         Accordage d'oreille
-                    </h4>
-                </label>
-                    <input type="radio" name="accord" class="box-none" id="oreil">
+                    </h3>
                 <form action="" method="post" class="accord-form">
                     <fieldset>
                         <legend>Quelle note voulez-vous entendre ? :</legend>
@@ -165,38 +85,24 @@
                             Altération :
                         </label>
                         <select id="harmo-alt">
-                            <option value="becarre">-</option>
+                            <option value="becarre"></option>
                             <option value="diese">&#9839;</option>
                             <option value="bemol">&#9837;</option>
                         </select>
                     </fieldset>
                     <div>
-                        <label for="octave">Hauteur de la note : </label>
+                        <label for="octave">Octave : </label>
                         <select id="octave">
-                            <option value="basse">Basse</option>
-                            <option value="moyenne" selected>Moyenne</option>
-                            <option value="haute">Haute</option>
+                            <option value="1">1</option>
+                            <option value="2" >2</option>
+                            <option value="3"selected>3</option>
+                            <option value="4">4</option>
                         </select>
                     </div>
-                    <div>
-                        <fieldset>
-                            <legend>
-                                Affichage détecteur
-                            </legend>
-                            <input type="radio" name="tricheur" id="aveugle" checked>
-                            <label for="aveugle">
-                                Cacher
-                            </label>
-                            <input type="radio" name="tricheur" id="tricheur">
-                            <label for="tricheur">
-                                Afficher
-                            </label>
-                        </fieldset>
-                    </div>
 
-                    <button type="submit" class="btns btn-sub">Play</button>
+                    <button type="submit" class="btns btn-sub">Jouer</button>
                 </form>
-            </div>
+            <!-- </div> -->
         </div>
         <div class="ads">
             PUB PUB PUB PUB PUB PUB PUB

@@ -21,7 +21,7 @@
         <h1>ZE METRONOME</h1>
     </header>
     <main>
-        <div class="device_2">
+        <div class="device">
 <!--Navigation-->
             <nav>
                 <label for="hamburger">&#9776;</label>
@@ -77,10 +77,68 @@
                 </div>
             </div>
             <!--?la grille-->
-<!--Paramêtres-->
+<!--Paramètres-->
             <div id="param-grid">
                 <form action="" method="post">
                     <div>
+                        <div>
+                            <label for="generation">
+                                Génération des accords : 
+                                <select id="generation">
+                                    <option value="">Personnalisée</option>
+                                    <option value="">Aléatoire avec gamme</option>
+                                    <option value="">Aléatoire total</option>
+                                    <option value="">Préprogrammée</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>  
+                    <div><!--Affichage conditionné par le choix précédent : "Personnalisée => rien d'affiché ; "Aléatoire avec gamme => scale + tone + alt ; "Aléatoire total" => rien d'affiché ; "Préprogrammée" => template + tone + alt-->
+                        <div>
+                            <label for="scale">
+                                Gamme :
+                                <select id="scale">
+                                    <option value="">Majeure</option>
+                                    <option value="">Mineure nateurelle</option>
+                                    <option value="">Mineure harmonique</option>
+                                    <option value="">Blues mineur...</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div>
+                            <label for="template">
+                                Style :
+                                <select id="template">
+                                    <option value="">Blues</option>
+                                    <option value="">Rock_1</option>
+                                    <option value="">Rock_2</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div>
+                            <label for="tone">
+                                Tonalité :
+                                <select id="tone">
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="E">E</option>
+                                    <option value="F">F</option>
+                                    <option value="G">G</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                </select>
+                            </label>
+                            <label for="alt">
+                                Altération :
+                                <select id="alt">
+                                    <option value="becarre"></option>
+                                    <option value="diese">&#9839;</option>
+                                    <option value="bemol">&#9837;</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>  
+                    <div>    
                         <div>
                             <label for="grid-bar">
                                 Nombre de mesure :
@@ -100,7 +158,7 @@
                     <div>
                         <div>
                             <label for="grid-repeat">
-                                Répéter la mesure :
+                                Répéter la grille :
                                 <input type="number" id="grille-repeat" min="1" max="500"
                                     placeholder="4">
                             </label>
@@ -206,6 +264,23 @@
                                 <label for="diode-3">
                                     <input type="radio" name="diode-value" id="diode-3" value="diode-3">Son 3
                                 </label>
+                                <label for="diode-4">
+                                    <input type="radio" name="diode-value" id="diode-4"value="diode-4">Autre
+                                    <select id="">
+                                        <option value="">clave1</option>
+                                        <option value="">clave2</option>
+                                        <option value="">clave3</option>
+                                        <option value="">hihat1</option>
+                                        <option value="">hihat2</option>
+                                        <option value="">hihat3</option>
+                                        <option value="">bell1</option>
+                                        <option value="">bell2</option>
+                                        <option value="">bell3</option>
+                                        <option value="">snap1</option>
+                                        <option value="">snap2</option>
+                                        <option value="">snap3</option>
+                                    </select>
+                                </label>
                                 <button type="button" class="btns btn-sub close-custom">
                                     Ok
                                 </button>
@@ -235,9 +310,26 @@
                                     Altération :
                                 </label>
                                 <select id="harmo-alt">
-                                    <option value="becarre">-</option>
+                                    <option value="becarre"></option>
                                     <option value="diese">&#9839;</option>
                                     <option value="bemol">&#9837;</option>
+                                </select>
+                                <label for="quality">
+                                    Qualité d'accord :
+                                </label>
+                                <select id="quality">
+                                    <option value=""></option>
+                                    <option value="">m</option>
+                                    <option value="">-</option>
+                                    <option value="">+</option>
+                                    <option value="">Δ</option>
+                                    <option value="">m7</option>
+                                    <option value="">Ø</option>
+                                    <option value="">7</option>
+                                    <option value="">mΔ</option>
+                                    <option value="">+Δ</option>
+                                    <option value="">-7</option>
+                                    <option value="">autres...</option>
                                 </select>
                                 <label for="harmo-accbip">
                                     Bip joué :

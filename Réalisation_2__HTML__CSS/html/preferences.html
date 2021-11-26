@@ -20,7 +20,7 @@
         <h1>ZE METRONOME</h1>
     </header>
     <main>
-        <div  class="device_2">
+        <div  class="device">
 <!--Navigation-->
             <nav>
                 <label for="hamburger">&#9776;</label>
@@ -79,22 +79,30 @@
                 </form>
             </div>
 
-<!--Mode flash-->
-            <!-- <div id="flashy" class="box-div">
-                <label for="flash" class="box-choice">
+<!--Choix famille sons-->
+            <div id="family" class="box-div">
+                <label for="fam" class="box-choice">
                     <h4>
-                        Flash screen
+                        Sons prédéfinis
                     </h4>
                 </label>
-                    <input type="radio" name="pref" class="box-none" id="flash">
-                <form action="" method="POST" id="form-flash" class="pref-form">
-                    Activer l'affichage pulsatile
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
+                    <input type="radio" name="pref" class="box-none" id="fam">
+                <form action="" method="POST" id="form-fam" class="pref-form">
+                    Choix des bips :
+                    <label for="clave">
+                        <input type="radio" name="son" id="clave" value="clave" checked>Clave
+                    </label>
+                    <label for="hihat">
+                        <input type="radio" name="son" id="hihat" value="hihat">Hihat
+                    </label>
+                    <label for="bell">
+                        <input type="radio" name="son" id="bell" value="bell">Bell
+                    </label>
+                    <label for="snap">
+                        <input type="radio" name="son" id="snap" value="snap">Snap
                     </label>
                 </form>
-            </div> -->
+            </div>
 <!--Notation-->
             <div id="notation" class="box-div">
                 <label for="nota" class="box-choice">
