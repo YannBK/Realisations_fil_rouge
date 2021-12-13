@@ -20,13 +20,15 @@
         <h1>ZE METRONOME</h1>
     </header>
     <main>
-        <div  class="device">
-<!--Navigation-->
+        <div class="device">
+            <!--Navigation-->
             <nav>
                 <label for="hamburger">&#9776;</label>
                 <input type="checkbox" id="hamburger" />
                 <h2>
-                    <a href="index.html"><!--&#9750;-->&larr;</a>
+                    <a id="back" href="#">
+                        <!--&#9750;-->&larr;
+                    </a>
                     CONTACT
                 </h2>
                 <div>
@@ -37,14 +39,15 @@
                     <a href="accordeur.html">Accordeur</a>
                     <a href="preferences.html">Préférences</a>
                     <a href="creation-connexion.html">Connexion / Création</a>
-                    <a href="compte.html">Compte utilisateur</a><!--ne s'affiche que si connecté-->
+                    <a href="compte.html">Compte utilisateur</a>
+                    <!--ne s'affiche que si connecté-->
                     <a href="evaluation.html">&#201;valuez-moi!</a>
                     <a href="contact.html">Contact</a>
                     <a href="mentions-legales.html">Mentions légales</a>
                 </div>
                 <a href="creation-connexion.html">
                     <button type="submit" value="connection" class="btns btn-sub">
-                    Connexion
+                        Connexion
                     </button>
                 </a>
                 <section>
@@ -61,26 +64,34 @@
                     </span>
                 </section>
             </nav>
-<!--Formulaire-->            
+            <!--Formulaire-->
             <h3>Mot de passe oublié ?</h3>
             <p>Veuillez renseigner les informations suivantes pour en obtenir un nouveau.</p>
             <form method="POST" action="" class="cc-form">
-                 <label for="login">
-                    Login : <span class="star">*</span>
-                </label>
-                <input type="text" class="text" id="login" minlength="2" maxlength="50" placeholder="Votre login"
-                        required>
-                <label for="email">
-                    E-mail: <span class="star">*</span>
-                </label>
-                <input type="email" class="text" id="email" minlength="2" maxlength="50" placeholder="Votre e-mail"
-                        required>
+                <div class="div-input">
+                    <label for="login">
+                        Login : <span class="star">*</span>
+                    </label>
+                    <input type="text" class="text" id="mdplogin" data-number="0" minlength="2" maxlength="50"
+                        placeholder="Votre login" required>
+                    <img src="../../fichiers/images/checky.jfif" alt="icone de validation" class="icone-verif">
+                    <span class="msg-alert">Choisissez un pseudo entre 3 et 30 caractères</span>
+                </div>
+                <div class="div-input">
+                    <label for="email">
+                        E-mail: <span class="star">*</span>
+                    </label>
+                    <input type="email" class="text" id="mdpemail" data-number="1" minlength="2" maxlength="50"
+                        placeholder="Votre e-mail" required>
+                    <img src="../../fichiers/images/checky.jfif" alt="icone de validation" class="icone-verif">
+                    <span class="msg-alert">Renseigner un email valide</span>
+                </div>
                 <button type="submit" value="Envoyer" class="btns btn-sub">
                     Envoyer
                 </button>
             </form>
         </div>
-<!--Pubs-->
+        <!--Pubs-->
         <div class="ads">
             PUB PUB PUB PUB PUB PUB PUB
         </div>
@@ -89,7 +100,7 @@
 
     </footer>
 
-    <script src=""></script>
+    <script type="text/javascript" src="../../Réalisation_5__Langage (variable_conditions_boucles....)/js/formulaire.js"></script>
 </body>
 
 

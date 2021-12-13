@@ -30,11 +30,21 @@
     width: 95%;
 }
 
-#A2_inputs {
+#A2_inputs form{
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    margin-left: 15px;
+}
+
+#A2_inputs form div{
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    margin-left: 20px;
+    margin-left: 5px;
+    width: 80%;
 }
 
 .A2_btn_save-load {
@@ -43,11 +53,11 @@
 
 .trans-sl a {
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 
 .trans-sl a:hover {
-    color: rgb(255, 238, 217);
+    color: #ffeed9;
 }
 
 .rhythm_diode button[type*="submit"] {
@@ -57,7 +67,7 @@
 }
 
 #trans-conteneur-1 {
-    border-bottom: solid 1px rgb(0,0,0);
+    border-bottom: solid 1px #000;
 }
 
 .btn-schema{
@@ -93,9 +103,9 @@
 .cases{
     height: 50px;
     width: 50px;
-    background-color: rgb(255,255,255);
-    border: solid 1px rgb(0,0,0);
-    color: rgb(50, 48, 39);
+    background-color: #fff;
+    border: solid 1px #000;
+    color: #323027;
     text-align: center;
     line-height: 3rem;
     font-weight: 900;
@@ -103,16 +113,16 @@
 
 /* _-_-_-_-_-_-_-_ Ecrans BOX-TIROIR (speed, préf, accord,cocr) _-_-_-_-_-_-_-_ */
 .box-div {
-    border-bottom: solid 1px rgb(0,0,0);
+    border-bottom: solid 1px #000;
 }
 
 .box-div:hover {
-    background-color: rgb(50,48,39); 
+    background-color: #323027; 
 }
 
-.box-div form label {
-    margin: 5px;
-}
+/* .box-div form label {
+    margin: 10px auto;
+} */
 
 .box-choice {
     display: flex;
@@ -175,6 +185,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    background-color: #645d54;
     background-color: rgba(100, 93, 84,1);
     -webkit-transition: .4s;
     transition: .2s;
@@ -187,6 +198,7 @@
     width: 20px;
     left: 0;
     bottom: 0;
+    background-color: #00c870;
     background-color: rgba(0, 255, 157,0.5);
     -webkit-transition: .2s;
     transition: .2s;
@@ -197,7 +209,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider::before {
-    /* background-color: rgb(255, 238, 217); */
+    /* background-color: #ffeed9; */
 }
 /* translation curseur */
 input:checked + .slider::before {
@@ -230,12 +242,12 @@ input:checked + .slider::before {
 }
 
 #box-connect a{
-    color:rgb(245, 172, 78);
+    color:#f5ac4e;
 }
 
 /* _-_-_-_-_-_-_-_ Ecran CONTACT _-_-_-_-_-_-_-_ */
 .cc-form label {
-    margin: 10px auto;
+    /* margin: 10px auto; */
 }
 
 
@@ -247,8 +259,8 @@ input:checked + .slider::before {
     height: 30px;
     margin: 10px;
     padding: 5px;
-    border: solid 1px rgb(0,0,0);
-    background-color: rgb(119,119,119);
+    border: solid 1px #000;
+    background-color: #777;
 }
 
 .saves div img {

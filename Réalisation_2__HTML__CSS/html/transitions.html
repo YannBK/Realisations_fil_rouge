@@ -22,12 +22,14 @@
     </header>
     <main>
         <div class="device">
-<!--Navigation-->
+            <!--Navigation-->
             <nav>
                 <label for="hamburger">&#9776;</label>
                 <input type="checkbox" id="hamburger" />
                 <h2>
-                    <a href="index.html"><!--&#9750;-->&larr;</a>
+                    <a id="back" href="#">
+                        <!--&#9750;-->&larr;
+                    </a>
                     TRANSITIONS
                 </h2>
                 <div>
@@ -46,7 +48,7 @@
                 </div>
                 <a href="creation-connexion.html">
                     <button type="submit" value="connection" class="btns btn-sub">
-                    Connexion
+                        Connexion
                     </button>
                 </a>
                 <section>
@@ -63,16 +65,13 @@
                     </span>
                 </section>
             </nav>
-<!--Tableau des transitions-->
+            <!--Tableau des transitions-->
             <div id="trans-conteneur-1">
                 <h4 class="hide-title"></h4>
                 <div id="trans-table">
                     <div class="trans-rows">
                         <button class="btn-schema">
-                            schéma
-                        </button>
-                        <button class="btns trans-sl save">
-                            Save
+                            modifier
                         </button>
                         <a href="load.html">
                             <button class="btns trans-sl">
@@ -84,10 +83,7 @@
                         <button class="btns btntrans">
                             -
                         </button>
-                        <button class="btns btntrans">
-                            +
-                        </button>
-                <!--!les deux boutons flèche sont à remplacer par du drag&drop-->
+                        <!--!les deux boutons flèche sont à remplacer par du drag&drop-->
                         <button class="btns btntrans">
                             &#8593;
                         </button>
@@ -98,10 +94,7 @@
 
                     <div class="trans-rows">
                         <button class="btn-schema">
-                            schéma
-                        </button>
-                        <button class="btns trans-sl save">
-                            Save
+                            modifier
                         </button>
                         <a href="load.html">
                             <button class="btns trans-sl">
@@ -113,9 +106,7 @@
                         <button class="btns btntrans">
                             -
                         </button>
-                        <button class="btns btntrans">
-                            +
-                        </button>
+
                         <button class="btns btntrans">
                             &#8593;
                         </button>
@@ -129,31 +120,73 @@
                     <button class="btn-sub btns save">
                         Save
                     </button>
-                    <button type="submit" class="btns btn-sub">
-                        OK
+                    <button id="play-trans" type="submit" class="btns btn-sub">
+                        Play
+                    </button>
+                    <button class="btns btn-sub">
+                        Ajouter
                     </button>
                 </div>
             </div>
-<!--Paramètres rythme-->
+            <!--Paramètres rythme-->
             <div id="trans-rhythm">
                 <div id="A2_inputs">
-                    <label for="A2_nb-bips">
-                        Nb de beat : 
-                    </label>
-                    <input type="number" id="A2_nb-Bips" placeholder="8">
-                    <label for="A2_tps-bar">Unité de temps : </label>
-                    <input type="number" id="A2_tps-bar"
-                        placeholder="2">
-                    <button class="btns">
-                        Play / Stop
-                    </button>
+                    <form action="">
+                        <div>
+                            <label for="nb-bips">Nombre de beat :</label>
+                            <select name="nb-bips" id="nb-bips">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5" selected>5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                            </select>
+                            <label for="nb-tps">Diodes par battement :</label>
+                            <select name="nb-tps" id="nb-tps">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="number" placeholder="répét">
+                            <input type="number" placeholder="120">
+                            <button type="button" id="ok_config" class="btns btn-sub">ok diodes</button>
+                        </div>
+                    </form>
                 </div>
-<!--Rythme-->
+                <!--Rythme-->
                 <div class="A0_rhythm">
                     <div class="rhythm_diode">
                         <div class="A2_btn_save-load">
                             <button class="btn-sl btns save">
-                                    Save
+                                Save
                             </button>
                             <a href="load.html">
                                 <button class="btn-sl btns">
@@ -161,21 +194,21 @@
                                 </button>
                             </a>
                         </div>
-                        <div class=" show-rhythm shows">
-                            <div class="diode"></div>
-                            <div class="diode"></div>
-                            <div class="diode"></div>
-                            <div class="diode"></div>/
-                            <div class="diode"></div>
+                        <div id="show" class=" show-rhythm shows">
+                            <!-- <div class="diode"></div>
                             <div class="diode"></div>
                             <div class="diode"></div>
                             <div class="diode"></div>/
+                            <div class="diode"></div>
+                            <div class="diode"></div>
+                            <div class="diode"></div>
+                            <div class="diode"></div>/ -->
                         </div>
-                        <button type="submit" class="btns">OK</button>
+                        <button id="btn-valid-trans" class="btns A0_big-btn">Ajouter</button>
                     </div>
                 </div>
             </div>
-<!--Modal diode-->
+            <!--Modal diode-->
             <div class="modal modal-diode">
                 <form action="" method="post"> <span class="close-diode close">&times;</span>
                     <label for="diode-null">
@@ -193,26 +226,26 @@
                     <button type="submit" name="submit" class="btns btn-sub">Ok</button>
                 </form>
             </div>
-<!--Modal save-->
+            <!--Modal save-->
             <div class="modal modal-save">
                 <form action="" method="post"> <span class="close close-save">&times;</span>
-                        <h3>Sauvegarder</h3>
-                        <label for="name-save">
-                            Donnez un nom : <span class="star">*</span>
-                        </label>
-                        <input type="text" class="text" placeholder="Ma sauvegarde" required>
-                        <div class="btn-div-save">
-                            <button type="reset" class="btns btn-sub reset-save">
-                                Annuler
-                            </button>
-                            <button type="submit" class="btns btn-sub">
-                                Confirmer
-                            </button>
-                        </div>
+                    <h3>Sauvegarder</h3>
+                    <label for="name-save">
+                        Donnez un nom : <span class="star">*</span>
+                    </label>
+                    <input type="text" class="text" placeholder="Ma sauvegarde" required>
+                    <div class="btn-div-save">
+                        <button type="reset" class="btns btn-sub reset-save">
+                            Annuler
+                        </button>
+                        <button type="submit" class="btns btn-sub">
+                            Confirmer
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
-<!--Pubs-->
+        <!--Pubs-->
         <div class="ads">
             PUB PUB PUB PUB PUB PUB PUB
         </div>
@@ -221,7 +254,7 @@
 
     </footer>
 
-    <script src="../js/modal-save.js"></script>
+    <script type="text/javascript" src="../../Réalisation_5__Langage (variable_conditions_boucles....)/js/modal-save.js"></script>
 </body>
 
 </html>

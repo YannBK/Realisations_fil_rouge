@@ -36,7 +36,7 @@
     height: 5px;
     margin:30px;
     width: 100%;
-/*TODO changer la couleur du range*/
+/*TODO changer la couleur du range, ou plutôt le supprimer pour laisser la place à l'affichage de la gamme*/
 }
 /*input[type='range'] {
     -webkit-appearance: none !important;
@@ -74,6 +74,28 @@ input[type='range']::-webkit-slider-thumb {
     width: 30vw;
 }
 
+#tempo{
+    /* background-color: #00c870; *//*TODO changer le focus*/
+    background-color: rgba(0, 215, 117,0.1);
+    /*TODO pourquoi il ne s'aligne pas avec la couleur...parce que sa couleur propre est influencée par la couleur du background de la div dans laquelle il se trouve?*/
+    border: none;
+}
+#tempo{
+    -moz-appearance: textfield;/*pas la même couleur de code, plus nécessaire?*/
+}
+/* Chrome */
+#tempo::-webkit-inner-spin-button,
+#tempo::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+/* Opéra*/
+#tempo::-o-inner-spin-button,
+#tempo::-o-outer-spin-button { 
+	-o-appearance: none;
+	margin:0
+}
+
 .btn15 {
     width: 40px;
     height: 40px;
@@ -90,19 +112,19 @@ input[type='range']::-webkit-slider-thumb {
     margin: 0 20px;
 }
 .btn-play:hover {
-    background-color: rgb(2, 129, 19);
+    background-color: #028113;
 }
 
 .btn-pause:hover {
-    background-color: rgb(151, 1, 1);
+    background-color: #970101;
 }
 
 .btn-play:active {
-    background-color: rgb(0, 82, 12);
+    background-color: #00520c;
 }
 
 .btn-pause:active {
-    background-color: rgb(94, 0, 0);
+    background-color: #5e0000;
 }
 /*  _-_-_-_-_-_-_-_  Speed / Flash  _-_-_-_-_-_-_-_  */
 #A0-speed-light {
@@ -111,3 +133,26 @@ input[type='range']::-webkit-slider-thumb {
     margin: 20px auto;
 }
 
+#box-flash{
+    display: none;
+}
+/* .shows{
+    background-color: #00c870;
+    background-color: rgba(0, 255, 157,0.4);
+} */
+
+.diodeflash{
+    background-color: #00c870;
+    background-color: rgba(0, 255, 157,0.4);
+    animation: flashy 1s infinite linear;
+}
+
+@keyframes flashy {
+    0% {
+        background-color: #ff0000;
+    }
+    50% {
+        background-color: #00c870;
+        background-color: rgba(0, 255, 157,0.4);
+    }
+}

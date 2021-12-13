@@ -27,6 +27,7 @@
             <nav id="hamnav">
                 <label for="hamburger">&#9776;</label>
                 <input type="checkbox" id="hamburger" />
+                <a id="back" href="#"><!--&#9750;-->&larr;</a>
                 <h2>
                     METRONOME
                 </h2>
@@ -64,54 +65,10 @@
                     </span>
                 </section>
             </nav>
-<!--Signature rythmique-->
-            <div id="A0_signature">
-                <form action="" method="POST">
-                    <label for="nb-bips">Nombre de beat :</label>
-                    <div>
-                        <select name="nb-bips" id="nb-bips">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4" selected>4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                        </select>
-                    </div>
-                    <label for="nb-tps">Unité de temps :</label>
-                    <div>
-                        <select name="nb-tps" id="nb-tps">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="4" selected>4</option>
-                            <option value="8">8</option>
-                            <option value="16">16</option>
-                            <option value="32">32</option>
-                        </select>
-                    </div>
-                </form>
-            </div>
+
 <!--Affichage-->
             <div id="A0_show">
-                <div id="A0_show_simple-scroll" class="shows">
+                <div id="show-flash" class="shows">
                     <p>
                         &#9834; &#9835;&#9834;&#9835;&#9835;&#9833;&#9834;&#9836;&#9836;&#9834;&#9833;&#9835; &#9834;&#9834;&#9835;&#9834; &#9835;&#9835;&#9833;&#9834;&#9836;&#9836;&#9834;&#9833;&#9835;&#9834;&#9834; &#9835;&#9834;&#9835;&#9835; &#9833;&#9834;&#9836;&#9836;&#9834;&#9833;&#9835;&#9834;&#9834;&#9835;&#9834;&#9835;&#9835;&#9833;&#9834;&#9836;&#9836;&#9834; &#9833;&#9835;&#9834;&#9834;&#9835;&#9834;&#9835;&#9835;&#9833;&#9834;&#9836;&#9836; &#9834;&#9833;&#9835;&#9834; &#9834;&#9835;&#9834;&#9835;&#9835;&#9833;&#9834;&#9836;&#9836;&#9834;&#9833;&#9835;&#9834;</p>
                 </div>
@@ -124,32 +81,32 @@
 <!--Gestion Bpm-->
             <div id="A0_manage_bpm">
                 <div>
-                    <button class="btns btn15">
-                        +5
+                    <button class="btns btn15 btninc" value="-5">
+                        -5
                     </button>
-                    <button class="btns btn15">
-                        +1
+                    <button class="btns btn15 btninc" value="-1">
+                        -1
                     </button>
                 </div>
                 <div class="shows">
-                    120
+                    <input type="number" id="tempo" value="60" min="1">
                     &nbsp;&#9834;
                 </div>
                 <div>
-                    <button class="btns btn15">
+                    <button class="btns btn15 btninc" value="1">
                         +1
                     </button>
-                    <button class="btns btn15">
+                    <button class="btns btn15 btninc" value="5">
                         +5
                     </button>
                 </div>
             </div>
 
             <div id="A0_btn_down" class="btn_down">
-                <button class="btns btn-sub btn-pause">
+                <button id="btn-stop" class="btns btn-sub btn-pause">
                     Stop
                 </button>
-                <button class="btn-play btns btn-sub">
+                <button id="btn-play" class="btn-play btns btn-sub">
                     Play
                 </button>
             </div>
@@ -160,9 +117,60 @@
                         Speed
                     </button>
                 </a>
-                <button class="btns btn-sub">
+                <label for="flash"><button value="checked" id="btn_check" class="btns btn-sub">
                     Flash
-                </button>
+                </button></label>
+                <input type="checkbox" id="box-flash">
+            </div>
+            <!--Signature rythmique-->
+            <div id="A0_signature">
+                <form action="">
+                    <label for="nb-bips">Nombre de beat :</label>
+                        <div>
+                            <select name="nb-bips" id="nb-bips">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5" selected>5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                            </select>
+                        </div>
+                        <label for="nb-tps">Diodes par battement :</label>
+                        <div>
+                            <select name="nb-tps" id="nb-tps" >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3" >3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <button type="button" id="ok_config" class="btns btn-sub">ok diodes</button>
+                    </form>
             </div>
 <!--Gestion rythme-->
             <div class="A0_rhythm">
@@ -172,31 +180,7 @@
                             Avancé
                         </button>
                     </a>
-                    <div class="show-rhythm shows">
-                        <div class="diode"></div>
-                        <div class="diode"></div>
-                        <div class="diode"></div>
-                        <div class="diode"></div>/
-                        <div class="diode"></div>
-                        <div class="diode"></div>
-                        <div class="diode"></div>
-                        <div class="diode"></div>/
-                        <div class="diode"></div>
-                        <div class="diode"></div>
-                        <div class="diode"></div>
-                        <div class="diode"></div>/
-                        <div class="diode"></div>
-                        <div class="diode"></div>
-                        <div class="diode"></div>
-                        <div class="diode"></div>/
-                        <div class="diode"></div>
-                        <div class="diode"></div>
-                        <div class="diode"></div>
-                        <div class="diode"></div>/
-                        <div class="diode"></div>
-                        <div class="diode"></div>
-                        <div class="diode"></div>
-                        <div class="diode"></div>/
+                    <div id="show" class="show-rhythm shows">
                     </div>
                     <div>
                         <button class="btn-sl btns save">
@@ -267,7 +251,7 @@
 
     </footer>
 
-    <script src="../js/modal-save.js"></script>
+    <script type="text/javascript" src="../../Réalisation_5__Langage (variable_conditions_boucles....)/js/modal-save.js"></script>
 </body>
 
 </html>
