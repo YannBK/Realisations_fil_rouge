@@ -576,7 +576,7 @@ function supprimer(boutons) {
     }, false));
 }
 
-//pour modifier des utilisateurs, outch
+//pour modifier des mesures, outch
 function modifier() {
     let btnModif = document.querySelectorAll('.btn-modif');
     let index = 0;
