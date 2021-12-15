@@ -70,12 +70,36 @@
     border-bottom: solid 1px #000;
 }
 
-.btn-schema{
-    width: 100px;
+.btn-modif{
+    width: 60px;
     height: 30px;
 }
 
-
+.sign {
+    background-color: #fff;
+    width: 50px;
+    height: 23px;
+    border-radius: 5px;
+    color: #000;
+    text-align: center;
+    line-height: 23px;
+}
+.trans-number {
+    text-align: center;
+    -moz-appearance: textfield;/*pas la même couleur de code, plus nécessaire?*/
+}
+/* Chrome */
+.trans-number::-webkit-inner-spin-button,
+.trans-number::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+/* Opéra*/
+.trans-number::-o-inner-spin-button,
+.trans-number::-o-outer-spin-button { 
+	-o-appearance: none;
+	margin:0
+}
 /* _-_-_-_-_-_-_-_ Ecran HARMONIE _-_-_-_-_-_-_-_ */
 
 #container-grid {
@@ -119,10 +143,6 @@
 .box-div:hover {
     background-color: #323027; 
 }
-
-/* .box-div form label {
-    margin: 10px auto;
-} */
 
 .box-choice {
     display: flex;
@@ -244,12 +264,6 @@ input:checked + .slider::before {
 #box-connect a{
     color:#f5ac4e;
 }
-
-/* _-_-_-_-_-_-_-_ Ecran CONTACT _-_-_-_-_-_-_-_ */
-.cc-form label {
-    /* margin: 10px auto; */
-}
-
 
 /* _-_-_-_-_-_-_-_ Ecran LOAD _-_-_-_-_-_-_-_ */
 .saves {

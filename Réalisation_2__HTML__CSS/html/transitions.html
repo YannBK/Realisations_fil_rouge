@@ -65,56 +65,11 @@
                     </span>
                 </section>
             </nav>
+
             <!--Tableau des transitions-->
             <div id="trans-conteneur-1">
                 <h4 class="hide-title"></h4>
-                <div id="trans-table">
-                    <div class="trans-rows">
-                        <button class="btn-schema">
-                            modifier
-                        </button>
-                        <a href="load.html">
-                            <button class="btns trans-sl">
-                                Load
-                            </button>
-                        </a>
-                        <input type="number" placeholder="répét">
-                        <input type="number" placeholder="120">
-                        <button class="btns btntrans">
-                            -
-                        </button>
-                        <!--!les deux boutons flèche sont à remplacer par du drag&drop-->
-                        <button class="btns btntrans">
-                            &#8593;
-                        </button>
-                        <button class="btns btntrans">
-                            &#8595;
-                        </button>
-                    </div>
-
-                    <div class="trans-rows">
-                        <button class="btn-schema">
-                            modifier
-                        </button>
-                        <a href="load.html">
-                            <button class="btns trans-sl">
-                                Load
-                            </button>
-                        </a>
-                        <input type="number" placeholder="répét">
-                        <input type="number" placeholder="120">
-                        <button class="btns btntrans">
-                            -
-                        </button>
-
-                        <button class="btns btntrans">
-                            &#8593;
-                        </button>
-                        <button class="btns btntrans">
-                            &#8595;
-                        </button>
-                    </div>
-                </div>
+                <div id="trans-table"></div>
 
                 <div id="trans_total">
                     <button class="btn-sub btns save">
@@ -123,11 +78,16 @@
                     <button id="play-trans" type="submit" class="btns btn-sub">
                         Play
                     </button>
+                    <label for="flash"><button value="checked" id="btn_check" class="btns btn-sub">
+                        Flash
+                    </button></label>
+                    <input type="checkbox" id="box-flash" class="box-flash">
                     <button class="btns btn-sub">
                         Ajouter
                     </button>
                 </div>
             </div>
+
             <!--Paramètres rythme-->
             <div id="trans-rhythm">
                 <div id="A2_inputs">
@@ -175,57 +135,21 @@
                             </select>
                         </div>
                         <div>
-                            <input type="number" placeholder="répét">
-                            <input type="number" placeholder="120">
+                            <input id="trans-repet" type="number" placeholder="répét">
+                            <input id="trans-tempo" type="number" placeholder="120">
                             <button type="button" id="ok_config" class="btns btn-sub">ok diodes</button>
                         </div>
                     </form>
                 </div>
+
                 <!--Rythme-->
                 <div class="A0_rhythm">
-                    <div class="rhythm_diode">
-                        <div class="A2_btn_save-load">
-                            <button class="btn-sl btns save">
-                                Save
-                            </button>
-                            <a href="load.html">
-                                <button class="btn-sl btns">
-                                    Load
-                                </button>
-                            </a>
-                        </div>
-                        <div id="show" class=" show-rhythm shows">
-                            <!-- <div class="diode"></div>
-                            <div class="diode"></div>
-                            <div class="diode"></div>
-                            <div class="diode"></div>/
-                            <div class="diode"></div>
-                            <div class="diode"></div>
-                            <div class="diode"></div>
-                            <div class="diode"></div>/ -->
-                        </div>
+                        <div id="show" class=" show-rhythm shows"></div>
                         <button id="btn-valid-trans" class="btns A0_big-btn">Ajouter</button>
                     </div>
                 </div>
             </div>
-            <!--Modal diode-->
-            <div class="modal modal-diode">
-                <form action="" method="post"> <span class="close-diode close">&times;</span>
-                    <label for="diode-null">
-                        <input type="radio" name="diode-value" id="diode-null" value="diode-null">Null
-                    </label>
-                    <label for="diode-1">
-                        <input type="radio" name="diode-value" id="diode-1" value="diode-1" checked>Son 1
-                    </label>
-                    <label for="diode-2">
-                        <input type="radio" name="diode-value" id="diode-2" value="diode-2">Son 2
-                    </label>
-                    <label for="diode-3">
-                        <input type="radio" name="diode-value" id="diode-3" value="diode-3">Son 3
-                    </label>
-                    <button type="submit" name="submit" class="btns btn-sub">Ok</button>
-                </form>
-            </div>
+
             <!--Modal save-->
             <div class="modal modal-save">
                 <form action="" method="post"> <span class="close close-save">&times;</span>

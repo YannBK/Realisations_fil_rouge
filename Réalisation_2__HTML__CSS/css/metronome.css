@@ -79,6 +79,7 @@ input[type='range']::-webkit-slider-thumb {
     background-color: rgba(0, 215, 117,0.1);
     /*TODO pourquoi il ne s'aligne pas avec la couleur...parce que sa couleur propre est influencée par la couleur du background de la div dans laquelle il se trouve?*/
     border: none;
+    text-align: center;
 }
 #tempo{
     -moz-appearance: textfield;/*pas la même couleur de code, plus nécessaire?*/
@@ -133,15 +134,15 @@ input[type='range']::-webkit-slider-thumb {
     margin: 20px auto;
 }
 
-#box-flash{
+/* .box-flash{
     display: none;
-}
+} */
 /* .shows{
     background-color: #00c870;
     background-color: rgba(0, 255, 157,0.4);
 } */
 
-.diodeflash{
+/* .diodeflash{
     background-color: #00c870;
     background-color: rgba(0, 255, 157,0.4);
     animation: flashy 1s infinite linear;
@@ -155,4 +156,4 @@ input[type='range']::-webkit-slider-thumb {
         background-color: #00c870;
         background-color: rgba(0, 255, 157,0.4);
     }
-}
+} */
