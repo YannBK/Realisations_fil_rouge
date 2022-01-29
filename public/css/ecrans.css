@@ -1,0 +1,356 @@
+
+/*!_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ ECRANS _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
+
+/* _-_-_-_-_-_-_-_ Ecran TRANSITION _-_-_-_-_-_-_-_ */
+
+#trans-table {
+    padding: 5px;
+}
+
+.trans-rows {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    align-items: baseline;
+}
+
+.btntrans {
+    width: 30px;
+    height: 30px;
+}
+
+#trans_total {
+    text-align: center;
+    margin: 5px;
+}
+
+#trans-rhythm {
+    position: absolute;
+    bottom: 10px;
+    width: 95%;
+}
+
+#A2_inputs form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    margin-left: 15px;
+}
+
+#A2_inputs form div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-left: 5px;
+    width: 80%;
+}
+
+.A2_btn_save-load {
+    max-width: min-content;
+}
+
+.trans-sl a {
+    text-decoration: none;
+    color: #000;
+}
+
+.trans-sl a:hover {
+    color: #ffeed9;
+}
+
+.rhythm_diode button[type*="submit"] {
+    margin: 0;
+    padding: 0;
+    width: 60px;
+}
+
+#trans-conteneur-1 {
+    border-bottom: solid 1px #000;
+}
+
+.btn-modif{
+    width: 60px;
+    height: 30px;
+}
+.btn-modif:hover {
+    cursor: pointer;
+}
+
+.sign {
+    background-color: #fff;
+    width: 50px;
+    height: 23px;
+    border-radius: 5px;
+    color: #000;
+    text-align: center;
+    line-height: 23px;
+}
+.trans-number {
+    text-align: center;
+    -moz-appearance: textfield;/*pas la même couleur de code, plus nécessaire?*/
+}
+/* Chrome */
+.trans-number::-webkit-inner-spin-button,
+.trans-number::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+/* Opéra*/
+.trans-number::-o-inner-spin-button,
+.trans-number::-o-outer-spin-button { 
+	-o-appearance: none;
+	margin:0
+}
+/* _-_-_-_-_-_-_-_ Ecran HARMONIE _-_-_-_-_-_-_-_ */
+
+#container-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    max-width: 100%;
+    margin:20px;
+}
+
+#param-grid form div {
+    display: flex;
+    align-items: baseline;
+    margin: 5px auto;
+}
+#grid-sl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#grid-sl button {
+    margin: 10px;
+    width: 60px;
+    height: 30px;
+}
+#param-grid form #param {
+    display: none;
+}
+#rhythm-case {
+    display : none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cases{
+    display: flex;
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border: solid 1px #000;
+    color: #323027;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2rem;
+    font-weight: 900;
+}
+.grille {
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-case {
+    display: block;
+}
+.form-case input{
+    margin: 10px;
+}
+#diode-custom {
+    display: none;
+    align-items: baseline;
+    justify-content: space-evenly;
+    margin: 5px auto;
+}
+#diode-custom form div {
+    align-items: baseline;
+    margin: 5px auto;
+    justify-content: space-evenly;
+}
+#deux-accord {
+    display: none;
+}
+#lancer {
+    display: none;
+}
+#container-param {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* _-_-_-_-_-_-_-_ Ecrans BOX-TIROIR (speed, préf, accord,cocr) _-_-_-_-_-_-_-_ */
+.box-div {
+    border-bottom: solid 1px #000;
+}
+
+.box-div:hover {
+    background-color: #323027; 
+}
+
+.box-choice {
+    display: flex;
+}
+
+.box-none {
+    display: none;
+}
+
+/*______________________ Ecran SPEED _______________________*/
+#speed_count #count:checked ~ form,
+#increase #acc:checked ~ form,
+#decrease #dec:checked ~ form,
+#mute #mut:checked ~ form {
+    display: flex;
+}
+
+.speed-form {
+    display: none;
+}
+
+.speed-form div {
+    display: flex;
+    align-items: baseline;
+}
+
+/*______________________ Ecran PREF _______________________*/
+#mode #mod:checked ~ form,
+#family #fam:checked ~ form,
+#notation #nota:checked ~ form,
+#maxy #max:checked ~ form,
+#stats #stat:checked ~ form {
+    display: block;
+}
+
+.pref-form {
+    display: none;
+}
+
+/* ------- boutons switch --------*/
+
+/* Label contenant le slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+/* Cacher checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+/* Le slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #645d54;
+    background-color: rgba(100, 93, 84,1);
+    -webkit-transition: .4s;
+    transition: .2s;
+}
+/* Création et positionnement du curseur*/
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0;
+    bottom: 0;
+    background-color: #00c870;
+    background-color: rgba(0, 255, 157,0.5);
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+input:checked + .slider {
+    /* background-color: rgba(0, 255, 157,0.4); */
+}
+
+input:checked + .slider::before {
+    /* background-color: #ffeed9; */
+}
+/* translation curseur */
+input:checked + .slider::before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+/* Slider arrondi */
+.slider.round {
+    border-radius: 34px;
+}
+/* Curseur arrondi */
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/*____________________ Ecran ACCORD ______________________*/
+#oreille form div {
+    margin : 5px;
+}
+
+/*_____________ Ecran CONNECTION / CREATION ______________*/
+#box-connect #connect:checked ~ form,
+#box-create #create:checked ~ form{
+    display: flex;
+}
+
+.cocr-form {
+    display: none;
+}
+
+#box-connect a{
+    color:#f5ac4e;
+}
+
+/* _-_-_-_-_-_-_-_ Ecran LOAD _-_-_-_-_-_-_-_ */
+.saves {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    border: solid 1px #000;
+    background-color: #777;
+}
+
+.saves div img {
+    max-height: 30px;
+    min-height: 30px;
+    margin-right: 5px;
+}
+
+.saves button {
+    margin-right: 5px;
+    width: 80px;
+    height: 100%;
+}
+
+.saves button:last-child {
+    margin: 0;
+}
+
+/* _-_-_-_-_-_-_-_ Ecran EVALUATION _-_-_-_-_-_-_-_ */
+.text-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-screen form input{
+    margin: 5px;
+}
