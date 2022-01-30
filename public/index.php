@@ -3,7 +3,7 @@
 if (isset($_GET['p'])) {
     $p = $_GET['p'];
 } else {
-    $p = 'home';
+    $p = 'metronome';
 }
 
 ob_start();
